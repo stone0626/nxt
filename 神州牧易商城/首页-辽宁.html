@@ -1,0 +1,826 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>神州农易官方商城</title>
+
+<link href="css/base_front.css" type="text/css" rel="stylesheet" />
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+<link href="iealert/iealert.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="js/iealert.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/jQselect.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("body").iealert();
+  });
+</script>
+
+<script type="text/javascript">
+	function openme(){
+	document.getElementById('zhezhao').style.display='block';
+	document.getElementById('popup').style.display='block';
+	}
+	function closeme(){
+	document.getElementById('zhezhao').style.display='none';
+	document.getElementById('popup').style.display='none';
+	}
+
+  function company(){
+  document.getElementById('zhezhao').style.display='block';
+  document.getElementById('company_box').style.display='block';
+  }
+	function company_close(){
+	document.getElementById('zhezhao').style.display='none';
+	document.getElementById('company_box').style.display='none';
+	}
+
+  function channel(){
+  document.getElementById('zhezhao').style.display='block';
+  document.getElementById('channel_box').style.display='block';
+  }
+  function channel_close(){
+  document.getElementById('zhezhao').style.display='none';
+  document.getElementById('channel_box').style.display='none';
+  }
+
+  $(function(){
+    $(".logo_mid_top li").click(function(){
+        $(".logo_mid_top li").removeClass("style1");
+        $(".logo_mid_top li").addClass("style2");
+        $(this).removeClass("style2");
+        $(this).addClass("style1");
+    });
+  });
+
+  function setTab(name,cursel,n){
+  for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+  }
+  };
+</script>
+</head>
+
+<body>
+
+<!-- 登陆弹出框 -->
+<div id="zhezhao"></div>
+<div class="popup" id="popup">
+  <div class="popup_confirm">
+    <div class="popup_border"></div>
+    <div class="popup_box">
+      <h3>
+        <ul>
+          <li id="login1" class="hover" onclick="setTab('login',1,2);">账号登录</li>
+          <li id="login2" onclick="setTab('login',2,2);">扫描登录</li>
+        </ul>
+        <input type="button" value="×" class="button" onClick="closeme()" />
+      </h3>
+        <div class="popup_switch" id="con_login_1">
+          <div class="zhanghu"><span class="zh_text">账&nbsp;&nbsp;&nbsp;号：</span>
+            <input name="" type="text"  class="zh_input_bk01"/>
+          </div>
+          <p class="zh_tsy">没有此账号！</p>
+          <div class="clear"></div>
+          <div class="zhanghu"><span class="zh_text">密&nbsp;&nbsp;&nbsp;码：</span>
+            <input name="" type="password"  class="zh_input_bk" />
+            <a class="secret" href="#">忘记密码?</a></div>
+          <p class="zh_tsy zh_tsy1">密码输入错误！</p>
+          <div class="clear"></div>
+          <div class="zhanghu"><span class="zh_text">验证码：</span>
+            <input name="" type="text"  class="zh_input_bk02" />
+            <img src="images/zhanghu_code_07.png" /> <a class="zhanghu_code" href="#">换一张看不清</a></div>
+          <p class="zh_tsy zh_tsy2">验证码输入错误！</p>
+          <div class="clear"></div>
+          <p class="denglu">
+            <input name="" type="button" value="登录" onClick="logo_in()" />
+            <span>没有账号？<a href="#">立即注册》</a></span></p>
+        </div>
+        <div class="popup_switch" id="con_login_2" style="display: none;">
+          <img class="login_qr_code" src="images/qr_code.jpg">
+          <span class="login_qr_code_text">打开猪贸通，个人中心扫一扫！</span>
+        </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- end 登陆弹出框 -->
+
+<!-- 商家入驻弹出框 -->
+<div class="company" id="company_box">
+<div class="company_confirm">
+<div class="company_border"></div>
+<div class="company_box">
+	<h3><strong>选择企业入驻类型</strong><input type="button" value="×" class="button" onClick="company_close()" /></h3>
+    <div class="company_fin">
+        <input type="button" value="兽药或生物制品" class="company_btn01" /> <input name="" type="button" value="饲料或器械设备" class="company_btn01 company_btn02" />
+    </div>
+</div>
+</div></div>
+<!-- end 商家入驻弹出框 -->
+
+<!-- 线下渠道弹出框 -->
+<div class="channel" id="channel_box">
+<div class="channel_confirm">
+<div class="channel_border"></div>
+<div class="channel_box">
+  <h3><strong>选择线下渠道类型</strong><input type="button" value="×" class="button" onClick="channel_close()" /></h3>
+    <div class="channel_fin">
+        <div class="channel_fin_box">
+          <b>商城：</b>
+          <input type="button" value="县级运营服务中心" class="channel_btn01" /> <input name="" type="button" value="分销商" class="channel_btn01 channel_btn02" />
+        </div>
+        <div class="channel_fin_box_line"></div>
+        <div class="channel_fin_box">
+          <b>猪贸通：</b>
+          <input type="button" value="屠宰场服务站" class="channel_btn01" /> <input name="" type="button" value="县级代理站" class="channel_btn01 channel_btn02" />
+        </div>
+    </div>
+</div>
+</div></div>
+<!-- end 线下渠道弹出框 -->
+
+<!--top-->
+<div class="topnav_bg">
+	<div class="topnav">
+	  <p>您好，欢迎来到神州农易官方商城<strong>[农信通集团旗下畜牧业电商平台]</strong></p>
+      <div class="topnav_rt">
+      	<a href="#" onClick="openme()">登录</a><a href="#">免费注册</a><a href="#">我的订单</a><a href="#">猪贸通订单(<b>22</b>)</a><a href="#" >卖家中心</a>
+      </div>
+
+	</div>
+</div>
+<!--end top-->
+<!--logo-->
+<div class="logo_content">
+	<div class="logo_lt">
+	  <a href="#"><img src="images/logo.jpg"/></a>
+    <span style="float: left;font-size:20px;display: block;margin:15px 0 0 10px;color:#333;">辽宁版</span>
+  </div>
+    <div class="logo_mid">
+      <ul class="logo_mid_top"><li class="style1">商品</li><li class="style2">店铺</li></ul>
+      <div class="logo_search">
+        <p><input type="text" class="one" placeholder="输入商品" /><button class="one1">搜索</button></p>
+      </div>
+      <div class="keyword">
+        <ul>
+           <li><a href="#" class="hover">饲料</a></li>
+           <li><a href="#">售药</a></li>
+           <li><a href="#">预混料</a></li>
+   	    </ul>
+      </div>
+
+    </div>
+	<div class="logo_rt">
+    	<button></button>
+        <div class="logo_num">
+        	<img class="fl" src="images/gwc_num_lt.jpg" />
+            <span class="fl">9</span>
+            <img class="fl" src="images/gwc_num_rt.jpg" />
+        </div>
+    </div>
+</div>
+
+<!--end logo-->
+<div class="clear"></div>
+
+<div class="nav">
+	<div class="nav_main">
+		<H3><span>全部商品分类</span></H3>
+          <ul>
+          	<li><a href="#" class="current">首页</a></li>
+            <li><a href="#">兽药</a></li>
+            <li><a href="#">饲料</a></li>
+            <li><a href="#">器械设备</a></li>
+            <li><a href="#">禽畜交易</a></li>
+            <li><a href="#">生物制品</a></li>
+            <li><a href="#">服务产品</a></li>
+          </ul>
+   	    <div class="qjd"><a href="">旗舰店</a></div>
+   </div>
+</div>
+<!-- banner S -->
+<div class="carousel">
+	<div class="category">
+      <div class="menu">
+       		<ul>
+               <li>
+                  <div class="recommend-class">
+                  		<h4><a href="">兽药</a></h4>
+                       	 <a href="#">猪药</a><a href="#">禽药</a><a href="#">牛羊药</a><a href="#">水产药</a><a href="#">原料药</a>
+                   </div>
+                   <div class="sub-class" style="position:absolute;top:5px;">
+                           		<dl>
+                                	<dt><h5><a href="">猪药</a></h5></dt>
+									<dd>
+									<a href="#">呼吸系统药</a><a href="#">保肝护肾药</a><a href="#">生殖系统药</a><a href="#">肠炎腹泻药</a><a href="#">寄生虫药</a><a href="#">抗病毒药</a><a href="#">抗菌消炎药</a><a href="#">消炎药</a><a href="#">保健药</a><a href="#">解毒药</a><a href="#">解热镇痛药</a><a href="#">其他</a>
+									</dd>
+                                </dl>
+								<dl>
+                                	<dt><h5><a href="">禽药</a></h5></dt>
+									<dd>
+									<a href="#">呼吸系统药</a><a href="#">保肝护肾药</a><a href="#">生殖系统药</a><a href="#">肠炎腹泻药</a><a href="#">寄生虫药</a><a href="#">抗病毒药</a><a href="#">抗菌消炎药</a><a href="#">消炎药</a><a href="#">保健药</a><a href="#">解毒药</a><a href="#">解热镇痛药</a><a href="#">其他</a>
+									</dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">牛羊药</a></h5></dt>
+									<dd>
+									<a href="#">呼吸系统药</a><a href="#">保肝护肾药</a><a href="#">生殖系统药</a><a href="#">肠炎腹泻药</a><a href="#">寄生虫药</a><a href="#">抗病毒药</a><a href="#">抗菌消炎药</a><a href="#">消炎药</a><a href="#">保健药</a><a href="#">解毒药</a><a href="#">解热镇痛药</a><a href="#">其他</a>
+									</dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">水产药</a></h5></dt>
+									<dd>
+									<a href="#">呼吸系统药</a><a href="#">保肝护肾药</a><a href="#">生殖系统药</a><a href="#">肠炎腹泻药</a><a href="#">寄生虫药</a><a href="#">抗病毒药</a><a href="#">抗菌消炎药</a><a href="#">消炎药</a><a href="#">保健药</a><a href="#">解毒药</a><a href="#">解热镇痛药</a><a href="#">其他</a>
+									</dd>
+                                </dl>
+                                 <dl>
+                                	<dt><h5><a href="">原料药</a></h5></dt>
+									<dd>
+									<a href="#">呼吸系统药</a><a href="#">保肝护肾药</a><a href="#">生殖系统药</a><a href="#">肠炎腹泻药</a><a href="#">寄生虫药</a><a href="#">抗病毒药</a><a href="#">抗菌消炎药</a><a href="#">消炎药</a><a href="#">保健药</a><a href="#">解毒药</a><a href="#">解热镇痛药</a><a href="#">其他</a>
+									</dd>
+                                </dl>
+                          </div>
+                        </li>
+                        <li>
+                            <div class="recommend-class">
+                            	<h4><a href="">饲料</a></h4>
+                            	<a href="#">预混料</a><a href="#">混合料</a><a href="#">浓缩料</a><a href="#">原料</a><a href="#">添加剂</a></div>
+                                 <div class="sub-class" style="position: absolute; top:5px;  ">
+                           		<dl>
+                                	<dt><h5><a href="">预混料</a></h5></dt><dd><a href="#">复合多维</a><a href="#">复合微量元素</a><a href="#">猪预混料</a><a href="#">蛋鸡预混料</a><a href="#">特种养殖预混料</a><a href="#">水产预混料</a><a href="#">奶牛预混料</a><a href="#">肉种鸡预混料</a><a href="#">蛋中鸡预混料</a><a href="#">肉鸭预混料</a><a href="#">蛋鸭预混料</a><a href="#">肉鸡预混料</a><a href="#">其他</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">混合料</a></h5></dt><dd><a href="#">复合多维</a><a href="#">复合微量元素</a><a href="#">猪预混料</a><a href="#">蛋鸡预混料</a><a href="#">特种养殖预混料</a><a href="#">水产预混料</a><a href="#">奶牛预混料</a><a href="#">肉种鸡预混料</a><a href="#">蛋鸭预混料</a><a href="#">肉鸡预混料</a><a href="#">其他</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">浓缩料</a></h5></dt><dd><a href="#">复合多维</a><a href="#">复合微量元素</a><a href="#">猪预混料</a><a href="#">蛋鸡预混料</a><a href="#">特种养殖预混料</a><a href="#">水产预混料</a><a href="#">奶牛预混料</a><a href="#">肉种鸡预混料</a><a href="#">蛋中鸡预混料</a><a href="#">肉鸭预混料</a><a href="#">蛋鸭预混料</a><a href="#">肉鸡预混料</a><a href="#">其他</a></dd>
+                                </dl>
+                                 <dl>
+                                	<dt><h5><a href="">原料</a></h5></dt><dd><a href="#">复合多维</a><a href="#">复合微量元素</a><a href="#">猪预混料</a><a href="#">蛋鸡预混料</a><a href="#">特种养殖预混料</a><a href="#">水产预混料</a><a href="#">蛋鸭预混料</a><a href="#">肉鸡预混料</a><a href="#">其他</a></dd>
+                                </dl>
+								 <dl>
+                                	<dt><h5><a href="">添加剂</a></h5></dt><dd><a href="#">复合多维</a><a href="#">复合微量元素</a><a href="#">猪预混料</a><a href="#">蛋鸡预混料</a><a href="#">特种养殖预混料</a><a href="#">水产预混料</a><a href="#">奶牛预混料</a><a href="#">肉种鸡预混料</a><a href="#">蛋中鸡预混料</a><a href="#">肉鸭预混料</a><a href="#">蛋鸭预混料</a><a href="#">肉鸡预混料</a><a href="#">其他</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recommend-class">
+                            	<h4><a href="">器械设备</a></h4>
+                            	<a href="#">饲料加工机械</a><a href="#">兽药生产设备</a><a href="#">养殖设备</a></div>
+                                 <div class="sub-class" style="position: absolute; top:85px;  ">
+                           		<dl>
+                                	<dt><h5><a href="#">饲料加工机械</a></h5></dt><dd><a href="#">包装秤</a><a href="#">粉碎设备</a><a href="#">配料系统</a><a href="#">调质设备</a><a href="#">秸秆加工设备</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">兽药生产设备</a></h5></dt><dd><a href="#">包装秤</a><a href="#">粉碎设备</a><a href="#">配料系统</a><a href="#">调质设备</a><a href="#">秸秆加工设备</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">养殖设备</a></h5></dt><dd><a href="#">包装秤</a><a href="#">粉碎设备</a><a href="#">配料系统</a><a href="#">调质设备</a><a href="#">秸秆加工设备</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recommend-class">
+                            	<h4><a href="">畜禽交易</a></h4>
+                            	<a href="#">种畜禽</a><a href="#">商品活禽</a><a href="#">畜产品</a>  </div>
+                                 <div class="sub-class" style="position: absolute; top:150px; ">
+                           		<dl>
+                                	<dt><h5><a href="">种畜禽</a></h5></dt><dd><a href="">特种养殖</a><a href="#">牛</a><a href="#">羊</a><a href="#">禽</a><a href="#">猪</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">商品活禽</a></h5></dt><dd><a href="">特种养殖</a><a href="#">牛</a><a href="#">羊</a><a href="#">禽</a><a href="#">猪</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">畜产品</a></h5></dt><dd><a href="">其他产品</a><a href="#">副产品</a><a href="#">奶</a><a href="#">蛋</a><a href="#">肉</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="recommend-class" style="height:55px;">
+                            	<h4><a href="">生物制品</a></h4>
+                            	<a href="#">预防用生物制品</a><a href="#">治疗用生物制品</a><a href="#">诊断用生物制品</a></div>
+                                 <div class="sub-class" style=" position: absolute; top:230px;float:left;  ">
+                           		<dl>
+                                	<dt><h5><a href="#">预防用生物制品</a></h5></dt><dd><a href="#">呼吸系统药</a><a href="#">保肝护肾药</a><a href="#">生殖系统药</a><a href="#">肠炎腹泻统药</a><a href="#">寄生虫药</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="#">治疗用生物制品</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="#">诊断用生物制品</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="recommend-class">
+                            	<h4><a href="">服务产品</a></h4>
+                            	<a href="#">物流</a><a href="#">其他</a><a href="#">培训</a><a href="#">科研</a><a href="#">策划/设计</a>    </div>
+
+                                 <div class="sub-class" style="position: absolute; top:100px;float:left;  ">
+                           		<dl >
+                                	<dt><h5><a href="">策划1</a></h5></dt><dd><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">生殖系统药</a><a href="">肠炎腹泻统药</a><a href="">寄生虫药</a></dd>
+                                </dl>
+                                <dl >
+                                	<dt><h5><a href="">科研</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                <dl >
+                                	<dt><h5><a href="">科研</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                <dl>
+                                	<dt><h5><a href="">培训</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                 <dl>
+                                	<dt><h5><a href="">其他</a></h5></dt><dd><a href="">其他</a><a href="">免疫增强剂</a><a href="">营养保健</a><a href="">消毒杀菌剂</a><a href="">驱虫剂和杀虫剂</a><a href="">内服抗菌剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recommend-class recommend-class_last">
+                              <h4><a href="">生活广场</a></h4>
+                              <a href="#">物流</a><a href="#">其他</a><a href="#">培训</a><a href="#">科研</a><a href="#">策划/设计</a>    </div>
+
+                                 <div class="sub-class" style="position: absolute; top:100px;float:left;  ">
+                              <dl >
+                                  <dt><h5><a href="">策划2</a></h5></dt><dd><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">生殖系统药</a><a href="">肠炎腹泻统药</a><a href="">寄生虫药</a></dd>
+                                </dl>
+                                <dl >
+                                  <dt><h5><a href="">科研</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                <dl >
+                                  <dt><h5><a href="">科研</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                <dl>
+                                  <dt><h5><a href="">培训</a></h5></dt><dd><a href="">生殖系统药</a><a href="">其他</a><a href="">解毒药</a><a href="">保健药</a><a href="">呼吸系统药</a><a href="">保肝护肾药</a><a href="">肠炎腹泻药</a></dd>
+                                </dl>
+                                 <dl>
+                                  <dt><h5><a href="">其他</a></h5></dt><dd><a href="">其他</a><a href="">免疫增强剂</a><a href="">营养保健</a><a href="">消毒杀菌剂</a><a href="">驱虫剂和杀虫剂</a><a href="">内服抗菌剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a><a href="">环境改良剂</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                      </ul>
+       			 	</div>
+       			 </div>
+<div class="banner">
+	<div class="bd">
+		<ul>
+			<li><a target="_blank" href="#"><img src="images/banner01.jpg" /></a></li>
+			<li><a target="_blank" href="#"><img src="images/banner02.jpg" /></a></li>
+
+		</ul>
+	</div>
+
+	<div class="hd"><ul></ul></div>
+</div>
+<script type="text/javascript">jQuery(".banner").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, });</script>
+
+<div class="qjd_choice">
+    <input type="button" value="" onClick="company()" name="" class="btn01" />
+    <input type="button" value="" onClick="channel()" name="" class="btn02" />
+</div>
+<div class="kx">
+    	<div class="kx_biaoti"><h5>牧易快讯</h5><a href="#">更多</a></div>
+        <div class="kx_content">
+        	<ul>
+            	<li><a href="#">8月16日全国大米价格日全国大米价格</a></li>
+                <li><a href="#"><span>[公告]&nbsp;</span>8月16日全国大米价格</a></li>
+                <li><a href="#"><span>[报价]&nbsp;</span>8月16日全国大米价格</a></li>
+                <li><a href="#">8月16日全国大米价格</a></li>
+                <li><a href="#">8月16日全国大米价格</a></li>
+                <li><a href="#">8月16日全国大米价格</a></li>
+                <li><a href="#">8月16日全国大米价格</a></li>
+                <li><a href="#">8月16日全国大米价格</a></li>
+                <li><a href="#">8月16日全国大米价格</a></li>
+            </ul>
+        </div>
+</div>
+
+</div>
+<!-- banner E -->
+
+<div class="clear"></div>
+<div class="tg_content">
+
+<!-- 文字无缝上滚动 S -->
+<div id="f_order" class="f_order">
+  <div class="f_order_top">
+    <h3>牧易商城-商品订单</h3>
+  </div>
+  <div class="bd">
+    <ul>
+      <li>
+          <p>订单号1：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号2：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号3：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号4：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号5：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号5：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号5：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">jQuery("#f_order").slide({ mainCell:"ul",autoPlay:true,effect:"topMarquee",interTime:30,vis:7  });</script>
+<!-- 文字无缝上滚动 E -->
+
+<!-- 附近旗舰店 -->
+<div class="nearby_store">
+  <div class="f_order_top">
+    <h3>附近旗舰店</h3>
+  </div>
+  <div class="nearby_store_box">
+    <div class="nearby_store_box_img"><a href="#"><img src="images/flag_search_deafult.jpg"></a></div>
+    <a href="#" class="nearby_store_box_name">正大饲料旗舰店正大饲料旗舰店</a>
+    <button class="nearby_store_box_btn">进入店铺</button>
+  </div>
+  <div class="nearby_store_box">
+    <div class="nearby_store_box_img"><a href="#"><img src="images/bixuan01.jpg"></a></div>
+    <a href="#" class="nearby_store_box_name">正大饲料旗舰店</a>
+    <button class="nearby_store_box_btn">进入店铺</button>
+  </div>
+  <div class="nearby_store_box">
+    <div class="nearby_store_box_img"><a href="#"><img src="images/flag_search_deafult.jpg"></a></div>
+    <a href="#" class="nearby_store_box_name">正大饲料旗舰店</a>
+    <button class="nearby_store_box_btn">进入店铺</button>
+  </div>
+  <div class="nearby_store_box">
+    <div class="nearby_store_box_img"><a href="#"><img src="images/flag_search_deafult.jpg"></a></div>
+    <a href="#" class="nearby_store_box_name">正大饲料旗舰店</a>
+    <button class="nearby_store_box_btn">进入店铺</button>
+  </div>
+</div>
+<!-- end 附近旗舰店 -->
+
+<!-- 文字无缝上滚动 S -->
+<div id="f_orders" class="f_order">
+  <div class="f_order_top">
+    <h3>猪贸通-生猪交易订单</h3>
+  </div>
+  <div class="bd">
+    <ul>
+      <li>
+          <p>订单号1：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号2：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号3：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号4：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号5：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号2：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号3：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号4：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+      <li>
+          <p>订单号5：<span>4545454545</span></p>
+          <p>发货单：<span>4545454545</span></p>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">jQuery("#f_orders").slide({ mainCell:"ul",autoPlay:true,effect:"topMarquee",interTime:30,vis:7  });</script>
+<!-- 文字无缝上滚动 E -->
+
+</div>
+
+<div class="clear"></div>
+
+<!-- 限时抢购 -->
+<div class="slideTxtBox">
+  <div class="hd">
+    <ul><li class="on">热卖商品</li><li>最新上架</li><li>限时特价</li></ul> <span><a href="#">更多</a></span>
+  </div>
+
+    <div class="bd">
+    <ul>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a><i class="tg_con_ico01"></i></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/product.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a><i class="tg_con_ico02"></i></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/product.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a><i class="tg_con_ico03"></i></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a><i class="tg_con_ico04"></i></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    </ul>
+    <ul>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/product.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/product.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    </ul>
+        <ul>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/product.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/product.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="slide_img"><a href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    </ul>
+   </div>
+</div>
+<script  type="text/javascript">
+     jQuery(".slideTxtBox").slide({effect:"left"});
+</script>
+<!-- end 限时抢购 -->
+
+<div class="clear"></div>
+
+<!--1L-->
+<!--品牌-->
+
+<div class="f_brand">
+	<div class="f_brand_box">
+        <ul>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+            <li><a href="#"><img src="images/flagship_store.png" /></a></li>
+        </ul>
+    </div>
+	<a class="prev"></a>
+	<a class="next"></a>
+</div>
+<script type="text/javascript">jQuery(".f_brand").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:7, scroll:1, autoPage:true, pnLoop:true });</script>
+
+<!--end 品牌-->
+<div class="product_content">
+	<div class="product_top product_top01">
+    	<h3>1F</h3><p>兽药</p>
+        <div class="product_top_rt">
+        	<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>|<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>|<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>
+    	</div>
+    </div>
+	<div class="pr_left pr_left01">
+    	<a class="pr_left_top" href="#"><img src="images/banner01.jpg" /></a>
+        <div class="pr_brand">
+        	<img src="images/flagship_store01.jpg" />
+        </div>
+    </div>
+    <div class="pr_center">
+    <ul>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    </ul>
+  </div>
+    <div class="pr_right">
+        <div class="pr_right_con">
+        	<H5>热销榜</H5>
+            <ul>
+            	<li><div class="pr_right_ul_lt"><a href="#"><img src="images/1f_pic0442.jpg" /></a></div><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
+<!--end 1L-->
+<!--2L-->
+<div class="product_content">
+	<div class="product_top product_top02">
+    	<h3>2F</h3><p>饲料</p>
+        <div class="product_top_rt">
+        	<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>|<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>|<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>
+    	</div>
+    </div>
+	<div class="pr_left pr_left02">
+    	<a class="pr_left_top" href="#"><img src="images/banner01.jpg" /></a>
+        <div class="pr_brand">
+        	<img src="images/flagship_store02.jpg" />
+        </div>
+    </div>
+
+    <div class="pr_center">
+    <ul>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    </ul>
+  </div>
+    <div class="pr_right">
+        <div class="pr_right_con">
+        	<H5>热销榜</H5>
+            <ul>
+            	<li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
+<!--end 2L-->
+<!--3L-->
+<div class="product_content">
+	<div class="product_top product_top03">
+    	<h3>3F</h3><p>器械设备</p>
+        <div class="product_top_rt">
+        	<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>|<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>|<a href="#">保肝护肾</a>|<a href="#">呼吸系统药</a>
+    	</div>
+    </div>
+	<div class="pr_left pr_left03">
+    	<a class="pr_left_top" href="#"><img src="images/banner01.jpg" /></a>
+        <div class="pr_brand">
+        	<img src="images/flagship_store03.jpg" />
+        </div>
+    </div>
+    <div class="pr_center">
+    <ul>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    <li><div class="pr_img"><a class="img" href="" target="_blank"><img src="images/banner01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a></li>
+    </ul>
+  </div>
+    <div class="pr_right">
+        <div class="pr_right_con">
+        	<H5>热销榜</H5>
+            <ul>
+            	<li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+                <li><a class="pr_right_ul_lt" href="#"><img src="images/1f_pic0442.jpg" /></a><div class="pr_right_ul_rt"><p><span>￥289</span></p><p><a href="#">正品防爆 养殖照明灯 养殖取暖灯 节能照明灯 猪用取暖灯猪用取暖灯猪用取暖灯猪用取</a></p><p class="sc">已售出<span class="sc">0</span>件</p></div></li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
+<!--end 3L-->
+
+<!--link-->
+<div class="link">
+	<div class="link_box">
+    	<h3>合作伙伴：</h3>
+        <div class="link_box_rt">
+            <img src="images/link_a01.jpg" />
+            <img src="images/link_a02.jpg" />
+            <img src="images/link_a03.jpg" />
+            <img src="images/link_a04.jpg" />
+            <img src="images/link_a05.jpg" />
+            <img src="images/link_a06.jpg" />
+        </div>
+    </div>
+    <div class="link_box">
+    	<h3>投资机构：</h3>
+        <div class="link_box_rt">
+            <img src="images/link_b01.jpg" />
+            <img src="images/link_b02.jpg" />
+            <img src="images/link_b03.jpg" />
+            <img src="images/link_b04.jpg" />
+            <img src="images/link_b05.jpg" />
+            <img src="images/link_b06.jpg" />
+        </div>
+    </div>
+    <div class="link_box">
+    	<h3>金融服务：</h3>
+        <div class="link_box_rt">
+            <img src="images/link_c01.jpg" />
+            <img src="images/link_c02.jpg" />
+            <img src="images/link_c03.jpg" />
+            <img src="images/link_c04.jpg" />
+            <img src="images/link_c05.jpg" />
+            <img src="images/link_c06.jpg" />
+            <img src="images/link_c07.jpg" />
+            <img src="images/link_c08.jpg" />
+            <img src="images/link_c09.jpg" />
+            <img src="images/link_c10.jpg" />
+            <img src="images/link_c11.jpg" />
+            <img src="images/link_c12.jpg" />
+            <img src="images/link_c13.jpg" />
+            <img src="images/link_c14.jpg" />
+            <img src="images/link_c15.jpg" />
+            <img src="images/link_c16.jpg" />
+            <img src="images/link_c17.jpg" />
+            <img src="images/link_c18.jpg" />
+        </div>
+    </div>
+</div>
+<!--end link-->
+<div class="char">
+	<div class="char_box"><img src="images/inform.jpg"/></div>
+</div>
+<!--tyro-->
+<div class="tyro">
+	<div class="tyro_main">
+    	<ul>
+        	<li>
+            	<h3>新手上路</h3>
+                <a href="#">新手帮助</a>
+            </li>
+            <li>
+            	<h3>购物指南</h3>
+                <a href="#">购物流程</a>
+                <a href="#">常见问题</a>
+            </li>
+            <li>
+            	<h3>支付方式</h3>
+                <a href="#">付款问题</a>
+                <a href="#">支付方式</a>
+            </li>
+            <li>
+            	<h3>配送方式</h3>
+                <a href="#">配送方式</a>
+            </li>
+            <li>
+            	<h3>特色服务</h3>
+                <a href="#">特色服务</a>
+            </li>
+            <li class="tyro_last">
+            	<h3>关于我们</h3>
+                <a href="#">关于我们</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+    	<a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!--end footer-->
+
+<!--end tyro-->
+<!-- operation_b -->
+<div class="operation_b">
+  <a href="">
+    <div class="operation_b_img"><span><img src="images/operation_img.jpg" /></span></div>
+    <div class="operation_b_text"><b href="#">正大饲料旗舰店</b><span>点击进入</span></div>
+  </a>
+</div>
+<!-- end operation_b -->
+</body>
+</html>

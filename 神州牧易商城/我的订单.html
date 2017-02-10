@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>我的订单</title>
+<link href="css/base_front.css" type="text/css" rel="stylesheet" />
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/jQselect.js"></script>
+<script type="text/javascript">
+	function newadr(){
+	document.getElementById('zhezhao').style.display='block';
+	document.getElementById('newadr').style.display='block';
+	}
+	function newadr_close(){
+	document.getElementById('zhezhao').style.display='none';
+	document.getElementById('newadr').style.display='none';
+	}
+</script>
+</head>
+
+<body>
+
+<!-- 新地址弹出框 -->
+<div id="zhezhao"></div>
+<div class="newadr" id="newadr">
+<div class="newadr_confirm">
+<div class="newadr_border"></div>
+<div class="newadr_box">
+	<h3><strong>填写新地址</strong><input type="button" value="×" class="button" onClick="newadr_close()" /></h3>
+	<form>
+	<div class="areabox">
+		<span class="area"><i>*</i>所在地区：</span>
+		<select class="sel_city">
+			<option>请选择</option>
+			<option>河南省</option>
+		</select>
+		<select  class="sel_city">
+			<option>请选择</option>
+			<option>郑州市</option>
+		</select>
+		<select  class="sel_city">
+			<option>请选择</option>
+			<option>金水区</option>
+            <option>二七区</option>
+		</select>
+        <span class="tishi">请选择区域</span>
+  </div>
+	<div class="areabox">
+		<span class="area clear"><i>*</i>详细地址：</span>
+		<textarea name="" cols="" rows="" class="textbox"></textarea>
+        <span class="tishi">请输入正确的街道地址</span>
+	</div>
+	<div class="areabox">
+		<span class="area clear"><i>*</i>邮政编码：</span>
+		<input name="input" type="text" class="postal"/>
+  </div>
+	<div class="areabox">
+		<span class="area clear"><i>*</i>收&nbsp;货&nbsp;&nbsp;人：</span>
+		<input name="" type="text" class="postal"/>
+	</div>
+    <div class="areabox">
+		<span class="area clear"><i>*</i>电子邮箱：</span>
+		<input name="input" type="text" class="postal"/>
+  </div>
+	<div class="areabox">
+		<span class="area clear"><i>*</i>手机号码：</span>
+		<input name="" type="text" class="postal"/><b class="tagging">手机与固话至少填写一项</b>
+	</div>
+	<div class="areabox">
+	<span class="area clear">电话号码：</span>
+    <input name="" type="text" class="postal"/>
+    </div>
+    <div class="clear"></div>
+	<input name="" type="checkbox" value="" class="seras"/><span class="mr_address">设为默认收货地址</span>
+	<div class="qdcz_btn clear">
+        <input name="" type="button" value="确定" class="qd_button"  onClick="newadr_close()" />
+        <input name="" type="button" value="重置" class="cz_button" />
+    </div>
+</form>
+</div>
+</div>
+</div>
+<!-- end 新地址弹出框 -->
+
+<!--top-->
+<div class="topnav_bg">
+	<div class="topnav">
+	  <p>您好，欢迎来到神州农易官方商城<strong>[农信网集团旗下农业电商平台]</strong></p>
+      <div class="topnav_rt">
+      	<a href="#">登录</a><a href="#">免费注册</a><a href="#">我的订单</a><a href="#" >卖家中心</a>
+      </div>
+	 
+	</div>
+</div>
+<!--end top-->
+<!--logo-->
+<div class="logo_content">
+	<div class="logo_lt">
+		<a href="#"><img src="images/logo.jpg"/></a>
+    </div>
+    <div class="logo_mid">
+		<div class="logo_mid_lt">
+        	<SELECT id=a>
+                <OPTION value=1 selected>商品</OPTION>
+                <OPTION value=2>旗舰店</OPTION>
+            </SELECT>            
+        </div>
+        <SCRIPT type=text/javascript>
+	$(document).ready(function() {
+		$("#a").selectbox();
+	});
+	</SCRIPT>
+   	<input type="text" value="" class="logo_mid_md" />  
+    <button class="logo_mid_rt">搜索</button>
+      <div class="keyword">        
+        <ul>
+           <li><a href="#" class="hover">饲料</a></li>
+           <li><a href="#">售药</a></li>
+           <li><a href="#">预混料</a></li>
+   	    </ul>
+      </div>
+    </div>
+	<div class="logo_rt">
+    	<button></button>
+        <div class="logo_num">
+        	<img class="fl" src="images/gwc_num_lt.jpg" />
+            <span class="fl">9</span>
+            <img class="fl" src="images/gwc_num_rt.jpg" />
+        </div>
+    </div>
+</div>
+
+<!--end logo-->
+<div class="clear"></div>
+
+<div class="nav">
+	<div class="nav_main">
+		<H3><span>全部商品分类</span></H3>
+          <ul>
+          	<li><a href="#" class="current">首页</a></li>
+            <li><a href="#">兽药</a></li>
+            <li><a href="#">饲料</a></li>
+            <li><a href="#">器械设备</a></li>
+            <li><a href="#">禽畜交易</a></li>
+            <li><a href="#">生物制品</a></li>
+            <li><a href="#">服务产品</a></li>
+          </ul>
+   	    <div class="qjd"><a href="">旗舰店</a></div>
+   </div>
+</div>
+<!--end nav-->
+<div class="main">
+<!--cart-->
+<div class="mycart">
+				<div class="mybasket_img"><img src="images/shopping_01.jpg" /></div>
+                <div class="shopping-cart">
+					<div class="choicegoods01 choicegoods04">Step.1 我的购物车</div>
+					<div class="choicegoods01">Step.2 填写核对订单信息</div>
+					<div class="choicegoods01 choicegoods03">Step.3 订单提交成功</div>
+					</div>
+                
+</div>             
+<!--end cart-->
+
+<!--order-->
+
+<div class="settlement">
+	<div class="orders">填写核对订单信息</div>
+    <!--收货人信息-->
+    <div class="information">
+	<div class="step_cont_top">收货人信息</div>
+    
+    <div class="receipt yesback">
+         <input name="RadioGroup1" type="radio" id="RadioGroup1_0" value="" checked="checked" />
+        <p>河南省 郑州市 金水区 文化路98号 （张三 收）15896569654 </p>
+        <span class="default">
+            <a href="#">设为默认</a>
+            <a href="#" class="editor" onClick="newadr()">编辑</a>
+            <a href="#" class="editor">删除</a>
+        </span>
+    </div>
+    <div class="receipt">
+          <input type="radio" name="RadioGroup1" value="" id="RadioGroup1_1" />
+          <p>河南省 郑州市 金水区 文化路98500文化路98 （小颖 收）18237149156 </p>
+          <span class="default">
+             <a href="#">设为默认</a>
+             <a href="#" class="editor" onClick="newadr()">编辑</a>
+             <a href="#" class="editor">删除</a>
+          </span>
+      </div>
+      <div class="receipt">
+         <input type="radio" name="RadioGroup1" value="" id="RadioGroup1_2" />
+         <p>河南省 郑州市 二七区 陇海路航海路向北100米 （李思思 收）13584568156 </p>
+         <span class="default">
+            <a href="#">设为默认</a>
+            <a href="#" class="editor" onClick="newadr()">编辑</a>
+            <a href="#" class="editor">删除</a>
+         </span>
+      </div>           
+			<input name="" type="button" value="使用新地址" class="newaddress" onClick="newadr()"/>
+			   <div class="clear"></div>
+			   	
+				</div>
+				<!--end 收货人信息-->
+				 <!--商品信息-->
+                <div class="information">
+                <div class="step_cont">
+                  <div class="step_cont_top">商品信息</div>
+                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="commodity_box">
+                  <tr class="gwc_title box">
+                    <td align="center" colspan="2">商品</td>
+                    <td align="center" width="24%">金额</td>
+                    <td align="center" width="11%">数量</td>
+                    <td align="center" width="11%">优惠方式</td>
+                    <td align="center" width="18%">总价</td>
+                  </tr>
+                <tr>
+                   <td width="12%" class="commodity" align="center"><a href="#"><img src="images/bixuan01.jpg" /></a></td>
+                   <td align="left" width="26%"><span class="commodity_tit"><a href="#">长虹长虹长虹长虹长虹长虹长虹长虹长虹长虹</a></span><br/>
+                   <span class="commodity_cs">规格：M号 白色</span></td>
+                   <td align="center" width="24%">价&nbsp;&nbsp;&nbsp;格：&yen;522222222233.00<br /><span class="red">促销价：&yen;522222222233.00</span></td>
+                    <td align="center" width="11%"><span class="red">1502</span></td>
+                    <td align="center" width="11%"><span>无</span></td>
+                    <td align="center" width="18%" class="operation"><span class="red">&yen;522222222233.00</span></td>
+                </tr>
+                <tr>
+                   <td class="commodity" align="center"><a href="#"><img src="images/bixuan01.jpg" /></a></td>
+                   <td align="left"><span class="commodity_tit"><a href="#">巴糕点</a></span><br/>
+                   <span class="commodity_cs">规格：500g</span></td>
+                   <td align="center">价&nbsp;&nbsp;&nbsp;格：&yen;4864346463.00<br /><span class="red">促销价：&yen;4864346463.00</span></td>
+                    <td align="center"><span class="red">1502</span></td>
+                    <td align="center" class="operation"><span class="huiyuanth">会员特惠</span></td>
+                    <td align="center"><span class="red">&yen;456451649878.00</span></td>
+                </tr>
+                <tr>
+                   <td class="commodity" align="center"><a href="#"><img src="images/bixuan01.jpg" /></a></td>
+                   <td align="left"><span class="commodity_tit"><a href="#">巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点巴糕点</a></span><br/>
+                   <span class="commodity_cs">规格：500g</span></td>
+                   <td align="center">价&nbsp;&nbsp;&nbsp;格：&yen;4864346463.00<br /><span class="red">促销价：&yen;4864346463.00</span></td>
+                    <td align="center"><span class="red">1502</span></td>
+                    <td align="center" class="operation"><span class="huiyuanth">会员特会员特惠</span></td>
+                    <td align="center"><span class="red">&yen;456451649878.00</span></td>
+                </tr>
+            </table>
+               </div>
+                    </div>
+				<!--end 商品信息-->    
+    <!--订单结算-->
+      <div class="invoice">
+         <div class="invoice_lt">
+        	<p><span>备注：</span>
+        	<input style="width:300px;height:50px;" class="field" type="text" onfocus="if(value=='请在此处填写您对商品的特殊要求，对商家的意见等。') {value=''}" onblur="if (value=='') {value='请在此处填写您对商品的特殊要求，对商家的意见等。'}">
+        </p>
+        </div>
+        
+     <div class="invoice_rt">
+       <p><strong>运送方式：</strong><span>快递</span></p>
+       <p><strong>收货地址：</strong><span>河南省郑州市金水区水区花园路三全路交叉口北600米路东56号院</span></p>
+       <p><strong>收 件 人：</strong><span>我是收件人</span></p>
+       <p><strong>联系电话：</strong><span>1215446231546</span></p>
+     </div>         
+	
+    </div>
+    <!--end 订单结算-->
+    
+    <div class="invoice_last">
+     <input class="tijiao_btn" type="button" value="提交订单" />
+     <i>&yen;2333333396.30</i><em>应付金额：</em>
+    	
+    </div>
+    
+</div>
+</div>
+<!--end order-->
+</div>
+<!--end link-->
+<div class="char">
+	<div class="char_box"><img src="images/inform.jpg"/></div>
+</div>
+<!--tyro-->
+<div class="tyro">
+	<div class="tyro_main">
+    	<ul>
+        	<li>
+            	<h3>新手上路</h3>
+                <a href="#">新手帮助</a>
+            </li>
+            <li>
+            	<h3>购物指南</h3>
+                <a href="#">购物流程</a>
+                <a href="#">常见问题</a>
+            </li>
+            <li>
+            	<h3>支付方式</h3>
+                <a href="#">付款问题</a>
+                <a href="#">支付方式</a>
+            </li>
+            <li>
+            	<h3>配送方式</h3>
+                <a href="#">配送方式</a>
+            </li>
+            <li>
+            	<h3>特色服务</h3>
+                <a href="#">特色服务</a>
+            </li>
+            <li class="tyro_last">
+            	<h3>关于我们</h3>
+                <a href="#">关于我们</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+    	<a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!--end footer-->
+
+<!--end tyro-->
+</body>
+</html>

@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>商品搜索页</title>
+<link href="css/base_front.css" type="text/css" rel="stylesheet" />
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/jQselect.js"></script>
+<script type="text/javascript" src="js/system_h.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".system a").click(function(){
+        $(".system a").removeClass();
+        $(this).addClass("hover");
+    });
+	$(".sequence a").click(function(){
+        $(".sequence a").removeClass();
+        $(this).addClass("hover");
+    });
+	
+});
+</script>
+</head>
+
+<body>
+<!--top-->
+<div class="topnav_bg">
+	<div class="topnav">
+	  <p>您好，欢迎来到神州农易官方商城<strong>[农信网集团旗下畜牧业电商平台]</strong></p>
+      <div class="topnav_rt">
+      	<a href="#">登录</a><a href="#">免费注册</a><a href="#">我的订单</a><a href="#" >卖家中心</a>
+      </div>
+	 
+	</div>
+</div>
+<!--end top-->
+<!--logo-->
+
+<div class="logo_content">
+	<div class="logo_lt">
+	  <a href="#"><img src="images/logo.jpg"/></a>
+	  <select>
+   	    <option>请选择</option>
+            <option>河南省</option>
+      </select>
+  </div>
+    <div class="logo_mid">
+		<div class="logo_mid_lt">
+        	<SELECT id=a>
+                <OPTION value=1 selected>商品</OPTION>
+                <OPTION value=2>旗舰店</OPTION>
+            </SELECT>            
+        </div>
+        <SCRIPT type=text/javascript>
+	$(document).ready(function() {
+		$("#a").selectbox();
+	});
+	</SCRIPT>
+   	<input type="text" value="" class="logo_mid_md" />  
+    <button class="logo_mid_rt">搜索</button>
+      <div class="keyword">        
+        <ul>
+           <li><a href="#" class="hover">饲料</a></li>
+           <li><a href="#">售药</a></li>
+           <li><a href="#">预混料</a></li>
+   	    </ul>
+      </div>
+      
+    </div>
+	<div class="logo_rt">
+    	<button></button>
+        <div class="logo_num">
+        	<img class="fl" src="images/gwc_num_lt.jpg" />
+            <span class="fl">9</span>
+            <img class="fl" src="images/gwc_num_rt.jpg" />
+        </div>
+    </div>
+</div>
+
+<!--end logo-->
+<div class="clear"></div>
+
+<div class="nav">
+	<div class="nav_main">
+		<H3><span>全部商品分类</span></H3>
+          <ul>
+          	<li><a href="#" class="current">首页</a></li>
+            <li><a href="#">兽药</a></li>
+            <li><a href="#">饲料</a></li>
+            <li><a href="#">器械设备</a></li>
+            <li><a href="#">禽畜交易</a></li>
+            <li><a href="#">生物制品</a></li>
+            <li><a href="#">服务产品</a></li>
+          </ul>
+   	    <div class="qjd"><a href="">旗舰店</a></div>
+   </div>
+</div>
+
+<!--end nav-->
+<div class="main">
+<!--p_search-->
+<div class="p_search">
+	<div class="p_sort">
+    	<div class="p_sort_top">
+        	<div class="p_sort_top_lt"><b>全部</b><span>></span><a href="#">种子</a></div>
+            <div class="p_sort_top_rt">共有<span>1245</span>个商品</div>
+        </div>
+        <tbody>
+        	<table class="sort_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="sort_table_top" colspan="3">种子专区</td>
+              </tr>
+              <tr>
+                <td class="sort_tab_na" width="100px">大田种子:</td>
+                <td class="sort_tab_m" width="1000px">
+                <div class="system">
+                	<div class="system_s">
+                    	<a class="hover" href="#">默认</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">玉米</a><a href="#">水稻</a>
+                    </div>
+                    <div class="system_h" id="sy01">
+                    	<a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a>
+                    </div>
+                	</div>
+                </td>
+                <td width="" class="sort_tab_more" id="so01"><span>更多</span></td>
+              </tr>
+              <tr>
+                <td class="sort_tab_na" width="100px">瓜菜种苗:</td>
+                <td class="sort_tab_m" width="1000px"><div class="system">
+                	<div class="system_s">
+                    	<a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">玉米</a><a href="#">水稻</a>
+                    </div>
+                    <div class="system_h" id="sy02">
+                    	<a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a>
+                    </div>
+                	</div>
+                </td>
+                <td width="" class="sort_tab_more" id="so02"><span>更多</span></td>
+              </tr>
+              <tr>
+                <td class="sort_tab_na" width="100px">果树种苗:</td>
+                <td class="sort_tab_m" width="1000px"><div class="system">
+                	<div class="system_s">
+                    	<a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">玉米</a><a href="#">水稻</a>
+                    </div>
+                    <div class="system_h" id="sy03">
+                    	<a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a>
+                    </div>
+                	</div>
+                </td>
+                <td width="" class="sort_tab_more" id="so03"><span>更多</span></td>
+              </tr>
+              <tr>
+                <td class="sort_tab_na" width="100px">药材种苗:</td>
+                <td class="sort_tab_m" width="1000px"><div class="system">
+                	<div class="system_s">
+                    	<a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">玉米</a><a href="#">水稻</a>
+                    </div>
+                    <div class="system_h" id="sy04">
+                    	<a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a>
+                    </div>
+                	</div>
+                </td>
+                <td width="" class="sort_tab_more" id="so04"><span>更多</span></td>
+              </tr>
+              <tr>
+                <td class="sort_tab_na" width="100px">其他:</td>
+                <td class="sort_tab_m" width="1000px"><div class="system">
+                	<div class="system_s">
+                    	<a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">小麦</a><a href="#">玉米</a><a href="#">水稻</a><a href="#">玉米</a><a href="#">水稻</a>
+                    </div>
+                    <div class="system_h" id="sy05">
+                    	<a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a><a href="#">旱稻</a><a href="#">大麦</a><a href="#">高粮</a><a href="#">谷子</a><a href="#">甘薯</a><a href="#">木薯</a><a href="#">蚕豆</a><a href="#">绿豆</a><a href="#">黑豆</a><a href="#">小豆</a>
+                    </div>
+                	</div>
+                </td>
+                <td width="" class="sort_tab_more" id="so05"><span>更多</span></td>
+              </tr>
+			</table>
+        </tbody>
+    </div>
+    <div class="sequence">
+    	<a href="#">发货地</a><span>排序：</span><a class="hover" href="#">综合排序</a><a href="#">销量</a><a href="#">价格</a><a href="#">折扣</a>
+    </div>
+    <div class="s_comm">
+    	<div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+            <i class="tg_con_ico01"></i>
+        </div>
+        <div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/img/01.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+        </div>
+        <div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/1f_pic0442.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+        </div>
+        <div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+        </div>
+        <div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+        </div>
+        <div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+        </div>
+        <div class="s_comm_box">
+        	<div class="s_comm_img"><a href="" target="_blank"><img src="images/2f_02.jpg" /></a></div><H5><a href="#">2%东立阳光大猪用预大猪用预混料东立阳光大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><b><a href="#" class="flagship">正大饲料旗舰店</a><i>销量：<span>32423</span></i></b>
+        </div>
+    </div>
+    
+    <div class="pagelist">
+                  <a href="#" class="onepage">首页</a>
+                  <a href="#" class="onepage">上一页</a>
+                  <a href="#" class="page_first">1</a>
+                  <a href="#" >2</a> <a href="#">3</a>
+                  <span class="ellipsis">...</span> 
+                  <a href="#">21</a> 
+                  <a href="#" class="onepage">末页</a> 
+                  <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+     </div>
+    
+</div>
+<!--end p_search-->
+</div>
+
+<!--end link-->
+<div class="char">
+	<div class="char_box"><img src="images/inform.jpg"/></div>
+</div>
+<!--tyro-->
+<div class="tyro">
+	<div class="tyro_main">
+    	<ul>
+        	<li>
+            	<h3>新手上路</h3>
+                <a href="#">新手帮助</a>
+            </li>
+            <li>
+            	<h3>购物指南</h3>
+                <a href="#">购物流程</a>
+                <a href="#">常见问题</a>
+            </li>
+            <li>
+            	<h3>支付方式</h3>
+                <a href="#">付款问题</a>
+                <a href="#">支付方式</a>
+            </li>
+            <li>
+            	<h3>配送方式</h3>
+                <a href="#">配送方式</a>
+            </li>
+            <li>
+            	<h3>特色服务</h3>
+                <a href="#">特色服务</a>
+            </li>
+            <li class="tyro_last">
+            	<h3>关于我们</h3>
+                <a href="#">关于我们</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+    	<a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!--end footer-->
+
+<!--end tyro-->
+</body>
+</html>

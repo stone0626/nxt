@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>商品详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".p_operate").click(function(){
+        $(".wrapper").css({display :"block"});
+        $(".buy_main").css({display :"block"});
+    });
+    $(".buy_top a").click(function(){
+        $(".wrapper").css({display :"none"});
+        $(".buy_main").css({display :"none"});
+    });
+});
+</script>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<style type="text/css" media="screen">
+.clear{clear: both;}
+
+.p_top{height:44px;width:100%;background: #e6e6e6;overflow: hidden;border: 1px solid #ddd;}
+.p_top h1{font-size: 1rem;text-align: center;line-height: 30px;}
+
+.p_basic{width:100%;overflow: hidden;}
+.p_basic_pic{width:322px;height:360px;margin:10px auto 0;position:relative;overflow:hidden;}
+.p_basic_pic .hd{width:100%; height:12px;position:absolute; z-index:21;bottom:10px;text-align:center;}
+.p_basic_pic .hd ul{display:inline-block;height:10px;font-size:0;vertical-align:top;}
+.p_basic_pic .hd ul li{display:inline-block;width:10px;height:10px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px; background:#8C8C8C;margin:0 5px;vertical-align:top;}
+.p_basic_pic .hd ul .on{background:#f00;}
+
+.p_basic_pic .bd{position:relative;z-index:0;}
+.p_basic_pic .bd li{width:322px;height:322px;overflow: hidden;}
+.p_basic_pic .bd li .p_basic_img{width:322px;height:322px;display:table;}
+.p_basic_pic .bd li .p_basic_img span{display:table-cell;vertical-align:middle;text-align:center;}
+.p_basic_pic .bd li .p_basic_img img{max-width:320px;max-height:320px;}
+
+.p_basic_na{width:100%;overflow: hidden;padding:5px;}
+.p_basic_na_top{font-size: 16px; font-family: "Microsoft Yahei";color:#333;line-height: 20px;height:40px; overflow: hidden;display: block;}
+.p_basic_pri{overflow: hidden;padding:5px;width:90%;margin:0 auto;}
+.p_basic_pri_lt{float: left;overflow: hidden;}
+.p_basic_pri_lt b{font-size: 22px;color:#f00;font-family: "Arial"; display:block; line-height: 24px;margin-top:4px;float:left; }
+.p_basic_pri_lt span{display:block; background: #f00;color:#fff;padding: 3px 5px;font-size: 12px;margin:5px 10px 0;float:left;}
+.p_basic_pri_lt i{font-size: 1rem;font-family: "Arial";text-decoration:line-through;color:#888;display: block;float:left;line-height: 30px;}
+.p_basic_pri_rt{float:right;line-height:30px;color:#555;font-size: 12px;margin:0;}
+.p_basic_pri_rt i{font-size: 15px;font-family: "Arial";font-style: normal;}
+.p_basic_num{width: 100%;display: block; font-family: "Microsoft Yahei";}
+
+.p_detail_img{display:table;width:100%;height:auto;}
+.p_detail_img span{display:table-cell;vertical-align:top;text-align:center;}
+.p_detail_img span img{max-width:100%;height:auto;display: inline-block;}
+
+.p_operate{position: fixed;width:100%;height:50px;left:0;bottom:0;display: table;text-align: center;z-index: 200;background: #fe0000;opacity: 0.9;cursor: pointer;}
+.p_operate a{color:#fff;text-decoration: none;font-size: 1.4rem;font-weight: normal;line-height: 50px;}
+
+.wrapper{width:100%;height:100%;background: #000;opacity: 0.6;position: absolute;left:0;top:0;z-index: 9998;display: none;}
+.buy_main{width:100%;height:100%;position: absolute;left:0;top:0;z-index: 9999;display: none;}
+.buy{width:70%;margin:3rem auto 0;background:#fff;border:1px solid #ddd;}
+.buy_top{width:100%;height:40px;overflow: hidden;border-bottom: 1px solid #ddd;margin-bottom: 1rem;}
+.buy_top h3{line-height: 40px;margin:0;padding-left: 0.5rem;float: left;}
+.buy_top a{float: right;}
+.buy_top a i{font-size:1.5rem;color:#666;margin:0.5rem 0.5rem 0 0;}
+.buy_box{width:80%;overflow: hidden;margin:0 auto 1rem;font-family: "Microsoft Yahei";}
+.buy_box span{width:20%;float: left;line-height: 2rem;}
+.buy_box input{width:75%;border:1px solid #d8d8d8;padding-left:0.5rem;line-height: 1.2rem;height:1.8rem;}
+.buy button{width:30%;height:2rem;background: #f00;color:#fff;border:none;outline: none;margin:0 auto 1.5rem;display: block;}
+</style>
+</head>
+<body style="margin:0;position:relative;">
+<!-- 购买弹出框 -->
+<div class="wrapper"></div>
+<div class="buy_main">
+    <div class="buy">
+        <div class="buy_top"><h3>确定购买</h3><a href="#"><i class="fa fa-close"></i></a></div>
+        <div class="buy_box">
+            <span>地址：</span><input type="text" name="">
+        </div>
+        <div class="buy_box">
+            <span>地址：</span><input type="text" name="">
+        </div>
+        <div class="buy_box">
+            <span>地址：</span><input type="text" name="">
+        </div>
+        <button>确定</button>
+    </div>
+</div> 
+<!-- end 购买弹出框 -->
+    <div class="p_top">
+        <button style="left:0.7rem;top:0;" class="ui-btn-left ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-inline ui-shadow ui-corner-all"></button>
+        <h1>商品详情</h1>
+    </div>
+
+    <div data-demo-html="true" role="main" class="ui-content" style="margin-bottom: 2.5rem;">
+        <div id="p_basic_pic" class="p_basic_pic">
+            <div class="bd">
+                <ul>
+                    <li><div class="p_basic_img"><span><img src="images/02.jpg" /></span></div></li>
+                    <li><div class="p_basic_img"><span><img src="images/banner01.jpg" /></span></div></li>
+                    <li><div class="p_basic_img"><span><img src="images/banner02.jpg" /></span></div></li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>          
+        <script type="text/javascript">
+                TouchSlide({ 
+                    slideCell:"#p_basic_pic",
+                    titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                    mainCell:".bd ul", 
+                    effect:"left", 
+                    autoPlay:true,//自动播放
+                    autoPage:true, //自动分页
+                });
+        </script>
+        <div class="p_basic_na">
+            <p class="p_basic_na_top">排毒益生 母猪专用脱霉剂 龙胆泻肝散 泻肝胆实火 清三焦湿专用脱霉剂 龙热</p>
+            <div class="p_basic_pri">
+                <div class="p_basic_pri_lt">
+                    <b>&yen;19.00</b><span>卖家促销</span><i>&yen;399.00</i>    
+                </div>
+                <p class="p_basic_pri_rt">月销量：<i>15444</i></p>
+            </div>
+            <p class="p_basic_num"> 产品规格：1袋50Kg</p>
+        </div>
+        <div class="p_detail_img">
+            <span><img src="images/banner02.jpg" /></span>
+        </div>
+
+        <div class="p_operate">
+            <a href="#"><span>立即购买</span></a>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

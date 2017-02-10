@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>个人中心-我的收藏</title>
+<link href="css/base_center.css" type="text/css" rel="stylesheet" />
+<link href="css/main_center.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".detail_nav li:first").addClass("hover");
+        $(".detail_nav li").click(function(){
+            $(".detail_nav li").removeClass("hover");
+            $(this).addClass("hover");
+            $(".my_collect_box").hide();
+            $("."+ $(this).attr("id")).show();
+        });
+    }); 
+</script>
+</head>
+
+<body>
+<!--top-->
+<div class="top">
+	<div class="top_main">
+        <strong class="top_lt">欢迎来到神州牧易商城个人中心！</strong>
+        <div class="top_rt">
+        	<a href="#" class="top_rt_home">商城首页</a>
+            <a href="#"><img src="images/shopping.png" /><span>购物车</span></a>
+			<div class="collect">
+            	<a href="#"><img src="images/collect.png" /><span>收藏夹</span><img src="images/jiantou_c.png" /></a>
+                <div class="collect_box">
+                	<a href="#">收藏的商品</a>
+                    <a href="#">收藏的旗舰店</a>
+                </div>
+            </div>
+            <a href="#">联系客服</a>
+        </div>
+    </div>
+</div>
+<!--end top-->
+<!-- logo -->
+<div class="logo">
+    <a href="#" class="logo_lt"><img src="images/logo_center.png" /></a>
+    <div class="logo_rt">
+        <input class="logo_rt_in" value="" type="text" />
+        <input class="logo_rt_btn" value="搜索" type="button" />
+    </div>
+</div>
+<!-- end logo -->
+<!-- portrait -->
+<div class="portrait">
+    <div class="portrait_box">
+       <a href="#"  class="portrait_box_img"><i><img src="images/bixuan01.jpg" /></i></a>
+       <p><span>梁山伯与朱丽叶</span><a href="#">账号管理</a><a href="#">退出</a></p>
+    </div>
+</div>
+<!-- end portrait -->
+
+<div class="main">
+<!--slidenav-->
+<div class="slidenav">
+    <div class="slidetop">
+        <h3 class="h3_01">我的订单</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">已买到的商品</a></li>
+        <li><a href="#">我的购物车</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_02">我的收藏</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#" class="hover">收藏的商品</a></li>
+        <li><a href="#">收藏的店铺</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_03">我的设置</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">个人资料</a></li>
+        <li><a href="#">我的收货地址</a></li>
+        <li><a href="#">修改密码</a></li>
+        <li><a href="#">绑定手机</a></li>
+        <li><a href="#">绑定农信宝</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_04">我的收益</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">我的收益</a></li>
+    </ul>
+</div>
+<!--end slidenav-->
+<!--主体-->
+<div class="main_rt">
+<!-- 我的收藏 -->
+<div class="my_collect">
+    <div class="slidetop">
+        <h3>我的收藏</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <div class="my_collect_main">
+        <ul class="detail_nav">
+            <li id="detail1" class="hover">收藏的商品</li>
+            <li id="detail2">收藏的店铺</li>
+         </ul>
+         <div class="my_collect_box detail1">
+            <p class="my_collect_box_top">您共收藏了<span>2</span>个商品</p> 
+            <div class="my_collect_box_main">
+                <div class="my_collect_box_son">
+                    <a class="my_collect_pro_img" href="#"><span><img src="images/bixuan01.jpg" /></span></a>
+                    <a class="my_collect_pro_tit" href="#">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                    <p class="my_collect_pro_pri"><b>&yen;288.00</b><span>&yen;688.00</span></p>
+                    <p class="my_collect_pro_btn"><a class="btn01" href="#">取消收藏</a><a class="btn02" href="#">加入购物车</a></p>
+                </div>
+                <div class="my_collect_box_son">
+                    <a class="my_collect_pro_img" href="#"><span><img src="images/bixuan01.jpg" /></span></a>
+                    <a class="my_collect_pro_tit" href="#">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                    <p class="my_collect_pro_pri"><b>&yen;288.00</b><span>&yen;688.00</span></p>
+                    <p class="my_collect_pro_btn"><a class="btn01" href="#">取消收藏</a><a class="btn02" href="#">加入购物车</a></p>
+                </div>
+                <div class="my_collect_box_son">
+                    <a class="my_collect_pro_img" href="#"><span><img src="images/bixuan01.jpg" /></span></a>
+                    <a class="my_collect_pro_tit" href="#">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                    <p class="my_collect_pro_pri"><b>&yen;288.00</b><span>&yen;688.00</span></p>
+                    <p class="my_collect_pro_btn"><a class="btn01" href="#">取消收藏</a><a class="btn02" href="#">加入购物车</a></p>
+                </div>
+                <div class="my_collect_box_son">
+                    <a class="my_collect_pro_img" href="#"><span><img src="images/bixuan01.jpg" /></span></a>
+                    <a class="my_collect_pro_tit" href="#">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                    <p class="my_collect_pro_pri"><b>&yen;288.00</b><span>&yen;688.00</span></p>
+                    <p class="my_collect_pro_btn"><a class="btn01" href="#">取消收藏</a><a class="btn02" href="#">加入购物车</a></p>
+                </div>
+                <div class="my_collect_box_son">
+                    <a class="my_collect_pro_img" href="#"><span><img src="images/bixuan01.jpg" /></span></a>
+                    <a class="my_collect_pro_tit" href="#">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                    <p class="my_collect_pro_pri"><b>&yen;288.00</b><span>&yen;688.00</span></p>
+                    <p class="my_collect_pro_btn"><a class="btn01" href="#">取消收藏</a><a class="btn02" href="#">加入购物车</a></p>
+                </div>
+                <div class="my_collect_box_son">
+                    <a class="my_collect_pro_img" href="#"><span><img src="images/bixuan01.jpg" /></span></a>
+                    <a class="my_collect_pro_tit" href="#">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                    <p class="my_collect_pro_pri"><b>&yen;288.00</b><span>&yen;688.00</span></p>
+                    <p class="my_collect_pro_btn"><a class="btn01" href="#">取消收藏</a><a class="btn02" href="#">加入购物车</a></p>
+                </div>
+            </div>
+            <!-- 分页 -->
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             <!--end 分页 -->
+            <!-- 1页分页
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            end 1页分页 -->
+         </div>
+         <div class="my_collect_box detail2" style="display: none;">
+            <p class="my_collect_box_top">您共收藏了<span>5</span>个店铺</p> 
+            <div class="my_collect_box_store">
+                <div class="my_collect_box_lt">
+                    <div class="my_collect_box_img">
+                        <a href="#"><b><img src="images/flagship_store.png"></b></a><span>牧易自营</span>
+                    </div>
+                    <a class="my_collect_box_name" href="#">正大饲料旗舰店</a>
+                    <p class="my_collect_box_att"><strong>关注人气：</strong><span>2555人</span></p>
+                    <p class="my_collect_box_att"><strong>关注时间：</strong><span>2016-01-25</span></p>
+                    <a class="my_collect_box_btn" href="#">进入店铺</a>
+                    <div class="my_collect_box_del">
+                        <a href="#" class="fl">相似店铺</a><a href="#" class="fr">取消收藏</a>
+                    </div> 
+                </div>
+                <div class="my_collect_box_rt">
+                    <div class="my_collect_box_rt_box">
+                        <ul>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="prev"></a>
+                    <a class="next"></a>
+                </div>
+<script type="text/javascript">jQuery(".my_collect_box_rt").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:4, scroll:1, autoPage:true, pnLoop:true,});</script>   
+            </div>
+            <div class="my_collect_box_store">
+                <div class="my_collect_box_lt">
+                    <div class="my_collect_box_img">
+                        <a href="#"><b><img src="images/flagship_store.png"></b></a><span>牧易自营</span>
+                    </div>
+                    <a class="my_collect_box_name" href="#">正大饲料旗舰店</a>
+                    <p class="my_collect_box_att"><strong>关注人气：</strong><span>2555人</span></p>
+                    <p class="my_collect_box_att"><strong>关注时间：</strong><span>2016-01-25</span></p>
+                    <a class="my_collect_box_btn" href="#">进入店铺</a>
+                    <div class="my_collect_box_del">
+                        <a href="#" class="fl">相似店铺</a><a href="#" class="fr">取消收藏</a>
+                    </div> 
+                </div>
+                <div class="my_collect_box_rt">
+                    <div class="my_collect_box_rt_box">
+                        <ul>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="prev"></a>
+                    <a class="next"></a>
+                </div>
+<script type="text/javascript">jQuery(".my_collect_box_rt").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:4, scroll:1, autoPage:true, pnLoop:true,});</script>   
+            </div>
+            <div class="my_collect_box_store">
+                <div class="my_collect_box_lt">
+                    <div class="my_collect_box_img">
+                        <a href="#"><b><img src="images/flagship_store.png"></b></a><span>牧易自营</span>
+                    </div>
+                    <a class="my_collect_box_name" href="#">正大饲料旗舰店</a>
+                    <p class="my_collect_box_att"><strong>关注人气：</strong><span>2555人</span></p>
+                    <p class="my_collect_box_att"><strong>关注时间：</strong><span>2016-01-25</span></p>
+                    <a class="my_collect_box_btn" href="#">进入店铺</a>
+                    <div class="my_collect_box_del">
+                        <a href="#" class="fl">相似店铺</a><a href="#" class="fr">取消收藏</a>
+                    </div> 
+                </div>
+                <div class="my_collect_box_rt">
+                    <div class="my_collect_box_rt_box">
+                        <ul>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="prev"></a>
+                    <a class="next"></a>
+                </div>
+<script type="text/javascript">jQuery(".my_collect_box_rt").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:4, scroll:1, autoPage:true, pnLoop:true,});</script>   
+            </div>
+            <div class="my_collect_box_store">
+                <div class="my_collect_box_lt">
+                    <div class="my_collect_box_img">
+                        <a href="#"><b><img src="images/flagship_store.png"></b></a><span>牧易自营</span>
+                    </div>
+                    <a class="my_collect_box_name" href="#">正大饲料旗舰店</a>
+                    <p class="my_collect_box_att"><strong>关注人气：</strong><span>2555人</span></p>
+                    <p class="my_collect_box_att"><strong>关注时间：</strong><span>2016-01-25</span></p>
+                    <a class="my_collect_box_btn" href="#">进入店铺</a>
+                    <div class="my_collect_box_del">
+                        <a href="#" class="fl">相似店铺</a><a href="#" class="fr">取消收藏</a>
+                    </div> 
+                </div>
+                <div class="my_collect_box_rt">
+                    <div class="my_collect_box_rt_box">
+                        <ul>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                            <li>
+                                <a href="#" class="my_collect_box_rt_img"><span><img src="images/bixuan01.jpg" /></span></a>
+                                <a href="#" class="my_collect_box_rt_name">正大饲料200Kg优惠装正大饲料200Kg优惠装</a>
+                                <b class="my_collect_box_rt_pri">&yen;88.00</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="prev"></a>
+                    <a class="next"></a>
+                </div>
+<script type="text/javascript">jQuery(".my_collect_box_rt").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:4, scroll:1, autoPage:true, pnLoop:true,});</script>   
+            </div>
+            <!-- 分页 -->
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             <!--end 分页 -->
+            <!-- 1页分页
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            end 1页分页 -->
+         </div>        
+    </div>
+</div>
+<!-- end 我的收藏 -->
+</div>
+<!--end 主体-->
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+        <a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!-- end 底部 -->
+</body>
+</html>

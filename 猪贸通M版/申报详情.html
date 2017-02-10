@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/pig_market.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("#verified_pig_btn").click(function(){
+        $("#verified_pig").css({"display":"none"});
+        $("#verified_pig_next").css({"display":"block"});
+    });
+    $(".pig_p06").click(function(){
+        $("#pig_ear_num").css({"display":"block"});
+        $(".pig_add_cover").css({"display":"block"});
+    });
+});
+</script>
+
+<title>猪贸通M版-申报详情</title>
+</head>
+<body class="mhome">
+
+<div class="pig_add_cover"></div>
+<!-- 选择品种 -->
+<div class="pig_add" id="pig_variety">
+    <header><h3>选择品种</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_add_cur" id="pig_variety_top">
+        <ul><li></li></ul>
+        <button>确定</button>
+    </div>
+    <div class="pig_add_main">
+        <ul class="pig_add_ul" id="pig_variety_ul">
+            <li><a href="#">内三元</a></li>
+            <li><a href="#">外三元</a></li>
+            <li><a href="#">土杂猪</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 选择品种 -->
+<!-- 选择毛色 -->
+<div class="pig_add" id="pig_trade">
+    <header><h3>选择毛色</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_add_cur" id="pig_trade_top">
+        <ul><li></li></ul>
+        <button>确定</button>
+    </div>
+    <div class="pig_add_main">
+        <ul class="pig_add_ul" id="pig_trade_ul">
+            <li><a href="#">黑色</a></li>
+            <li><a href="#">白色</a></li>
+            <li><a href="#">花色</a></li>
+            <li><a href="#">其他</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 选择毛色 -->
+
+<!-- 选择区域 -->
+<div class="pig_add">
+  <header><h3>选择区域</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+  <div class="pig_add_cur">
+    <ul><li class="cur01">北京</li><li class="cur02">北京</li><li class="cur03">北京</li></ul>
+    <button>确定</button>
+  </div>
+  <div class="pig_add_main">
+    <ul class="pig_add_ul" id="pig_add01">
+      <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津111</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">end</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add02" style="display: none;">
+      <li><a href="#">北京2</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add03" style="display: none;">
+      <li><a href="#">北京3</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">河北</a></li>
+        <li><a href="#">河南</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end 选择区域 -->
+
+<!-- 出栏时间 -->
+<div class="pig_add" id="pig_price">
+    <header><h3>选择时间</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_add_cur" id="pig_price_top">
+        <ul><li></li></ul>
+        <button>确定</button>
+    </div>
+    <div class="pig_add_main">
+        <ul class="pig_add_ul" id="pig_price_ul">
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+            <li><a href="#">2016-05-09 09:21:45</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 出栏时间 -->
+
+<!-- 耳标号 -->
+<div class="pig_add" id="pig_ear_num">
+    <header><h3>选择耳标号</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_add_cur" id="pig_status_top">
+        <ul><li></li></ul>
+        <button>确定</button>
+    </div>
+    <div class="pig_add_main">
+        <ul class="pig_add_ul" id="pig_status_ul">
+            <li><a href="#">12</a></li>
+            <li><a href="#">23</a></li>
+            <li><a href="#">14</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 耳标号 -->
+
+<!-- 配送选择 -->
+<div class="pig_add" id="pig_status">
+    <header><h3>配送方式</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_add_cur" id="pig_status_top">
+        <ul><li></li></ul>
+        <button>确定</button>
+    </div>
+    <div class="pig_add_main">
+        <ul class="pig_add_ul" id="pig_status_ul">
+            <li><a href="#">买家拉猪</a></li>
+            <li><a href="#">卖家送猪</a></li>
+            <li><a href="#">双方协商</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end 配送选择 -->
+
+<!--com_top-->
+<div class="com_top">
+	<a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<h3>新增检疫申报</h3>
+</div>
+<!--end com_top-->
+
+<!-- verified_pig -->
+<div class="verified_point">
+	<h3>只需两步，轻松搞定！</h3>
+</div>
+<div class="verified_pig" id="verified_pig">
+	<div class="verified_pig_top">
+		<i>1</i><h3>第一步：填写基本信息</h3>
+	</div>
+	<div class="verified_pig_box">
+		<strong>品种：</strong><p class="pig_sort_li_02"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>毛色：</strong><p class="pig_sort_li_03"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>价格：</strong><p><input type="text" value="" /><i class="unit">元/公斤</i></p><span class="redstar">*</span>
+	</div>
+    <div class="verified_pig_box">
+        <strong>出栏时间：</strong><p class="pig_p04"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>耳标号：</strong><p class="pig_p06"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>申报数量：</strong><p><input type="text" value="" /><i class="unit">头</i></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>平均体重：</strong><p><input type="text" value="" /><i class="unit">公斤/头</i></p><span class="redstar">*</span>
+    </div>
+	<div class="verified_pig_box">
+		<strong>所在地区：</strong><p class="pig_p01"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>详细地址：</strong><p class="verified_pig_add"><input type="text" value="" /></p><span class="redstar">*</span>
+	</div>
+	<button class="verified_pig_btn" id="verified_pig_btn">下一步</button>
+</div>
+<!-- end verified_pig -->
+
+<!-- verified_pig2 -->
+<div class="verified_pig" id="verified_pig_next" style="display: none;">
+    <div class="verified_pig_top">
+        <i>2</i><h3>第二步：附加信息</h3>
+    </div>
+    <div class="verified_pig_box">
+        <strong>联系电话：</strong><p><input id="amount" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" size="14" maxlength="12" name="amount" type="text" /></p><span class="redstar">*</span>
+    </div>
+     <div class="verified_pig_box">
+        <strong>配送方式：</strong><p class="pig_p05"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>起运地点：</strong><p><textarea></textarea></p>
+    </div>
+    <div class="verified_pig_box">
+        <strong>备注：</strong><p><input type="text" value="" /></p>
+    </div>
+    <div class="verified_pig_box">
+        <strong>报检人签字：</strong><p><input type="text" value="" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>上传照片：</strong>
+        <div class="verified_pig_pic">
+            <input type="file" value="">
+        </div>
+    </div>
+    <button class="verified_pig_btn">确定</button>
+</div>
+<!-- end verified_pig2 -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+	<a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+
+</body>
+</html>

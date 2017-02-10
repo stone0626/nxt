@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/pig_market.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/pig_market.js"></script>
+
+<title>猪贸通M版-物流</title>
+</head>
+<body class="mhome">
+
+
+<div class="pig_add_cover"></div>
+<!-- 选择区域 -->
+<div class="pig_add">
+  <header><h3>选择区域</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+  <div class="pig_add_cur">
+    <ul><li class="cur01">北京</li><li class="cur02">北京</li><li class="cur03">北京</li></ul>
+    <button>确定</button>
+  </div>
+  <div class="pig_add_main">
+    <ul class="pig_add_ul" id="pig_add01">
+      <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津111</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">end</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add02" style="display: none;">
+      <li><a href="#">北京2</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add03" style="display: none;">
+      <li><a href="#">北京3</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">河北</a></li>
+        <li><a href="#">河南</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end 选择区域 -->
+
+<!-- 选择日期 -->
+<div class="pig_add" id="pig_variety">
+	<header><h3>选择日期</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_variety_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_variety_ul">
+			<li><a href="#">2015-05-06</a></li>
+			<li><a href="#">2015-05-07</a></li>
+			<li><a href="#">2015-05-08</a></li>
+			<li><a href="#">2015-05-09</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 选择日期 -->
+
+<!-- 选择容量 -->
+<div class="pig_add" id="pig_trade">
+	<header><h3>选择容量（头）</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_trade_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_trade_ul">
+			<li><a href="#">小于50</a></li>
+		    <li><a href="#">51 - 100</a></li>
+		    <li><a href="#">101 - 150</a></li>
+		    <li><a href="#">151 - 200</a></li>
+		    <li><a href="#">201以上</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 选择容量 -->
+
+<!-- 选择筛选 -->
+<div class="pig_filter_wrapper">
+	<header><h3>请选择</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_filter">
+    	<div class="pig_filter_box"><strong>价格排序：</strong><p class="pig_p04"><span></span><i class="fa fa-angle-right fa-lg"></i></p></div>
+    	<div class="pig_filter_box">
+    		<strong class="pig_filter_strong">价格范围：<span>(元/公斤)</span></strong>
+    		<em><input type="text" value="" /><span>-</span><input type="text" value="" /></em>
+    	</div>
+    </div>
+    <div class="pig_filter_btn">
+    	<button class="btn01">重置</button><button class="btn02">提交</button>
+    </div>
+
+</div>
+<!-- end 选择筛选 -->
+
+<!-- 价格排序 -->
+<div class="pig_add" id="pig_price">
+	<header><h3>选择价格排序</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_price_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_price_ul">
+			<li><a href="#">从高到低</a></li>
+		    <li><a href="#">从低到高</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 价格排序 -->
+
+<!--pig_market_top-->
+<div class="pig_market_top">
+	<a class="pig_market_top_lt" href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<p><a class="fl current" href="#">车辆</a><a class="fr" href="#">企业</a></p>
+</div>
+<!--end pig_market_top-->
+<!-- company_tit -->
+<div class="company_tit">
+	<a href="#">协议</a><a href="#">地图</a>
+</div>
+<!-- end company_tit -->
+<!-- cultivate_item -->
+<ul class="cultivate_item">
+	<li class="pig_p01"><span>区域</span><i class="fa fa-lg fa-caret-down"></i></li>
+	<li class="pig_p03"><span>时间</span><i class="fa fa-lg fa-caret-down"></i></li>
+	<li class="pig_sort_li_03"><span>容量</span><i class="fa fa-lg fa-caret-down"></i></li>
+	<li class="pig_sort_li_04"><span>价格</span><i class="fa fa-lg fa-caret-down"></i></li>
+</ul>
+<!-- end cultivate_item -->
+
+
+<!-- pig_market -->
+<div class="pig_market">
+	<div class="pig_main">
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_car_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省】</h3>
+				<p><span>可装生猪11头</span><span class="add">服务半径：11公里</span><span>11.00元/公里</span><span>豫A • 54122</span><span>卡车</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_car_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省】</h3>
+				<p><span>可装生猪11头</span><span class="add">服务半径：11公里</span><span>11.00元/公里</span><span>豫A • 54122</span><span>卡车</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_car_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省】</h3>
+				<p><span>可装生猪11头</span><span class="add">服务半径：11公里</span><span>11.00元/公里</span><span>豫A • 54122</span><span>卡车</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_car_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省】</h3>
+				<p><span>可装生猪11头</span><span class="add">服务半径：11公里</span><span>11.00元/公里</span><span>豫A • 54122</span><span>卡车</span></p>
+			</div>
+		</a>
+
+	</div>
+</div>
+<!-- end pig_market -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+  <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+</body>
+</html>

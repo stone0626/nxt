@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".my_card_txt").click(function(){
+            $(".my_card_point").css({display: "block"});
+            $(".pig_add_cover").css({display: "block"});
+        });
+        $(".my_card_point_box button").click(function(){
+            $(".my_card_point").css({display: "none"});
+            $(".pig_add_cover").css({display: "none"});
+        });
+    });
+</script>
+<title>猪贸通M版-个人中心-我的银行卡</title>
+</head>
+<body class="mhome">
+
+<div class="pig_add_cover"></div>
+<!-- 提示 -->
+<div class="my_card_point">
+    <h3>提示</h3>
+    <div class="my_card_point_box">
+        <button class="my_card_btn01">删除</button><button>编辑</button>
+    </div>
+</div>
+<!-- end 提示 -->
+
+<!--com_top-->
+<div class="com_top">
+    <a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+    <h3>我的银行卡</h3>
+    <b class="added"><a href="#"><i class="fa fa-plus fa-lg"></i></a></b>
+</div>
+<!--end com_top-->
+
+<!-- my_card -->
+<div class="my_card">
+    <div class="my_card_box">
+        <h3>农业银行卡</h3>
+        <div class="my_card_txt">
+            <p><strong>账号：</strong><span>62288888888888888888888888888</span></p>
+            <p><strong>姓名：</strong><span>张三</span></p>
+        </div>
+    </div>
+</div>
+<!-- end my_card -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+  <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+</body>
+</html>

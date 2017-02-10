@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>商品详情页</title>
+<link href="css/base_front.css" type="text/css" rel="stylesheet" />
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<link href="css/magnifier.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/jqzoom.js"></script>
+<script type="text/javascript" src="js/jQselect.js"></script>
+<script type="text/javascript">
+	function setTab(name,cursel,n){
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+	};
+	function openme(){
+	document.getElementById('zhezhao').style.display='block';
+	document.getElementById('popup').style.display='block';
+	}
+	function closeme(){
+	document.getElementById('zhezhao').style.display='none';
+	document.getElementById('popup').style.display='none';
+	}
+	function logo_in(){alert()
+	closeme();
+	};
+	function shop(){
+	document.getElementById('zhezhao').style.display='block';
+	document.getElementById('shop_box').style.display='block';
+	}
+	function shop_close(){
+	document.getElementById('zhezhao').style.display='none';
+	document.getElementById('shop_box').style.display='none';
+	}
+</script>
+
+</head>
+
+<body>
+<!-- 登陆弹出框 -->
+<div id="zhezhao"></div>
+<div class="popup" id="popup">
+  <div class="popup_confirm">
+    <div class="popup_border"></div>
+    <div class="popup_box">
+      <h3><strong>使用微科账号登录</strong>
+        <input type="button" value="×" class="button" onClick="closeme()" />
+      </h3>
+      <div class="zhanghu"><span class="zh_text">账&nbsp;&nbsp;&nbsp;号：</span>
+        <input name="" type="text"  class="zh_input_bk01"/>
+      </div>
+      <p class="zh_tsy">没有此账号！</p>
+      <div class="clear"></div>
+      <div class="zhanghu"><span class="zh_text">密&nbsp;&nbsp;&nbsp;码：</span>
+        <input name="" type="password"  class="zh_input_bk" />
+        <a class="secret" href="#">忘记密码?</a></div>
+      <p class="zh_tsy zh_tsy1">密码输入错误！</p>
+      <div class="clear"></div>
+      <div class="zhanghu"><span class="zh_text">验证码：</span>
+        <input name="" type="text"  class="zh_input_bk02" />
+        <img src="images/zhanghu_code_07.png" /> <a class="zhanghu_code" href="#">换一张看不清</a></div>
+      <p class="zh_tsy zh_tsy2">验证码输入错误！</p>
+      <div class="clear"></div>
+      <p class="denglu">
+        <input name="" type="button" value="登录" onClick="logo_in()" />
+        <span>没有微科账号？<a href="#">立即注册》</a></span></p>
+    </div>
+  </div>
+</div>
+<!-- end 登陆弹出框 --> 
+
+<!-- 购物车添加成功 -->
+<div class="amount" id="shop_box">
+<div class="amount_confirm">
+<div class="amount_border"></div>
+<div class="amount_box">
+	<h3><strong>温馨提示</strong><input type="button" value="×" class="button" onClick="shop_close()" /></h3>
+    <div class="finish"><img src="images/popup_box_02.jpg" /></div>	
+    <div class="finish_text">
+        <strong>购物车添加成功！</strong><br />
+        购物车共有<span class="hongse">2</span>件商品，合计<span class="hongse">￥10000</span><br />
+        <input name="" type="button" value="继续购物" class="button1 button2" /> <input name="" type="button" value="去购物车结算" class="button1" />
+    </div>
+</div>
+</div></div>
+<!-- end 购物车添加成功 -->
+
+ <!--top-->
+<div class="topnav_bg">
+	<div class="topnav">
+	  <p>您好，欢迎来到神州农易官方商城<strong>[农信网集团旗下畜牧业电商平台]</strong></p>
+      <div class="topnav_rt">
+      	<a href="#" onClick="openme()">登录</a><a href="#">免费注册</a><a href="#">我的订单</a><a href="#" >卖家中心</a>
+      </div>
+	 
+	</div>
+</div>
+<!--end top-->
+<!--logo-->
+
+<div class="logo_content">
+	<div class="logo_lt">
+	  <a href="#"><img src="images/logo.jpg"/></a>
+	  <select>
+   	    <option>请选择</option>
+            <option>河南省</option>
+      </select>
+  </div>
+    <div class="logo_mid">
+		<div class="logo_mid_lt">
+        	<SELECT id=a>
+                <OPTION value=1 selected>商品</OPTION>
+                <OPTION value=2>旗舰店</OPTION>
+            </SELECT>            
+        </div>
+        <SCRIPT type=text/javascript>
+	$(document).ready(function() {
+		$("#a").selectbox();
+	});
+	</SCRIPT>
+   	<input type="text" value="" class="logo_mid_md" />  
+    <button class="logo_mid_rt">搜索</button>
+      <div class="keyword">        
+        <ul>
+           <li><a href="#" class="hover">饲料</a></li>
+           <li><a href="#">售药</a></li>
+           <li><a href="#">预混料</a></li>
+   	    </ul>
+      </div>
+      
+    </div>
+	<div class="logo_rt">
+    	<button></button>
+        <div class="logo_num">
+        	<img class="fl" src="images/gwc_num_lt.jpg" />
+            <span class="fl">9</span>
+            <img class="fl" src="images/gwc_num_rt.jpg" />
+        </div>
+    </div>
+</div>
+
+<!--end logo-->
+<div class="clear"></div>
+
+<div class="nav">
+	<div class="nav_main">
+		<H3><span>全部商品分类</span></H3>
+          <ul>
+          	<li><a href="#" class="current">首页</a></li>
+            <li><a href="#">兽药</a></li>
+            <li><a href="#">饲料</a></li>
+            <li><a href="#">器械设备</a></li>
+            <li><a href="#">禽畜交易</a></li>
+            <li><a href="#">生物制品</a></li>
+            <li><a href="#">服务产品</a></li>
+          </ul>
+   	    <div class="qjd"><a href="">旗舰店</a></div>
+   </div>
+</div>
+<!--end nav-->
+<div class="main">
+<!--main_lt-->
+<div class="commodities">
+<!--price-->
+	<div class="commod">
+     <!--轮播图-->
+    	<div class="commod_l">   
+      
+	<div class="tb-booth tb-pic tb-s310">
+		<a href="images/01.jpg"><img src="images/img/01_mid.jpg" alt="美女" rel="images/img/01.jpg" class="jqzoom" /></a>
+	</div>
+
+	<ul class="tb-thumb" id="thumblist">
+		<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="images/img/01_small.jpg" mid="images/img/01_mid.jpg" big="images/img/01.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img  src="images/img/02_small.jpg" mid="images/img/02_mid.jpg" big="images/img/02.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img src="images/img/03_small.jpg" mid="images/img/03_mid.jpg" big="images/img/03.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img src="images/img/04_small.jpg" mid="images/img/04_mid.jpg" big="images/img/04.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img src="images/img/05_small.jpg" mid="images/img/05_mid.jpg" big="images/img/05.jpg"></a></div></li>
+	</ul>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".jqzoom").imagezoom();
+	
+	$("#thumblist li a").click(function(){
+		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+	});
+
+});
+</script>
+                    
+</div>
+<!--轮播图结束-->
+
+<div class="commod_r">
+	<div class="spxq_rts_top">
+    	<h3>肥壮美--日长3斤，提前出栏，强行攻肥，快速生长肥壮美--日长快速生长肥壮美--日长3斤</h3>
+        <p>减50，满1000减100，满2000减200，...满5000减600加入购物车可见！ 更有20元、50元和100元即领即用品类券，限量开抢！</p>
+    </div>
+    <table cellpadding="0" cellspacing="0" class="spxqtable">
+    	<tr>
+        	<td width="15%">商品货号：</td>
+            <td width="85%"><i>2015-01-1144444444444</i></td>
+        </tr>
+        <tr>
+        	<td width="15%">品牌商标：</td>
+            <td width="85%"><i>正大多普达</i></td>
+        </tr>
+        <tr>
+        	<td width="15%">上架时间：</td>
+            <td width="85%"><i>2015-08-08</i></td>
+        </tr>
+        <tr>
+        <td width="15%">商品原价：</td>
+        <td width="85%"><span>&yen;2850.00</span></td>
+        </tr>
+        <tr>
+        <td>商&nbsp; 城&nbsp;价：</td>
+        <td><strong>&yen; <b>2850.00</b></strong></td>
+        </tr>
+        <tr>
+        <td  class="hy_b p_bd">会员折扣：</td>
+        <td  class="hy_b p_bd"><font>会员特惠</font><a href="#" class="login">登录</a> 即可查看享受优惠</td>
+        </tr>                  
+        <tr>
+        <td class="xktitle" valign="top">购买数量：</td>
+        <td class="shuliang">
+        	<div class="xushuliang fl"><a href="#">-</a>
+        	<label for="textfield"></label>
+        	<input name="textfield" type="text" id="textfield" value="1" />
+        	<a href="#">+</a></div><p>库存253件</p>
+        </td>
+        </tr>
+        </table>                       
+        <div class="goumai">
+        	<input type="button" class="ljgm fl"  value=""/>
+            <input type="button" class="jrgwc fl" onClick="shop()" value=""/>
+        </div>
+        <div class="fenxiang">
+        	 <span class="shoucang fl"><img src="images/hongxin.jpg"/><a href="#">收藏商品</a>（3）</span>
+             <span class="shoucang fl"><img src="images/fenxiang.jpg"/><a href="#">分享</a></span>
+        </div>
+                                
+     </div>
+  </div>
+<!--end price-->
+<!--detail-->
+<div class="detail">
+	<div class="detail_box">
+		<div class="detail_box_top">
+			<ul><li id="detail1" class="hover" onclick="setTab('detail',1,3);">商品详情</li><li id="detail2" onclick="setTab('detail',2,3);">成交历史</li><li id="detail3"  onclick="setTab('detail',3,3);">评价记录</li></ul>
+		</div>
+			<div class="p_detail" id="con_detail_1">
+            	<table class="p_detail_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="p_detail_name" width="15%">产品审定式备案区域：</td>
+                    <td width="15%">河南省</td>
+                    <td class="p_detail_name" width="15%">产品审定式登记号：</td>
+                    <td width="25%">12345655545544544</td>
+                    <td class="p_detail_name" width="10%">产品规格：</td>
+                    <td width="20%">产品规产品规产品规</td>
+                  </tr>
+                  <tr>
+                    <td class="p_detail_name">最少起售量：</td>
+                    <td>1000</td>
+                    <td class="p_detail_name">销售截止时间：</td>
+                    <td>2015/12/30</td>
+                    <td class="p_detail_name">生产厂家：</td>
+                    <td>丰诺种业</td>
+                  </tr>
+				      </table>
+              <div class="p_detail_img">
+				         <img src="images/asd123.jpg" />
+              </div>
+            </div>
+            <div class="t_history" id="con_detail_2" style="display:none;"> 
+            	<table class="t_history_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr class="t_history_top">
+                    <td width="25%">买家</td>
+                    <td width="10%">会员价</td>
+                    <td width="20%">数量</td>
+                    <td width="20%">付款时间</td>
+                    <td width="25%">款式和型号</td>
+                  </tr>
+                  <tr>
+                    <td class="t_history_name">7sadfasffaaf</td>
+                    <td class="t_offer"><span>专属优惠</span></td>
+                    <td>2222</td>
+                    <td>2015-10-21 15:22:22</td>
+                    <td class="t_history_name">优质小麦种子Th3111</td>
+                  </tr>
+                  <tr>
+                    <td class="t_history_name">7sadfasffaaf</td>
+                    <td class="t_offer"><span>专属优惠</span></td>
+                    <td>2222</td>
+                    <td>2015-10-21 15:22:22</td>
+                    <td class="t_history_name">优质小麦种子Th3111</td>
+                  </tr>
+                  <tr>
+                    <td class="t_history_name">7sadfasffaaf</td>
+                    <td class="t_offer"><span>专属优惠</span></td>
+                    <td>2222</td>
+                    <td>2015-10-21 15:22:22</td>
+                    <td class="t_history_name">优质小麦种子Th3111</td>
+                  </tr>
+                  <tr>
+                    <td class="t_history_name">7sadfasffaaf</td>
+                    <td class="t_offer"><span>专属优惠</span></td>
+                    <td>2222</td>
+                    <td>2015-10-21 15:22:22</td>
+                    <td class="t_history_name">优质小麦种子Th3111</td>
+                  </tr>
+                  <tr>
+                    <td class="t_history_name">7sadfasffaaf</td>
+                    <td class="t_offer"><span>专属优惠</span></td>
+                    <td>2222</td>
+                    <td>2015-10-21 15:22:22</td>
+                    <td class="t_history_name">优质小麦种子Th3111</td>
+                  </tr>
+				</table>
+                <div class="pagelist">
+                  <a href="#" class="onepage">首页</a>
+                  <a href="#" class="onepage">上一页</a>
+                  <a href="#" class="page_first">1</a>
+                  <a href="#" >2</a> <a href="#">3</a>
+                  <span class="ellipsis">...</span> 
+                  <a href="#">21</a> 
+                  <a href="#" class="onepage">末页</a> 
+                  <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+                </div>
+            </div>		
+            <div class="e_record" id="con_detail_3" style="display:none;">
+            	<div  class="e_record_top">
+            	<ul>
+                	<li id="e_record1" class="hover" onclick="setTab('e_record',1,4);">全部</li>
+                  	<li id="e_record2" onclick="setTab('e_record',2,4);">好评（55）</li>
+                   	<li id="e_record3" onclick="setTab('e_record',3,4);">中评（333）</li>
+                    <li id="e_record4" onclick="setTab('e_record',4,4);">差评（11）</li>
+                </ul>
+                </div>
+                	<!--全部-->
+                	<div class="e_record_box_main" id="con_e_record_1">
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <div class="clear"></div>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf2</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf3</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf4</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf5</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="pagelist">
+                  <a href="#" class="onepage">首页</a>
+                  <a href="#" class="onepage">上一页</a>
+                  <a href="#" class="page_first">1</a>
+                  <a href="#" >2</a> <a href="#">3</a>
+                  <span class="ellipsis">...</span> 
+                  <a href="#">21</a> 
+                  <a href="#" class="onepage">末页</a> 
+                  <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+                </div>
+                </div>
+                <!--end 全部-->
+                	<!--好评-->
+                	<div class="e_record_box_main" id="con_e_record_2" style="display:none;">
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfwf</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <div class="clear"></div>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf2</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf3</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf4</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf5</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="pagelist">
+                  <a href="#" class="onepage">首页</a>
+                  <a href="#" class="onepage">上一页</a>
+                  <a href="#" class="page_first">1</a>
+                  <a href="#" >2</a> <a href="#">3</a>
+                  <span class="ellipsis">...</span> 
+                  <a href="#">21</a> 
+                  <a href="#" class="onepage">末页</a> 
+                  <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+                </div>
+                </div>
+                <!--end 好评->
+                	<!--中评-->
+                	<div class="e_record_box_main" id="con_e_record_3" style="display:none;">
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfwsf123421414</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <div class="clear"></div>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf2</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf3</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf4</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf5</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="pagelist">
+                  <a href="#" class="onepage">首页</a>
+                  <a href="#" class="onepage">上一页</a>
+                  <a href="#" class="page_first">1</a>
+                  <a href="#" >2</a> <a href="#">3</a>
+                  <span class="ellipsis">...</span> 
+                  <a href="#">21</a> 
+                  <a href="#" class="onepage">末页</a> 
+                  <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+                </div>
+                </div>
+                <!--end 中评->
+               	    <!--差评-->
+                	<div class="e_record_box_main" id="con_e_record_4" style="display:none;">
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <div class="clear"></div>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf2</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf3</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf4</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="e_record_box">
+                    	<div class="e_record_box_l">
+                        	<img src="images/user_img.jpg" />
+                        </div>
+                      	<div class="e_record_box_r">
+                        	<p><span class="fl">买家：rfweqrwerasf5</span>
+                               <span class="fl">商品规格：12袋/500g</span>
+                               <span class="fr span_sj">评论时间：2015-10-11 15:33</span>
+                            </p>
+                            <strong>
+                            	生育期98-101天。株型紧凑，全株叶片20片，株256-260cm，穗位110cm；穗长15.6-17.0cm，穗粗4.7-4.9cm，穗行数14.2行，行粒数33.7-35.2粒；穗筒型，黄粒，红轴，半硬粒型，千粒重316.2-337.2g，出籽89.389.5%。
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="pagelist">
+                  <a href="#" class="onepage">首页</a>
+                  <a href="#" class="onepage">上一页</a>
+                  <a href="#" class="page_first">1</a>
+                  <a href="#" >2</a> <a href="#">3</a>
+                  <span class="ellipsis">...</span> 
+                  <a href="#">21</a> 
+                  <a href="#" class="onepage">末页</a> 
+                  <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+                </div>
+                </div>
+                <!--end 差评-->
+             </div>	       
+		</div>
+	
+
+<!--end detail-->
+</div>
+
+</div>
+<!--end main_lt-->
+
+<!--main_rt-->
+<div class="particular">
+<div class="flagship_store">
+	<a class="flagship_store_img" href="#"><img src="images/flagship_store.png" /></a>
+	<a class="flagship_store_na" href="#">正饲料旗舰店</a>
+    <span class="flagship_store_ma">神州牧易自营</span>
+    <div class="flagship_store_btn clear">
+    	<button class="fl">进入店铺</button><button class="fr">关注店铺</button>
+	</div>
+</div>
+<div class="guess clear">
+	<div class="guess_top">
+    	<h3>猜你喜欢</h3>
+    </div>
+    <div class="guess_box">
+    	<div class="guess_box_img"><a href="" target="_blank"><img src="images/1f_pic01.jpg" /></a></div><H5><a href="#">2%东立阳光预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a>
+    </div>
+    <div class="guess_box">
+    	<a href="" target="_blank"><img src="images/1f_pic01.jpg" /></a><H5><a href="#">2%东立阳光大猪用预大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a>
+    </div>
+    <div class="guess_box">
+    	<a href="" target="_blank"><img src="images/1f_pic01.jpg" /></a><H5><a href="#">大猪用预大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a>
+    </div>
+    <div class="guess_box">
+    	<a href="" target="_blank"><img src="images/1f_pic01.jpg" /></a><H5><a href="#">阳光大猪用预大猪用预大猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a>
+    </div>
+    <div class="guess_box">
+    	<a href="" target="_blank"><img src="images/1f_pic01.jpg" /></a><H5><a href="#">阳光用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a>
+    </div>
+    <div class="guess_box">
+    	<a href="" target="_blank"><img src="images/1f_pic01.jpg" /></a><H5><a href="#">阳光大猪猪用预混料</a></H5><p><span class="price">￥298</span><span class="yprice">原价：￥389</span></p><a href="#" class="flagship">正大饲料旗舰店</a>
+    </div>
+    
+</div>
+
+</div>
+<!--end main_rt-->
+
+</div>
+
+<!--end link-->
+<div class="char">
+	<div class="char_box"><img src="images/inform.jpg"/></div>
+</div>
+<!--tyro-->
+<div class="tyro">
+	<div class="tyro_main">
+    	<ul>
+        	<li>
+            	<h3>新手上路</h3>
+                <a href="#">新手帮助</a>
+            </li>
+            <li>
+            	<h3>购物指南</h3>
+                <a href="#">购物流程</a>
+                <a href="#">常见问题</a>
+            </li>
+            <li>
+            	<h3>支付方式</h3>
+                <a href="#">付款问题</a>
+                <a href="#">支付方式</a>
+            </li>
+            <li>
+            	<h3>配送方式</h3>
+                <a href="#">配送方式</a>
+            </li>
+            <li>
+            	<h3>特色服务</h3>
+                <a href="#">特色服务</a>
+            </li>
+            <li class="tyro_last">
+            	<h3>关于我们</h3>
+                <a href="#">关于我们</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+    	<a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!--end footer-->
+
+<!--end tyro-->
+</body>
+</html>

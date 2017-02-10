@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/pig_market.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+	// 商品滑动到底部出现弹出框
+  $(document).ready(function (){
+    var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+    var nScrollTop = 0;   //滚动到的当前位置
+    var nDivHight = $(".pig_main").height();
+
+    $(".pig_main").scroll(function(){
+      nScrollHight = $(this)[0].scrollHeight;
+      nScrollTop = $(this)[0].scrollTop;
+      if(nScrollTop + nDivHight >= nScrollHight)
+        alert("到底了");
+      });
+</script>
+<title>猪贸通M版-生猪市场</title>
+</head>
+<body class="mhome">
+
+<div class="pig_add_cover"></div>
+<!-- 选择品种 -->
+<div class="pig_add" id="pig_variety">
+	<header><h3>选择品种</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_variety_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_variety_ul">
+			<li><a href="#">内三元</a></li>
+		    <li><a href="#">外三元</a></li>
+		    <li><a href="#">土杂猪</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 选择品种 -->
+
+<!-- 选择供求 -->
+<div class="pig_add" id="pig_trade">
+	<header><h3>选择供求</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_trade_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_trade_ul">
+			<li><a href="#">出售</a></li>
+		    <li><a href="#">收购</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 选择供求 -->
+
+
+<!-- 选择筛选 -->
+<div class="pig_filter_wrapper">
+	<header><h3>筛选</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+    <div class="pig_filter">
+    	<div class="pig_filter_box"><strong>区域：</strong><p class="pig_p01"><span></span><i class="fa fa-angle-right fa-lg"></i></p></div>
+    	<div class="pig_filter_box"><strong>供求：</strong><p class="pig_p02"><span></span><i class="fa fa-angle-right fa-lg"></i></p></div>
+    	<div class="pig_filter_box"><strong>生猪品种：</strong><p class="pig_p03"><span></span><i class="fa fa-angle-right fa-lg"></i></p></div>
+    	<div class="pig_filter_box"><strong>价格排序：</strong><p class="pig_p04"><span></span><i class="fa fa-angle-right fa-lg"></i></p></div>
+    	<div class="pig_filter_box"><strong>成交状态：</strong><p class="pig_p05"><span></span><i class="fa fa-angle-right fa-lg"></i></p></div>
+    	<div class="pig_filter_box">
+    		<strong class="pig_filter_strong">价格范围：<span>(元/公斤)</span></strong>
+    		<em><input type="text" value="" /><span>-</span><input type="text" value="" /></em>
+    	</div>
+    	<div class="pig_filter_box">
+    		<strong class="pig_filter_strong">重量范围：<span>(公斤)</span></strong>
+    		<em><input type="text" value="" /><span>-</span><input type="text" value="" /></em>
+    	</div>
+    	<div class="pig_filter_box">
+    		<strong class="pig_filter_strong">数量范围：<span>(头)</span></strong>
+    		<em><input type="text" value="" /><span>-</span><input type="text" value="" /></em>
+    	</div>
+    </div>
+
+    <div class="pig_filter_btn">
+    	<button class="btn01">重置</button><button class="btn02">提交</button>
+    </div>
+
+</div>
+<!-- end 选择筛选 -->
+
+<!-- 价格排序 -->
+<div class="pig_add" id="pig_price">
+	<header><h3>选择价格排序</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_price_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_price_ul">
+			<li><a href="#">从高到低</a></li>
+		    <li><a href="#">从低到高</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 价格排序 -->
+
+<!-- 成交状态 -->
+<div class="pig_add" id="pig_status">
+	<header><h3>选择成交状态</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="pig_status_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_status_ul">
+			<li><a href="#">不限</a></li>
+		    <li><a href="#">未成交</a></li>
+		    <li><a href="#">已成交</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 成交状态 -->
+
+<!-- 选择区域 -->
+<div class="pig_add">
+	<header><h3>选择区域</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur">
+		<ul><li class="cur01">北京</li><li class="cur02">北京</li><li class="cur03">北京</li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="pig_add01">
+			<li><a href="#">北京</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">天津</a></li>
+		    <li><a href="#">吉林1</a></li>
+		    <li><a href="#">黑龙江</a></li>
+		    <li><a href="#">北京</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">天津111</a></li>
+		    <li><a href="#">吉林1</a></li>
+		    <li><a href="#">黑龙江</a></li>
+		    <li><a href="#">北京</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">end</a></li>
+		</ul>
+		<ul class="pig_add_ul" id="pig_add02" style="display: none;">
+			<li><a href="#">北京2</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">天津</a></li>
+		    <li><a href="#">重庆</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">天津</a></li>
+		</ul>
+		<ul class="pig_add_ul" id="pig_add03" style="display: none;">
+			<li><a href="#">北京3</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">天津</a></li>
+		    <li><a href="#">重庆</a></li>
+		    <li><a href="#">河北</a></li>
+		    <li><a href="#">河南</a></li>
+		    <li><a href="#">北京</a></li>
+		    <li><a href="#">上海</a></li>
+		    <li><a href="#">天津</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 选择区域 -->
+
+
+<!--pig_market_top-->
+<div class="pig_market_top">
+	<a class="pig_market_top_lt" href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<p><a class="fl current" href="#">生猪市场</a><a class="fr" href="#">附近猪源</a></p>
+</div>
+<!--end pig_market_top-->
+<!-- pig_market -->
+<div class="pig_market">
+	
+	<div class="pig_market_search">
+		<input type="text" value="" placeholder="请输入关键字" />
+		<button><i class="fa fa-search fa-lg"></i></button>
+	</div>
+	<ul class="pig_sort">
+		<li><span class="pig_sort_li_01">区域</span></li>
+		<li><span class="pig_sort_li_02">品种</span></li>
+		<li><span class="pig_sort_li_03">供求</span></li>
+		<li><span class="pig_sort_li_04">筛选</span></li>
+	</ul>
+	<div class="pig_main">
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+		<a class="pig_box" href="#">
+			<img class="pig_box_lt" src="images/pig_main_img.png" alt="">
+			<div class="pig_box_rt">
+				<h3>【河南省鹤壁市】 出售内三元</h3>
+				<p><span>内三元</span><span>20.00元/公斤</span><span>【未成交】</span><span>出售</span><span>200头</span><span>04-11 18:55</span></p>
+			</div>
+		</a>
+	</div>
+</div>
+<!-- end pig_market -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+  <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+</body>
+</html>

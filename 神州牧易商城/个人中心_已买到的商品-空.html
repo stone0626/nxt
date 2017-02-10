@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>个人中心-已买到的商品-空</title>
+<link href="css/base_center.css" type="text/css" rel="stylesheet" />
+<link href="css/main_center.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".detail_nav li:first").addClass("hover");
+        $(".detail_nav li").click(function(){
+            $(".detail_nav li").removeClass("hover");
+            $(this).addClass("hover");
+            $(".detail_box").hide();
+            $("."+ $(this).attr("id")).show();
+        });
+    }); 
+</script>
+</head>
+<body>
+<!--top-->
+<div class="top">
+    <div class="top_main">
+        <strong class="top_lt">欢迎来到神州牧易商城个人中心！</strong>
+        <div class="top_rt">
+            <a href="#" class="top_rt_home">商城首页</a>
+            <a href="#"><img src="images/shopping.png" /><span>购物车</span></a>
+            <div class="collect">
+                <a href="#"><img src="images/collect.png" /><span>收藏夹</span><img src="images/jiantou_c.png" /></a>
+                <div class="collect_box">
+                    <a href="#">收藏的商品</a>
+                    <a href="#">收藏的旗舰店</a>
+                </div>
+            </div>
+            <a href="#">联系客服</a>
+        </div>
+    </div>
+</div>
+<!--end top-->
+<!-- logo -->
+<div class="logo">
+    <a href="#" class="logo_lt"><img src="images/logo_center.png" /></a>
+    <div class="logo_rt">
+        <input class="logo_rt_in" value="" type="text" />
+        <input class="logo_rt_btn" value="搜索" type="button" />
+    </div>
+</div>
+<!-- end logo -->
+<!-- portrait -->
+<div class="portrait">
+    <div class="portrait_box">
+       <a href="#"  class="portrait_box_img"><i><img src="images/bixuan01.jpg" /></i></a>
+       <p><span>梁山伯与朱丽叶</span><a href="#">账号管理</a><a href="#">退出</a></p>
+    </div>
+</div>
+<!-- end portrait -->
+<div class="main">
+<!--slidenav-->
+<div class="slidenav">	
+    	<div class="slidetop">
+        	<h3 class="h3_01">全部功能</h3>
+        	<img src="images/slidenav_top.jpg" />
+        </div>
+		<ul>
+    		<li><a href="#">已买到的商品</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">购买过的旗舰店</a></li>
+            <li><a href="#">我的购物车</a></li>
+            <li><a href="#">评价管理</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="#">我的折扣</a></li>
+    	</ul>
+   		<div class="slidetop">
+        	<h3 class="h3_02">我的足迹</h3>
+        	<img src="images/slidenav_top.jpg" />
+        </div>
+		<ul>
+    		<li><a href="#">正大饲料旗舰店</a></li>
+            <li><a href="#">兽药旗舰店</a></li>
+            <li><a href="#">猪药网的旗舰店</a></li>
+            <li><a href="#">兽药旗舰店</a></li>
+            <li><a href="#">六畜兴旺旗舰店</a></li>
+    	</ul>
+</div>
+<!--edn slidenav-->
+<!--主体-->
+<div class="main_rt">
+<!-- 已买到的商品 -->
+<div class="detail">
+    <div class="slidetop">
+        <h3>已买到的商品</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <div class="detail_main">
+        <ul class="detail_nav">
+            <li id="detail1" class="hover">全部订单</li>
+            <li id="detail2">待付款(<span>52</span>)</li>
+            <li id="detail3">待发货(<span>33</span>)</li>
+            <li id="detail4">待收货(<span>24</span>)</li>
+            <li id="detail5">待评价(<span>234</span>)</li>
+            <li id="detail6" class="huishou">订单回收站</li>
+         </ul>
+         <div class="detail_box detail1">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <div class="detail_none">
+                <img src="images/gwc_img.jpg" />
+                <span>您还没有购买商品，快去逛逛吧！</span>
+            </div>           
+         </div>
+         <div class="detail_box detail2" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <div class="detail_none">
+                <img src="images/gwc_img.jpg" />
+                <span>您还没有购买商品，快去逛逛吧！</span>
+            </div>
+         </div>
+         <div class="detail_box detail3" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <div class="detail_none">
+                <img src="images/gwc_img.jpg" />
+                <span>您还没有购买商品，快去逛逛吧！</span>
+            </div>
+         </div>
+         <div class="detail_box detail4" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <div class="detail_none">
+                <img src="images/gwc_img.jpg" />
+                <span>您还没有购买商品，快去逛逛吧！</span>
+            </div>
+         </div>
+         <div class="detail_box detail5" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <div class="detail_none">
+                <img src="images/gwc_img.jpg" />
+                <span>您还没有购买商品，快去逛逛吧！</span>
+            </div>
+         </div>
+         <div class="detail_box detail6" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="40%">商品</td>
+                    <td width="15%">单价</td>
+                    <td width="15%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="15%">订单操作</td>
+                </tr>
+            </table>
+            <div class="detail_none">
+                <img src="images/gwc_img.jpg" />
+                <span>您还没有购买商品，快去逛逛吧！</span>
+            </div>
+         </div>
+         
+    </div>
+</div>
+<!-- end 已买到的商品 -->
+</div>
+<!--end 主体-->
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+        <a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!-- end 底部 -->
+</body>
+</html>

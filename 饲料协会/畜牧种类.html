@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>畜牧种类</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        .tablist_left {width: 20%;display: inline-block;margin-left: 1%;}
+        .tablist_left a::after{background: none;}
+        .tablist_content {width: 76%;display: inline-block;vertical-align: top;}
+        .tablist_list{width:85%;display: block;overflow: hidden;border:1px solid #d8d8d8;margin:0 auto 3rem;padding: 0 5% 5% 5%;background: #fff;font-family: "Microsoft Yahei";text-decoration: none;}
+        .tablist_list h3{font-size: 1rem;font-weight: normal;color:#222;}
+        .tablist_list span{font-size: 0.8rem;color:#666;padding-bottom: 1rem;display: inline-block;font-weight: normal;}
+        .tablist_list img{width:100%;max-width: 1200px;}
+        .tablist_list p{font-size: 0.8rem;display:block;max-height: 3rem;overflow: hidden;color:#666;font-weight: normal;}
+        .tablist_list i{font-size: 0.8rem;color:#888;font-style: normal;font-weight: normal;}
+        .tablist_list_detail{font-family: "Microsoft Yahei";}
+        .tablist_list_detail h3{font-size: 1.3rem;font-weight: normal;color:#222;text-align: center;}
+        .tablist_list_detail span{font-size: 0.8rem;color:#666;padding-bottom: 1rem;display: inline-block;}
+        .tablist_list_detail p{font-size: 0.9rem;color:#333;text-indent: 1.8rem; line-height: 1.2rem;}
+    </style>
+</head>
+ 
+<body>
+ 
+<div data-role="page" id="home">
+
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="返回">
+        <h1>畜牧种类</h1>
+    </div>
+
+    <div data-demo-html="true">
+
+            <div data-role="tabs">
+                <ul data-role="listview" data-inset="true" class="tablist_left">
+                  <li><a href="#one" data-ajax="false">饲料</a></li>
+                  <li><a href="#two" data-ajax="false">兽药</a></li>
+                  <li><a href="#three" data-ajax="false">添加剂</a></li>
+                  <li><a href="#four" data-ajax="false">养殖</a></li>
+                </ul>
+                
+                <ul id="one" class="tablist_content" data-role="listview" data-inset="true">
+                    <li><a href="#page2">河南省郑州市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省郑州市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                </ul>
+                <ul id="two" class="tablist_content" data-role="listview" data-inset="true">
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省郑州市</a></li>
+                    <li><a href="#">河南省周口市</a></li>                    
+                </ul>
+                <ul id="three" class="tablist_content" data-role="listview" data-inset="true">
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省郑州市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省郑州市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                </ul>
+                <ul id="four" class="tablist_content" data-role="listview" data-inset="true">
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省郑州市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                    <li><a href="#">河南省周口市</a></li>
+                    <li><a href="#">河南省开封市</a></li>
+                    <li><a href="#">河南省漯河市</a></li>
+                    <li><a href="#">河南省洛阳市</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <footer data-role="footer" data-position="fixed">
+        <h2>Footer</h2>
+    </footer>
+
+</div>
+
+<div data-role="page" id="page2">
+
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="返回" data-position="fixed">
+        <h1>郑州市</h1>
+    </div>
+
+    <div data-demo-html="true" class="ui-content" role="main">
+        <a class="tablist_list" data-inset="true" href="#page3">
+            <h3>郑州市郑州市郑州市郑州市</h3>
+            <span>6月28日</span>
+            <img src="images/banner01.jpg" alt="">
+            <p>郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市</p>
+            <i>查看全文</i>
+        </a>
+        <a class="tablist_list" data-inset="true" href="#">
+            <h3>郑州市郑州市郑州市郑州市</h3>
+            <span>6月28日</span>
+            <img src="images/banner01.jpg" alt="">
+            <p>郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市</p>
+            <i>查看全文</i>
+        </a>
+        <a class="tablist_list" data-inset="true" href="#">
+            <h3>郑州市郑州市郑州市郑州市</h3>
+            <span>6月28日</span>
+            <img src="images/banner01.jpg" alt="">
+            <p>郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市</p>
+            <i>查看全文</i>
+        </a>
+    </div>
+
+    <footer data-role="footer" data-position="fixed">
+        <h2>Footer</h2>
+    </footer>
+
+</div>
+
+<div data-role="page" id="page3">
+
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="返回" data-position="fixed">
+        <h1>郑州市</h1>
+    </div>
+
+    <div data-demo-html="true" class="ui-content" role="main">
+        <div class="tablist_list_detail">
+            <h3>郑州市郑州市郑州市郑州市</h3>
+            <span>6月28日 新华社</span>
+            <p>郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市郑州市</p>
+        </div>      
+    </div>
+
+    <footer data-role="footer" data-position="fixed">
+        <h2>Footer</h2>
+    </footer>
+
+</div>
+
+ 
+</body> 
+</html>

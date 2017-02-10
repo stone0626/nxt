@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no,minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".new_add_area").click(function(){
+    $(".belong_area").css({"display":"block"});
+  });
+  $(".belong_area_top a").click(function(){
+    $(".belong_area").css({"display":"none"});
+  });
+});
+
+
+
+</script>
+<title>管理收货地址</title>
+</head>
+
+<body class="mhome">
+
+<!-- 所属区域 -->
+<div class="belong_area" id="belong_area">
+	<div class="belong_area_top">
+		<a href="#"><i class="fa fa-angle-left fa-2x"></i></a>
+		<span>配送至</span>
+	</div>
+	<ul>
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">天津</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">河北</a></li>
+		<li><a href="#">河南</a></li>
+		<li><a href="#">辽宁</a></li>
+		<li><a href="#">吉林</a></li>
+		<li><a href="#">黑龙江</a></li>
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">天津</a></li>
+		<li><a href="#">河南</a></li>
+		<li><a href="#">辽宁</a></li>
+		<li><a href="#">吉林</a></li>
+		<li><a href="#">黑龙江</a></li>
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">天津</a></li>
+	</ul>
+</div>
+<!-- end 所属区域 -->
+
+<!--p_top-->
+<div class="p_top new_add_tit">
+	<a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<h3>管理收货地址</h3>
+</div>
+<!--end p_top-->
+<!-- new_add -->
+<div class="new_add">
+	<div class="new_add_box">
+		<p>收件人：</p>
+		<div class="new_add_box_rt">
+			<input type="text" value="" />
+		</div>
+		<i class="fa fa-angle-right fa-lg new_add_area_i"></i>
+	</div>
+	<div class="new_add_box">
+		<p>手机号码：</p>
+		<div class="new_add_box_rt">
+			<input type="text" style="ime-mode:disabled" onkeydown="if(event.keyCode==13)event.keyCode=9" onkeypress="if ((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" value="" />
+		</div>
+		<i class="fa fa-angle-right fa-lg new_add_area_i"></i>
+	</div>
+	<div class="new_add_box new_add_area" >
+		<p>所在区域：</p>
+		<i class="fa fa-angle-right fa-lg new_add_area_i"></i>
+	</div>
+	<div class="new_add_box">
+		<p>详细地址：</p>
+		<div class="new_add_box_rt">
+			<input type="text" value="" />
+		</div>
+		<i class="fa fa-angle-right fa-lg new_add_area_i"></i>
+	</div>
+	<div class="edit_add_btn">
+		<button class="edit_add_btn02">保存</button>
+	</div>
+</div>
+<!-- end new_add -->
+</body>
+</html>

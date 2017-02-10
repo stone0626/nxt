@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>个人中心-购物车</title>
+<link href="css/base_center.css" type="text/css" rel="stylesheet" />
+<link href="css/main_center.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    function del_order(){
+    document.getElementById('zhezhao').style.display='block';
+    document.getElementById('del_order').style.display='block';
+    }
+    function del_order_close(){
+    document.getElementById('zhezhao').style.display='none';
+    document.getElementById('del_order').style.display='none';
+    }
+    function collect(){
+    document.getElementById('zhezhao').style.display='block';
+    document.getElementById('collect').style.display='block';
+    }
+    function collect_close(){
+    document.getElementById('zhezhao').style.display='none';
+    document.getElementById('collect').style.display='none';
+    }
+</script>
+</head>
+
+<body>
+<div id="zhezhao"></div>
+
+<!--删除商品-->
+<div class="popup" id="del_order">
+    <div class="popup_box">
+        <h3><strong>提示</strong>
+        <input type="button" value="×" class="button" onClick="del_order_close()" />
+        </h3>
+        <img src="images/tanhao.jpg" />
+        <div class="popup_main">
+            <span>您确定要删除该商品？</span>
+            <b>&nbsp;</b>
+            <div class="pop_input pop_input1">
+            <input class="red_btn" type="button" value="确认" /><input class="red_btn gray_btn" type="button" value="取消" onClick="del_order_close()" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--end 删除商品-->
+
+<!--移入收藏夹-->
+<div class="popup" id="collect">
+    <div class="popup_box">
+        <h3><strong>提示</strong>
+        <input type="button" value="×" class="button" onClick="collect_close()" />
+        </h3>
+        <img src="images/duihao_c.jpg" />
+        <div class="popup_main">
+            <span class="mt10">移入收藏夹成功！</span>
+        </div>
+    </div>
+</div>
+<!--end 移入收藏夹-->
+
+<!--top-->
+<div class="top">
+	<div class="top_main">
+        <strong class="top_lt">欢迎来到神州牧易商城个人中心！</strong>
+        <div class="top_rt">
+        	<a href="#" class="top_rt_home">商城首页</a>
+            <a href="#"><img src="images/shopping.png" /><span>购物车</span></a>
+			<div class="collect">
+            	<a href="#"><img src="images/collect.png" /><span>收藏夹</span><img src="images/jiantou_c.png" /></a>
+                <div class="collect_box">
+                	<a href="#">收藏的商品</a>
+                    <a href="#">收藏的旗舰店</a>
+                </div>
+            </div>
+            <a href="#">联系客服</a>
+        </div>
+    </div>
+</div>
+<!--end top-->
+<!-- logo -->
+<div class="logo">
+    <a href="#" class="logo_lt"><img src="images/logo_center.png" /></a>
+    <div class="logo_rt">
+        <input class="logo_rt_in" value="" type="text" />
+        <input class="logo_rt_btn" value="搜索" type="button" />
+    </div>
+</div>
+<!-- end logo -->
+<!-- portrait -->
+<div class="portrait">
+    <div class="portrait_box">
+       <a href="#"  class="portrait_box_img"><i><img src="images/bixuan01.jpg" /></i></a>
+       <p><span>梁山伯与朱丽叶</span><a href="#">账号管理</a><a href="#">退出</a></p>
+    </div>
+</div>
+<!-- end portrait -->
+
+<div class="main">
+<!--slidenav-->
+<div class="slidenav">
+    <div class="slidetop">
+        <h3 class="h3_01">我的订单</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">已买到的商品</a></li>
+        <li><a href="#" class="hover">我的购物车</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_02">我的收藏</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">收藏的商品</a></li>
+        <li><a href="#">收藏的店铺</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_03">我的设置</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">个人资料</a></li>
+        <li><a href="#">我的收货地址</a></li>
+        <li><a href="#">修改密码</a></li>
+        <li><a href="#">绑定手机</a></li>
+        <li><a href="#">绑定农信宝</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_04">我的收益</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">我的收益</a></li>
+    </ul>
+</div>
+<!--end slidenav-->
+<!--主体-->
+<div class="main_rt">
+<!-- 我的购物车 -->
+<div class="my_cart">
+    <div class="slidetop">
+        <h3>我的购物车</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <table class="my_cart_tit" width="98%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="35%">商品信息</td>
+            <td width="17%">单价</td>
+            <td width="15%">数量</td>
+            <td width="18%">金额</td>
+            <td width="15%">操作</td>
+        </tr>
+    </table>
+    <div class="my_cart_box">
+        <div class="my_cart_list_top"><input name="" type="checkbox" value="" /> &nbsp;商家：<a href="#">正大饲料旗舰店</a></div>
+        <table class="my_cart_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="my_cart_box">
+        <div class="my_cart_list_top"><input name="" type="checkbox" value="" /> &nbsp;商家：<a href="#">正大饲料旗舰店</a></div>
+        <table class="my_cart_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="my_cart_box">
+        <div class="my_cart_list_top"><input name="" type="checkbox" value="" /> &nbsp;商家：<a href="#">正大饲料旗舰店</a></div>
+        <table class="my_cart_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="my_cart_settle">
+        <input type="button" value="去结算" />
+        <p>已选商品<span class="red">1</span>件<em>合计：</em><b class="red">&yen;&nbsp;230.00</b></p>
+    </div>
+    <div class="my_cart_box">
+        <div class="my_cart_list_top"><input name="" type="checkbox" value="" /> &nbsp;商家：<a href="#">正大饲料旗舰店</a></div>
+        <table class="my_cart_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+            <tr>
+                <td width="5%"><input name="" type="checkbox" value="" /></td>
+                <td width="10%" class="my_cart_list_img"><a href="#"><span><img src="images/bixuan01.jpg" /></span></a></td>
+                <td width="20%" class="my_cart_list_tit"><a href="#">正大饲料诺威素正大饲料诺威素正大饲料诺威素</a><p>规格：50Kg/袋</p></td>
+                <td width="17%" class="my_cart_list_pri"><b>&yen;5544.00</b><span>&yen;8888.00</span></td>
+                <td width="15%">
+                    <div class="my_cart_list_num">
+                        <a href="#">-</a><input value="1" type="text"><a href="#">+</a>
+                    </div>
+                </td>
+                <td width="18%" class="my_cart_list_pri"><b>&yen;888888.00</b></td>
+                <td width="15%" class="my_cart_list_oper"><a class="blue" href="#" onclick="collect()">移入收藏夹</a><a class="red" href="#" onclick="del_order()">删除</a></td>
+            </tr>
+        </table>
+        <div class="my_cart_failure"></div>
+    </div>
+
+</div>
+<!-- end 我的购物车 -->
+</div>
+<!--end 主体-->
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+        <a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!-- end 底部 -->
+</body>
+</html>

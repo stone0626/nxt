@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/pig_market.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("#verified_pig_btn").click(function(){
+        $("#verified_pig").css({"display":"none"});
+        $("#verified_pig_next").css({"display":"block"});
+    });
+});
+</script>
+
+<title>猪贸通M版-实名认证-猪场</title>
+</head>
+<body class="mhome">
+
+<div class="pig_add_cover"></div>
+<!-- 所属行业 -->
+<div class="pig_add" id="pig_variety">
+  <header><h3>选择行业</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+  <div class="pig_add_cur" id="pig_variety_top">
+    <ul><li></li></ul>
+    <button>确定</button>
+  </div>
+  <div class="pig_add_main">
+    <ul class="pig_add_ul" id="pig_variety_ul">
+        <li><a href="#">养猪个体户</a></li>
+        <li><a href="#">养猪合作社</a></li>
+        <li><a href="#">兽药动保</a></li>
+        <li><a href="#">出售仔猪场</a></li>
+        <li><a href="#">器械设备</a></li>
+        <li><a href="#">国家核心育种场</a></li>
+        <li><a href="#">地方品种种猪场</a></li>
+        <li><a href="#">屠宰加工</a></li>
+        <li><a href="#">生猪收购行业</a></li>
+        <li><a href="#">社会团体</a></li>
+        <li><a href="#">网站媒体</a></li>
+        <li><a href="#">自繁自养猪场</a></li>
+        <li><a href="#">规模化商品猪场</a></li>
+        <li><a href="#">饲料/添加剂</a></li>
+        <li><a href="#">其他</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- end 所属行业 -->
+
+<!-- 选择区域 -->
+<div class="pig_add">
+  <header><h3>选择区域</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+  <div class="pig_add_cur">
+    <ul><li class="cur01">北京</li><li class="cur02">北京</li><li class="cur03">北京</li></ul>
+    <button>确定</button>
+  </div>
+  <div class="pig_add_main">
+    <ul class="pig_add_ul" id="pig_add01">
+      <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津111</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">end</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add02" style="display: none;">
+      <li><a href="#">北京2</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add03" style="display: none;">
+      <li><a href="#">北京3</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">河北</a></li>
+        <li><a href="#">河南</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end 选择区域 -->
+
+<!--com_top-->
+<div class="com_top">
+	<a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<h3>认证屠宰场</h3>
+</div>
+<!--end com_top-->
+
+<!-- verified_pig -->
+<div class="verified_point">
+	<h3>只需两步，轻松搞定！</h3>
+</div>
+<div class="verified_pig" id="verified_pig">
+	<div class="verified_pig_top">
+		<i>1</i><h3>第一步：填写基本信息</h3>
+	</div>
+	<div class="verified_pig_box">
+		<strong>所属行业：</strong><p class="pig_sort_li_02"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>企业名称：</strong><p><input type="text" value="" /></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>日屠宰量：</strong><p><input type="text" value="" /><i class="unit">头</i></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>所在地区：</strong><p class="pig_p01"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>详细地址：</strong><p class="verified_pig_add"><input type="text" value="" /></p><span class="redstar">*</span>
+	</div>
+	<div class="verified_pig_box">
+		<strong>收猪要求：</strong><p class="p_textarea"><textarea></textarea></p><span class="redstar">*</span>
+	</div>
+	<button class="verified_pig_btn" id="verified_pig_btn">下一步</button>
+</div>
+<!-- end verified_pig -->
+
+<!-- verified_pig2 -->
+<div class="verified_pig" id="verified_pig_next" style="display: none;">
+    <div class="verified_pig_top">
+        <i>2</i><h3>第二步：附加信息</h3>
+    </div>
+    <div class="verified_pig_box">
+        <strong>联系人：</strong><p><input type="text" value="" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>手机号：</strong><p><input id="amount" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" size="14" maxlength="12" name="amount" type="text" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>QQ：</strong><p><input id="amount" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" size="14" name="amount" type="text" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>营业执照：</strong>
+        <div class="verified_pig_pic">
+            <input type="file" value="">
+        </div>
+        <span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>封面照片：</strong>
+        <div class="verified_pig_pic">
+            <input type="file" value="">
+        </div>
+    </div>
+    <button class="verified_pig_btn">确定</button>
+</div>
+<!-- end verified_pig2 -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+	<a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+
+</body>
+</html>

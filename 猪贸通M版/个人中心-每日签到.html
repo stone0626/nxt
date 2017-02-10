@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".sign_click_rt button").click(function(){
+            $(this).css({background: "#888"}).text("已签到");
+        });
+    });
+</script>
+<title>猪贸通M版-每日签到</title>
+</head>
+<body class="mhome">
+
+<!--com_top-->
+<div class="com_top">
+    <a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+    <h3>每日签到</h3>
+</div>
+<!--end com_top-->
+
+<!-- sign -->
+<div class="sign">
+    <div class="sign_top"><h3>今天已签到</h3></div>
+    <div class="sign_click">
+        <img src="images/ico_sign02.png">
+        <div class="sign_click_rt"><button>点击签到</button><p>您已连续签到1天，继续努力吧！</p></div>
+    </div>
+    <div class="sign_img"></div>
+    <a class="sign_sea_a" href="#">查看我的积分</a>
+    <div class="sign_txt">
+        <h3>活动规则</h3>
+        <p>1、登录用户每天“点击签到”，即可完成签到。
+        </br>2、用户每天签到都可获得相应积分，连续签到将奖励更多积分，连续签到7天后重置签到天数。多签多得，记得每天都要来签到哦！
+        </br>3、积分可以换购商品、可以兑换礼品，还可以提现。（100积分等值于1元人民币）
+        </br>4、本活动中的所有统计数据都以神州牧易查询结果为准，如有任何问题请及时反馈。（点击“设置”→“用户反馈”）
+        </br>5、本活动最终解释权归河南神州牧易电子商务有限公司所有</p>
+    </div>
+</div>
+<!-- end sign -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+  <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".my_card_txt").click(function(){
+            $(".my_card_point").css({display: "block"});
+            $(".pig_add_cover").css({display: "block"});
+        });
+        $(".my_card_point_box button").click(function(){
+            $(".my_card_point").css({display: "none"});
+            $(".pig_add_cover").css({display: "none"});
+        });
+    });
+</script>
+<title>猪贸通M版-个人资料</title>
+</head>
+<body class="mhome">
+
+<div class="pig_add_cover"></div>
+<!-- 提示 -->
+<div class="my_card_point">
+    <h3>更改电话号码</h3>
+    <div class="alter_tel">
+         <input onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" name="amount" type="text" maxlength="11" />
+    </div>
+    <div class="my_card_point_box">
+        <button class="my_card_btn01">取消</button><button>确定</button>
+    </div>
+</div>
+<!-- end 提示 -->
+
+<!--com_top-->
+<div class="com_top">
+    <a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+    <h3>个人资料</h3>
+</div>
+<!--end com_top-->
+
+<!-- personal -->
+<div class="personal">
+    <div class="personal_top">
+        <strong>头像</strong><a href="#"><img src="images/defaul_head.png"></a>
+    </div>
+    <div class="personal_box">
+        <p><strong>用户姓名</strong><span>pig</span></p>
+        <a href="#" class="my_card_txt"><strong>手机号码</strong><i class="fa fa-angle-right"></i><span>15784578457</span></a>
+        <a href="#"><strong>邮寄地址</strong><i class="fa fa-angle-right"></i></a>
+        <a href="#"><strong>我的银行卡</strong><i class="fa fa-angle-right"></i></a>
+    </div>
+    <div class="personal_box">
+        <a href="#"><strong>修改登录密码</strong><i class="fa fa-angle-right"></i></a>
+        <a href="#"><strong>重置支付密码</strong><i class="fa fa-angle-right"></i></a>
+        <a href="#"><strong>退出</strong></a>
+    </div>
+
+</div>
+<!-- end personal -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+  <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+</body>
+</html>

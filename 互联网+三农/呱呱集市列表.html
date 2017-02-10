@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>呱呱集市列表</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="css/base_web.css">
+<link rel="stylesheet" type="text/css" href="css/main_zs.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/jQselect.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+$(function(){
+  $(".nav_main h2").click(function(){
+    $(this).children('.fa-angle-down').toggleClass('hid');
+    $(this).children('.fa-angle-up').toggleClass('hid');
+    $(".category").toggle();
+  });
+  $(".flag_shop_sort li a").click(function(){
+    $(this).addClass("hover").siblings().removeClass();
+  });
+  $(".flag_shop_filter a").click(function(){
+    $(this).addClass("hover").siblings().removeClass();
+  });
+})
+</script>
+</head>
+<body>
+<!--top-->
+<div class="topnav_bg">
+  <div class="topnav">
+  <div class="topnav_lt">
+    <strong>您好，欢迎访问互联网+三农运营服务平台！</strong><a class="hover" href="#">登录</a>|<a href="#">免费注册</a><a href="#"><i class="fa fa-mobile"></i>手机客户端下载</a>
+  </div>
+  <dl class="topnav_rt">
+    <dt>
+      <a href="#">我的订单</a>
+    </dt>
+    <dd>
+      <p><b>我的服务</b><i class="fa fa-angle-down"></i></p>
+      <div class="topnav_rt_item">
+        <a href="#">我的订单</a><a href="#">我的预约</a><a href="#">我的评价</a><a href="#">我的收藏</a><a href="#">我的活动</a><a href="#">会员服务</a><a href="#">账号设置</a>
+      </div>
+    </dd><span>|</span>
+    <dd>
+      <p class="topnav_rt_item_p"><b>最近浏览</b><i class="fa fa-angle-down"></i></p>
+      <div class="topnav_rt_item topnav_rt_list ">
+        <em>暂无记录</em>
+      </div>
+    </dd><span>|</span>
+    <dd>
+      <p><b>我是商家</b><i class="fa fa-angle-down"></i></p>
+      <div class="topnav_rt_item">
+        <a href="#">商家登录</a>
+      </div>
+    </dd><span>|</span>
+    <dd>
+      <p><b>快捷导航</b><i class="fa fa-angle-down"></i></p>
+      <div class="topnav_rt_item">
+        <a href="#">商家新闻</a><a href="#">积分商城</a><a href="#">商家榜单</a>
+      </div>
+    </dd>
+  </dl>
+  </div>
+</div>
+<!--end top-->
+<!--logo-->
+<div class="logo_content">
+  <div class="logo_lt">
+    <a class="logo_img" href="#"><img src="images/logo_lt.jpg"/></a>
+    <div class="logo_name">
+      <p>浚县</p>
+      <a href="#">切换分站<i class="fa fa-angle-down"></i></a>
+    </div>
+  </div>
+  <div class="logo_mid">
+    <div class="logo_mid_lt">
+      <select id=a>
+        <option value=1 selected>商家</option>
+        <option value=2>团购</option>
+        <option value=3>呱呱市集</option>
+        <option value=4>商品</option>
+      </select>
+    </div>
+    <script type=text/javascript>
+      $(document).ready(function() {
+         $("#a").selectbox();
+      });
+    </script>
+    <input type="text" value="" class="logo_mid_md" />
+    <button class="logo_mid_rt">搜索</button>
+    <div class="keyword">
+      <ul>
+         <li><a href="#" class="hover">饲料</a></li>
+         <li><a href="#">售药</a></li>
+         <li><a href="#">预混料</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<!--end logo-->
+<!-- nav -->
+<div class="nav">
+  <div class="nav_main">
+    <h2><span>快捷入口</span><i class="fa fa-angle-down"></i><i class="fa fa-angle-up hid"></i></h2>
+    <ul class="nav_ul">
+      <li><a href="#" class="current">首页</a></li>
+      <li><a href="#">大美浚县</a></li>
+      <li><a href="#">精彩三农</a></li>
+      <li><a href="#">呱呱政务</a></li>
+      <li><a href="#">旗舰店</a></li>
+      <li><a href="#">活动</a></li>
+      <li><a href="#">瓜棚柳下</a></li>
+      <li><a href="#">邦客中心</a></li>
+      <li><a href="#">三农资讯</a></li>
+    </ul>
+    <!-- category -->
+    <ul class="category">
+      <li id="mainCate-1" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">公益服务</a></h3>
+          <p><a href="#">专家在线</a><a href="#">12316服务</a></p>
+        </div>
+        <div class="subCate">
+          <h4>公益服务</h4>
+          <a href="#">12316服务</a><a href="#">专家在线</a><a href="#">价格行情</a><a href="#">社保查询</a><a href="#">政策早班车</a><a href="#">气象为农</a>
+          <a href="#">致富天地</a><a href="#">互联网＋办事大厅</a><a href="#">修心养身</a>
+        </div>
+      </li>
+      <li id="mainCate-2" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">便民服务</a></h3>
+          <p><a href="#">手机充值</a><a href="#">快递查询</a></p>
+        </div>
+        <div class="subCate">
+          <h4>便民服务</h4>
+          <a href="#">手机充值</a><a href="#">快递查询</a><a href="#">水电缴费</a><a href="#">火车票</a><a href="#">飞机票</a><a href="#">汽车票</a>
+          <a href="#">违章查询</a><a href="#">加油卡充值</a><a href="#">医院挂号</a><a href="#">有线电视缴费</a><a href="#">固话宽带</a><a href="#">信用卡还款</a>
+        </div>
+      </li>
+      <li id="mainCate-3" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">农产品销售</a></h3>
+          <p><a href="#">绿色产品</a><a href="#">有机产品</a></p>
+        </div>
+        <div class="subCate">
+          <h4>农产品销售</h4>
+          <a href="#">绿色产品</a><a href="#">有机产品</a><a href="#">粮油</a><a href="#">特产</a><a href="#">工艺品</a>
+        </div>
+      </li>
+      <li id="mainCate-4" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">神州农易商城</a></h3>
+          <p><a href="#">种子</a><a href="#">肥料</a></p>
+        </div>
+        <div class="subCate">
+          <h4>神州农易商城</h4>
+          <a href="#">种子</a><a href="#">肥料</a><a href="#">农药</a><a href="#">农机</a><a href="#">神州农易</a>
+        </div>
+      </li>
+      <li id="mainCate-5" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">呱呱商城</a></h3>
+          <p><a href="#">日用百货</a><a href="#">美食特产</a></p>
+        </div>
+        <div class="subCate">
+          <h4>呱呱商城</h4>
+          <a href="#">日用百货</a><a href="#">美食特产</a><a href="#">家用电器</a><a href="#">鞋包服饰</a><a href="#">母婴用品</a>
+          <a href="#">电脑/手机/数码</a><a href="#">家居家纺</a><a href="#">家用电器</a><a href="#">美容护肤 </a><a href="#">农产品销售</a>
+          <a href="#">办公用品</a><a href="#">淘宝</a><a href="#">京东</a><a href="#">一淘网</a>
+        </div>
+      </li>
+      <li id="mainCate-6" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">呱呱农服</a></h3>
+          <p><a href="#">飞防</a><a href="#">土地流转</a></p>
+        </div>
+        <div class="subCate">
+          <h4>呱呱农服</h4>
+          <a href="#">飞防</a><a href="#">土地流转</a><a href="#">土地托管</a>
+        </div>
+      </li>
+      <li id="mainCate-7" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">农业新经营主体服务</a></h3>
+          <p><a href="#">项目申报</a><a href="#">信息化服务</a></p>
+        </div>
+        <div class="subCate">
+          <h4>农业新经营主体服务</h4>
+          <a href="#">项目申报</a><a href="#">信息化服务</a><a href="#">政策法规</a><a href="#">行情资讯</a><a href="#">企业培训</a>
+          <a href="#">合作社政策</a><a href="#">产品通·云追溯</a><a href="#">农业企业云平台</a><a href="#">聚农宝</a><a href="#">云农场</a>
+        </div>
+      </li>
+      <li id="mainCate-8" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">呱呱集市</a></h3>
+          <p><a href="#">买房租房</a><a href="#">车辆与农机</a></p>
+        </div>
+        <div class="subCate">
+          <h4>呱呱集市</h4>
+          <a href="#">买房租房</a><a href="#">车辆与农机</a><a href="#">二手</a><a href="#">务工信息</a><a href="#">农村服务</a>
+          <a href="#">征婚交友</a><a href="#">培训教育</a><a href="#">求职</a><a href="#">兼职</a><a href="#">宠物</a>
+        </div>
+      </li>
+      <li id="mainCate-9" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">培训教育</a></h3>
+          <p><a href="#">新农邦商学院</a><a href="#">企业培训</a></p>
+        </div>
+        <div class="subCate">
+          <h4>培训教育</h4>
+          <a href="#">新农邦商学院</a><a href="#">企业培训</a><a href="#">阳光培训</a><a href="#">技能教育</a><a href="#">学历教育</a>
+        </div>
+      </li>
+      <li id="mainCate-10" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">农业物流</a></h3>
+          <p><a href="#">呱呱物流</a><a href="#">快递/物流信息</a></p>
+        </div>
+        <div class="subCate">
+          <h4>农业物流</h4>
+          <a href="#">呱呱物流</a><a href="#">快递/物流信息</a><a href="#">发快递</a><a href="#">配送员</a>
+        </div>
+      </li>
+      <li id="mainCate-11" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">休闲农业</a></h3>
+          <p><a href="#">香油网·吃</a><a href="#">香油网·玩</a></p>
+        </div>
+        <div class="subCate">
+          <h4>休闲农业</h4>
+          <a href="#">香油网·吃</a><a href="#">香油网·玩</a><a href="#">香油网·闲</a><a href="#">香油网·购</a><a href="#">香油网·资讯</a>
+        </div>
+      </li>
+      <li id="mainCate-12" class="mainCate">
+        <div class="mainCate_lt">
+          <h3><a href="#">休闲农业</a></h3>
+          <p><a href="#">香油网·吃</a><a href="#">香油网·玩</a></p>
+        </div>
+        <div class="subCate">
+          <h4>大数据中心</h4>
+          <a href="#">表格下载</a><a href="#">农村数据</a><a href="#">农情预测</a><a href="#">邦客入驻进展</a>
+        </div>
+      </li>
+    </ul>
+    <script type="text/javascript">
+    jQuery(".category").slide({  type:"menu", titCell:".mainCate", targetCell:".subCate", delayTime:0, triggerTime:0, defaultPlay:false, returnDefault:true });
+    </script>
+    <!-- end category -->
+   </div>
+</div>
+<!-- end nav -->
+<div class="clear"></div>
+<!-- bazaar_list -->
+
+<div class="bazaar_list">
+  <ul class="bazaar_sort">
+     <li class="bazaar_sort_li">
+       <strong>分类：</strong>
+       <p><a class="hover" href="#">全部</a><a href="#">农资</a><a href="#">农资农资农资</a><a href="#">农资</a><a href="#">农资</a><a href="#">农资</a></p>
+     </li>
+     <li>
+       <strong>分类：</strong>
+       <p><a class="hover" href="#">全部</a><a href="#">溧阳</a><a href="#">农资</a><a href="#">农资</a><a href="#">溧阳溧阳</a><a href="#">农资</a><a href="#">农资</a><a href="#">农资</a><a href="#">溧阳溧阳溧阳</a><a href="#">溧阳溧阳</a><a href="#">农资</a></p>
+     </li>
+  </ul>
+   <div class="bazaar_list_lt">
+      <div class="bazaar_filter">
+         <input type="text" name="" value="">
+         <button>搜索</button>
+         <a href="#">免费发布信息</a>
+      </div>
+      <h1 class="bazaar_list_tit">本地呱呱集市</h1>
+      <ul class="bazaar_list_box">
+         <li>
+            <a class="bazaar_list_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+            <div class="bazaar_list_name">
+              <a href="#">全新46寸智能网络液晶电视转让,高清有发票,带无线 - 1600元<i>个人</i></a>
+              <p>店址：浚县浙江商贸对面</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县伾山 - 大伾山广场 - 鹤壁浚县</p>
+            </div>
+            <b class="bazaar_list_price">&yen;500.00</b>
+         </li>
+         <li>
+            <a class="bazaar_list_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+            <div class="bazaar_list_name">
+              <a href="#">全新46寸智能网络液晶电视转让,高清有发票,带无线 - 1600元<i>个人</i></a>
+              <p>店址：浚县浙江商贸对面</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县伾山 - 大伾山广场 - 鹤壁浚县</p>
+            </div>
+            <b class="bazaar_list_price">&yen;500.00</b>
+         </li>
+         <li>
+            <a class="bazaar_list_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+            <div class="bazaar_list_name">
+              <a href="#">全新46寸智能网络液晶电视转让,高清有发票,带无线 - 1600元<i>个人</i></a>
+              <p>店址：浚县浙江商贸对面</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县伾山 - 大伾山广场 - 鹤壁浚县</p>
+            </div>
+            <b class="bazaar_list_price">&yen;500.00</b>
+         </li>
+         <li>
+            <a class="bazaar_list_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+            <div class="bazaar_list_name">
+              <a href="#">全新46寸智能网络液晶电视转让,高清有发票,带无线 - 1600元<i>个人</i></a>
+              <p>店址：浚县浙江商贸对面</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县伾山 - 大伾山广场 - 鹤壁浚县</p>
+            </div>
+            <b class="bazaar_list_price">&yen;500.00</b>
+         </li>
+         <li>
+            <a class="bazaar_list_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+            <div class="bazaar_list_name">
+              <a href="#">全新46寸智能网络液晶电视转让,高清有发票,带无线 - 1600元<i>个人</i></a>
+              <p>店址：浚县浙江商贸对面</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县</p>
+              <p>伾山 - 大伾山广场 - 鹤壁浚县伾山 - 大伾山广场 - 鹤壁浚县</p>
+            </div>
+            <b class="bazaar_list_price">&yen;500.00</b>
+         </li>
+      </ul>
+      <div class="pagelist">
+        <a href="#" class="onepage">首页</a>
+        <a href="#" class="onepage">上一页</a>
+        <a href="#" class="page_first">1</a>
+        <a href="#" >2</a> <a href="#">3</a>
+        <span class="ellipsis">...</span>
+        <a href="#">21</a>
+        <a href="#" class="onepage">末页</a>
+        <a href="#" class="onepage">下一页</a> &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至 <input name="" type="text" class="last_page" /> 页 <a href="#"  class="go" >确定</a>
+     </div>
+   </div>
+   <div class="flag_shop_rt">
+      <h3>热门信息</h3>
+      <div class="flag_shop_rt_box">
+         <a class="flag_shop_rt_img" href="#"><span><img src="images/banner01.jpg"></span></a>
+          <a class="flag_shop_rt_name" href="#">浚县首届相亲会活动浚县首届相亲会</a>
+      </div>
+      <div class="flag_shop_rt_box">
+         <a class="flag_shop_rt_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+          <a class="flag_shop_rt_name" href="#">浚县首届相亲会活动浚县首届相亲会</a>
+      </div>
+      <div class="flag_shop_rt_box">
+         <a class="flag_shop_rt_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+          <a class="flag_shop_rt_name" href="#">浚县首届相亲会活动浚县首届相亲会</a>
+      </div>
+      <div class="flag_shop_rt_box">
+         <a class="flag_shop_rt_img" href="#"><span><img src="images/flag_shop_img.jpg"></span></a>
+          <a class="flag_shop_rt_name" href="#">浚县首届相亲会活动浚县首届相亲会</a>
+      </div>
+   </div>
+</div>
+<!-- end flag_shop -->
+<div class="clear"></div>
+<!-- link -->
+<div class="link">
+   <strong>友情链接：</strong>
+   <p>
+     <a href="#">京东</a><a href="#">猪贸通</a><a href="#">聚农宝</a><a href="#">一淘</a><a href="#">一号店</a><a href="#">淘宝网</a>
+   </p>
+</div>
+<!-- end link -->
+<!-- footer -->
+<div class="footer">
+   <div class="footer_main">
+      <ul class="footer_ul">
+        <li class="footer_li_first">
+          <h3><i><img src="images/footer_ico01.png"/></i>联系我们</h3>
+          <p>客服电话：<b class="phone_num">4000365960</b></p>
+          <p class="p_small">免费长途</p>
+          <p>在线客服：<a href="#"><img src="images/footer_btn.png" alt=""></a></p>
+          <p>工作时间：周一至周日9:00-22:00</p>
+          <p class="p_small">法定节假日除外</p>
+        </li>
+        <li>
+          <h3><i><img src="images/footer_ico02.png"/></i>联系我们</h3>
+          <dl>
+            <dd>•<a href="#">关于我们</a></dd>
+            <dd>•<a href="#">联系我们</a></dd>
+            <dd>•<a href="#">人才招聘</a></dd>
+            <dd>•<a href="#">免责声明</a></dd>
+          </dl>
+        </li>
+        <li>
+          <h3><i><img src="images/footer_ico03.png"/></i>商户合作</h3>
+          <dl>
+            <dd>•<a href="#">商家入驻</a></dd>
+            <dd>•<a href="#">广告合作</a></dd>
+            <dd>•<a href="#">商家后台</a></dd>
+          </dl>
+        </li>
+        <li>
+          <h3><i><img src="images/footer_ico04.png"/></i>用户帮助</h3>
+          <dl>
+            <dd>•<a href="#">服务协议</a></dd>
+            <dd>•<a href="#">退款承诺</a></dd>
+          </dl>
+        </li>
+      </ul>
+      <div class="footer_rt">
+         <h3>扫一扫加关注</h3>
+         <img src="images/qr_code.jpg" alt="">
+      </div>
+
+   </div>
+   <p class="footer_copy">copyright 2013-2016 www.365960.cn All Rights Reserved 互联网+三农运营服务平台版权所有 - 京ICP备090152403号</p>
+</div>
+<!-- end footer -->
+
+<!-- 返回顶部 -->
+<div id="moquu_wxin" class="moquu_wxin"><a href="javascript:void(0)"><div class="moquu_wxinh"></div></a></div>
+<div id="moquu_wshare" class="moquu_wshare"><a href="#"></a></div>
+<a id="moquu_top" href="javascript:void(0)"></a>
+<!-- end 返回顶部 -->
+
+</body>
+</html>

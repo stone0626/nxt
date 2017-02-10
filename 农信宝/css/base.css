@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2016-10-17 11:48:17
+ * @version $Id$
+ */
+/* CSS Document */
+
+* { margin:0; padding:0; }
+body { font-family:"Microsoft YaHei",Arial; font-size:12px; color:#333;position: relative;}
+div, ul, ol, li, p, span, dl, dt, dd, h1, h2, h3, h4, h5, table, tbody, th, tr, td, form, input, submit, textarea, .unstyled { margin:0px; padding:0px; list-style:none; }
+a { text-decoration: none; color:#333; word-break:break-all;}
+a{blr:expression(this.onFocus=this.blur());}
+a{ outline: none;}
+a:focus{outline:none;}
+img { border:none; }
+button { margin:0; padding:0 }
+.clear { clear:both;}
+input{ outline:none; font-family:"Microsoft YaHei",宋体;}
+.fl {float:left;}
+.fr {float:right;}
+.mt10{margin-top: 10px;}
+
+/*top*/
+.top{width:100%;height:30px;border-bottom: 2px solid #e5e5e5;background: #f5f5f5;line-height: 30px;}
+.top_mi{width:1000px;overflow: hidden;margin:0 auto;}
+.top_mi a{float: right;display: block;color:#666;}
+.top_mi a:hover{color:#c40;}
+.top_mi b{float: right;padding: 0 15px;color:#999;}
+.top_mi i{font-size: 20px;padding-right: 3px;}
+
+/*nav*/
+.nav{width:1000px;margin:10px auto;overflow: hidden;height:70px;}
+.logo{width:150px;height:50px;display: block;float: left;background-size: 30%;}
+.nav ul{width:600px;float: right;height:70px;line-height: 70px;}
+.nav ul li{float: left;width:20%;height:100%;display: block;}
+.nav ul li a{width:100%;display: block;height:68px;text-align: center;font-size: 18px;color:#333;}
+.nav ul li a:hover{border-bottom:2px solid #c40;color:#c40;}
+.nav ul li a.hover{border-bottom:2px solid #c40;color:#c40;}
+
+/*footer*/
+.footer{width:100%;background: #241f1f;overflow: hidden;padding-bottom: 30px;}
+.footer_main{width:1000px;margin:0 auto;}
+.footer_main dl{float:left;margin:20px 90px 0 0;}
+.footer_main dl dt{font-size: 16px;}
+.footer_main dl dt a{color:#fff;line-height: 30px;}
+.footer_main dl dd a{color:#ccc;font-size: 14px;line-height: 30px;}
+.footer_main dl a:hover{text-decoration: underline;}
+.footer_nav{width:800px;margin:0 auto;}
+.footer_nav_last{width:440px;overflow: hidden;color:#999;margin: 50px auto 20px;}
+.footer_nav_last a{color:#fff;font-size: 14px;margin:0 15px;}
+.state{text-align: center;color:#fff;}
+
+/*分页效果*/
+.pagelist{ margin:35px auto;text-align:center; color:#333; font-family:"宋体";}
+.pagelist a{ padding:7px 10px; border:1px solid #CFCFCF; color:#333; margin:0 3px; text-decoration: none;}
+.pagelist a:visited{ text-decoration:none;}
+.pagelist a:active{ text-decoration:none;}
+.pagelist a:hover{background:#c40; color:#fff;cursor:pointer; text-decoration: none; }
+.pagelist span{padding:7px 10px; border:1px solid #CFCFCF;}
+.pagelist a.page_first{ background:#c40; color:#fff;}
+.pagelist a:hover.onepage{background:#c40; color:#fff;}
+.pagelist .ellipsis{ border:none; padding:5px; }
+.pagelist .last_page{ width:50px; height:27px; line-height:27px;margin:0 3px;  border:1px solid #CFCFCF; text-align:center; vertical-align:middle;}
+.pagelist .go{padding:7px 15px;  background:none; cursor:pointer; border:1px solid #CFCFCF; outline:none; margin-left:10px;}
+
+.pagelist a.grey{ color:#bcbcbc;}
+.pagelist .grey{padding:7px 10px; border:1px solid #CFCFCF; color:#bcbcbc; margin:0 3px; text-decoration: none; background-color:#fff;}
+.pagelist .grey_first{ background:#c40; color:#fff;}
+
+
+
+
+
+
+
+
+
+

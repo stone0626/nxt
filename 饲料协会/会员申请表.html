@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>会员申请表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+
+<style type="text/css" media="screen">
+    .register_box{font-family: "Microsoft Yahei";width:100%;overflow: hidden;}
+    .register_box p{width:95%;display: block;margin: 0 auto;}
+    .register_box_input{width:95%;margin:0.8rem auto;position: relative;height:4rem;}
+    .register_radio{width:95%;margin:1.5rem auto 0.8rem;height:2rem;}
+    .register_box_input input[type=text]{width: 100%;line-height: 1.5rem;background: #fff;border:1px solid #e5e5e5;min-height:1.5rem;}
+    .register_box_input span{display: block;position: absolute;right:0.7rem;top:0.6rem;color:#666;}
+    .register_box_input b{float: left;}
+    .ui-radio{float: left;width:10%;}
+    .remark{width:90%;margin:0 auto;font-family: "Microsoft Yahei";font-size: 0.9rem;}
+    .register_sub{margin-top: 2rem;}
+</style>
+</head>
+<body>
+
+
+    <div data-role="header" data-position="fixed">
+        <button class="ui-btn-left ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-inline ui-shadow ui-corner-all"></button>
+        <h1>会员登记表</h1>
+    </div>
+    <div data-demo-html="true" class="ui-content" role="main">
+        <div class="register_box">
+            <p>单位名称</p>
+            <div class="register_box_input"><input type="text" name="" placeholder="请输入单位名称"></div>
+        </div>
+        <div class="register_box">
+            <p>通讯地址</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>邮政编码</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>法人代表或申请人姓名</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>职务</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>企业性质</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>创办时间</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>固定资产</p>
+            <div class="register_box_input"><input type="text" name=""><span>万元</span></div>
+        </div>
+        <div class="register_box">
+            <p>职工人数</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>手机号码</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>传真</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>E—mail</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>QQ</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>企业获证时间</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>获证号</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>入会时间</p>
+            <div class="register_box_input"><input type="text" name=""></div>
+        </div>
+        <div class="register_box">
+            <p>会员性质</p>
+            <div class="register_box_input register_radio">
+                <input type="radio" name="register_radio"><b style="padding-right: 30%;">单位会员</b>
+                <input type="radio" name="register_radio"><b>个人会员</b>
+            </div>
+        </div>
+        <div class="register_box">
+            <p>年产量</p>
+            <div class="register_box_input"><input type="text" name=""><span>吨</span></div>
+        </div>
+        <div class="register_box">
+            <p>年产值</p>
+            <div class="register_box_input"><input type="text" name=""><span>万元</span></div>
+        </div>
+        <div class="register_box">
+            <p>年利润</p>
+            <div class="register_box_input"><input type="text" name=""><span>万元</span></div>
+        </div>
+        <div class="remark">
+            <h3>备注：</h3>
+            <p>1、老会员进行确认，新会员进行申请；</p>
+            <p>2、企业单位会员（确认、申请）请填写详细，行政事业单位个人请填写单位、姓名、职务及个人信息；</p>
+            <p>3、在会员性质单位会员和个人会员的“口”打“√”。</p>
+        </div>
+        <button class="register_sub">提交</button>
+
+    </div>
+
+    
+
+    <footer data-role="footer" data-position="fixed">
+        <h2>Footer</h2>
+    </footer>
+
+
+
+</body>
+</html>

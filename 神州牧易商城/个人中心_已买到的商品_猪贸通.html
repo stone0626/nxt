@@ -1,0 +1,1203 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>个人中心-已买到的商品-猪贸通</title>
+<link href="css/base_center.css" type="text/css" rel="stylesheet" />
+<link href="css/main_center.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".detail_nav li:first").addClass("hover");
+        $(".detail_nav li").click(function(){
+            $(".detail_nav li").removeClass("hover");
+            $(this).addClass("hover");
+            $(".detail_box").hide();
+            $("."+ $(this).attr("id")).show();
+        });
+    }); 
+</script>
+<script type="text/javascript">
+    function confirm(){
+    document.getElementById('zhezhao').style.display='block';
+    document.getElementById('confirm').style.display='block';
+    }
+    function confirm_close(){
+    document.getElementById('zhezhao').style.display='none';
+    document.getElementById('confirm').style.display='none';
+    }
+    function del_order(){
+    document.getElementById('zhezhao').style.display='block';
+    document.getElementById('del_order').style.display='block';
+    }
+    function del_order_close(){
+    document.getElementById('zhezhao').style.display='none';
+    document.getElementById('del_order').style.display='none';
+    }
+    function perpetual(){
+    document.getElementById('zhezhao').style.display='block';
+    document.getElementById('perpetual').style.display='block';
+    }
+    function perpetual_close(){
+    document.getElementById('zhezhao').style.display='none';
+    document.getElementById('perpetual').style.display='none';
+    }
+    function cancle_order(){
+    document.getElementById('zhezhao').style.display='block';
+    document.getElementById('cancle_order').style.display='block';
+    }
+    function cancle_order_close(){
+    document.getElementById('zhezhao').style.display='none';
+    document.getElementById('cancle_order').style.display='none';
+    }
+</script>
+</head>
+
+<body>
+
+<div id="zhezhao"></div>
+<!--确认收货-->
+<div class="popup" id="confirm">
+    <div class="popup_box">
+        <h3><strong>提示</strong>
+        <input type="button" value="×" class="button" onClick="confirm_close()" />
+        </h3>
+        <img src="images/tanhao.jpg" />
+        <div class="popup_main">
+            <span>是否确认收货？</span>
+            <div class="pop_input">
+            <input class="red_btn" type="button" value="确认" /><input class="red_btn gray_btn" type="button" value="取消" onClick="confirm_close()" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--end 确认收货-->
+<!--取消订单-->
+<div class="popup" id="cancle_order">
+    <div class="popup_box">
+        <h3><strong>提示</strong>
+        <input type="button" value="×" class="button" onClick="cancle_order_close()" />
+        </h3>
+        <img src="images/tanhao.jpg" />
+        <div class="popup_main">
+            <span>您确定要取消该订单？</span>
+            <b>单击确定继续，单击取消终止！</b>
+            <div class="pop_input pop_input1">
+            <input class="red_btn" type="button" value="确认" /><input class="red_btn gray_btn" type="button" value="取消" onClick="cancle_order_close()" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--end 取消订单-->
+<!--删除订单-->
+<div class="popup" id="del_order">
+    <div class="popup_box">
+        <h3><strong>提示</strong>
+        <input type="button" value="×" class="button" onClick="del_order_close()" />
+        </h3>
+        <img src="images/tanhao.jpg" />
+        <div class="popup_main">
+            <span>您确定要删除该订单？</span>
+            <b>删除后，您可在订单回收站找回或永久删除</b>
+            <div class="pop_input pop_input1">
+            <input class="red_btn" type="button" value="确认" /><input class="red_btn gray_btn" type="button" value="取消" onClick="del_order_close()" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--end 删除订单-->
+<!--永久删除订单-->
+<div class="popup" id="perpetual">
+    <div class="popup_box">
+        <h3><strong>提示</strong>
+        <input type="button" value="×" class="button" onClick="perpetual_close()" />
+        </h3>
+        <img src="images/tanhao.jpg" />
+        <div class="popup_main">
+            <span>您确定要永久删除该订单？</span>
+            <b>永久删除后，您将无法再查看该订单也无法进行投诉维权，请谨慎操作！</b>
+            <div class="pop_input pop_input1">
+            <input class="red_btn" type="button" value="确认" /><input class="red_btn gray_btn" type="button" value="取消" onClick="perpetual_close()" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--end 永久删除订单-->
+<!--top-->
+<div class="top">
+    <div class="top_main">
+        <strong class="top_lt">欢迎来到神州牧易商城个人中心！</strong>
+        <div class="top_rt">
+            <a href="#" class="top_rt_home">商城首页</a>
+            <a href="#"><img src="images/shopping.png" /><span>购物车</span></a>
+            <div class="collect">
+                <a href="#"><img src="images/collect.png" /><span>收藏夹</span><img src="images/jiantou_c.png" /></a>
+                <div class="collect_box">
+                    <a href="#">收藏的商品</a>
+                    <a href="#">收藏的旗舰店</a>
+                </div>
+            </div>
+            <a href="#">联系客服</a>
+        </div>
+    </div>
+</div>
+<!--end top-->
+<!-- logo -->
+<div class="logo">
+    <a href="#" class="logo_lt"><img src="images/logo_center.png" /></a>
+    <div class="logo_rt">
+        <input class="logo_rt_in" value="" type="text" />
+        <input class="logo_rt_btn" value="搜索" type="button" />
+    </div>
+</div>
+<!-- end logo -->
+<!-- portrait -->
+<div class="portrait">
+    <div class="portrait_box">
+       <a href="#"  class="portrait_box_img"><i><img src="images/bixuan01.jpg" /></i></a>
+       <p><span>梁山伯与朱丽叶</span><a href="#">账号管理</a><a href="#">退出</a></p>
+    </div>
+</div>
+<!-- end portrait -->
+<div class="main">
+<!--slidenav-->
+<div class="slidenav">
+    <div class="slidetop">
+        <h3 class="h3_01">我的订单</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#" class="hover">已买到的商品</a></li>
+        <li><a href="#">我的购物车</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_02">我的收藏</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">收藏的商品</a></li>
+        <li><a href="#">收藏的店铺</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_03">我的设置</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">个人资料</a></li>
+        <li><a href="#">我的收货地址</a></li>
+        <li><a href="#">修改密码</a></li>
+        <li><a href="#">绑定手机</a></li>
+        <li><a href="#">绑定农信宝</a></li>
+    </ul>
+    <div class="slidetop">
+        <h3 class="h3_04">我的收益</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <ul>
+        <li><a href="#">我的收益</a></li>
+    </ul>
+</div>
+<!--end slidenav-->
+<!--主体-->
+<div class="main_rt">
+<!-- 已买到的商品 -->
+<div class="detail">
+    <div class="detailtop">
+        <h3>
+            <a class="grey" href="个人中心_已买到的商品.html">已买到的商品</a><i></i><a class="yellow" href="个人中心_已买到的商品_猪贸通.html">猪贸通订单</a>
+        </h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <div class="detail_main">
+        <ul class="detail_nav">
+            <li id="detail1" class="hover">全部订单</li>
+            <li id="detail2">待付款(<span>52</span>)</li>
+            <li id="detail3">待发货(<span>33</span>)</li>
+            <li id="detail4">待收货(<span>24</span>)</li>
+            <li id="detail5">待评价(<span>234</span>)</li>
+            <li id="detail6" class="huishou">订单回收站</li>
+         </ul>
+         <div class="detail_box detail1">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="red">待付款</strong>
+                        <strong class="red">待发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="green">已付款</strong>
+                        <strong class="red">待发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%" rowspan="2">
+                        <strong class="green">已付款</strong>
+                        <strong class="green">已发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%" rowspan="2">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="green">交易成功</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">我要退货</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                        <a href="#">评价</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="green">已退货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">退货详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                        <a href="#">评价</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%" rowspan="2">
+                        <strong class="grey">交易关闭</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%" rowspan="2">
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- 分页 -->
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             <!--end 分页 -->
+            <!-- 1页分页
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            end 1页分页 -->
+         </div>
+         <div class="detail_box detail2" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="red">待付款</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%" rowspan="2">
+                        <strong class="red">待付款</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%" rowspan="2">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- 分页
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             end 分页 -->
+            <!-- 1页分页 -->
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            <!-- end 1页分页 -->
+         </div>
+         <div class="detail_box detail3" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="green">已付款</strong>
+                        <strong class="red">待发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%" rowspan="2">
+                        <strong class="green">已付款</strong>
+                        <strong class="red">待发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%" rowspan="2">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- 分页
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             end 分页 -->
+            <!-- 1页分页 -->
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            <!-- end 1页分页 -->
+         </div>
+         <div class="detail_box detail4" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="green">已付款</strong>
+                        <strong class="green">已发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%" rowspan="2">
+                        <strong class="green">已付款</strong>
+                        <strong class="green">已发货</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%" rowspan="2">
+                        <a href="#" onclick="cancle_order()">取消订单</a>
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#" class="confirm_btn" onClick="confirm()">确认收货</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- 分页
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             end 分页 -->
+            <!-- 1页分页 -->
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            <!-- end 1页分页 -->
+         </div>
+         <div class="detail_box detail5" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <span>交易状态：</span>
+                <select>
+                    <option>全部</option>
+                    <option>待付款</option>
+                    <option>待发货</option>
+                </select>
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="35%">商品</td>
+                    <td width="10%">单价</td>
+                    <td width="10%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="10%">交易状态</td>
+                    <td width="10%">订单操作</td>
+                    <td width="10%">交易操作</td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%">
+                        <strong class="green">交易成功</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">评价</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="del_order()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg</a>
+                        <p>分类：300Kg</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_status" width="10%" rowspan="2">
+                        <strong class="green">交易成功</strong>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%" rowspan="2">
+                        <a href="#">订单详情</a>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">评价</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="24%">
+                        <a href="#">正大饲料100Kg 大甩卖</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="10%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="10%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_operate" width="10%">
+                        <a href="#">评价</a>
+                        <a href="#">再次购买</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- 分页
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             end 分页 -->
+            <!-- 1页分页 -->
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            <!-- end 1页分页 -->
+         </div>
+         <div class="detail_box detail6" style="display: none;">
+            <div class="detail_box_top">
+                <span>商品名称：</span><input type="text" value="" />
+                <span>成交日期：</span><input type="text" value="" class="detail_date" />
+                <em>-</em><input type="text" value="" class="detail_date" />
+                <button>搜索</button>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail_tab_top">
+                <tr>
+                    <td width="40%">商品</td>
+                    <td width="15%">单价</td>
+                    <td width="15%">数量</td>
+                    <td width="15%">实付款</td>
+                    <td width="15%">订单操作</td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="perpetual()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="29%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="15%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="15%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="15%">
+                        <a href="#">订单详情</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="detail_tab_pro">
+                <tr class="detail_tab_pro_top">
+                    <td colspan="8" class="tracking_number"><p>订单编号：</p><span>102493079013000001</span><p>成交日期：</p><span>2016-01-18</span><p>商家名称：</p><a href="#">正大饲料旗舰店</a><p>物流快递：</p><span>圆通 859448195735549</span><a href="#" class="del" onClick="perpetual()"><img src="images/del.png" width="16" height="16" /></a></td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="29%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="15%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="15%">
+                        1000
+                    </td>
+                    <td class="detail_tab_pro_total" width="15%" rowspan="2">
+                        <span>&yen;&nbsp;1,897,789.00</span><br/><i>（免运费）</i>
+                    </td>
+                    <td class="detail_tab_pro_operate" width="15%" rowspan="2">
+                        <a href="#">订单详情</a>
+                    </td>
+                </tr>
+                <tr class="detail_tab_pro_main">
+                    <td class="detail_tab_pro_img" width="11%">
+                        <a href="#"><img src="images/bixuan01.jpg" /></a>
+                    </td>
+                    <td class="detail_tab_pro_title" width="29%">
+                        <a href="#">正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价正大饲料100Kg 大甩卖 超低价</a>
+                        <p>分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;分类：300Kg&nbsp;&nbsp;</p>
+                    </td>
+                    <td class="detail_tab_pro_price" width="15%">
+                        <span>&yen;&nbsp;1,897.00</span><br/><i>&yen;&nbsp;1,897,789.00</i>
+                    </td>
+                    <td class="detail_tab_pro_number" width="15%">
+                        1000
+                    </td>
+                </tr>
+            </table>
+            
+            <!-- 分页
+            <div class="pagelist">
+                <a href="#" class="onepage">首页</a> 
+                <a href="#" class="onepage">上一页</a>
+                <a href="javascript:pageSearch(2)" class="page_first">1</a>
+                <a href="javascript:pageSearch(2)" class="onepage">2</a>
+                <a href="javascript:pageSearch(2)" class="onepage">3</a>
+                 <span class="ellipsis">...</span>
+                 <a href="javascript:pageSearch(2)" class="onepage">21</a>
+                <a href="javascript:pageSearch(2)" class="onepage">下一页</a>
+                <a href="javascript:pageSearch(2)" class="onepage">尾页</a>
+                 &nbsp;共21页&nbsp;&nbsp; &nbsp;跳到至
+                <input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页
+                <a href="javascript:pageSearch('go1')" class="go" >确定</a>
+            </div>
+             end 分页 -->
+            <!-- 1页分页 -->
+            <div class="pagelist"> <span class="grey">首页</span> <span class="grey">上一页</span> <span class="grey_first">1</span> <span href="#" class="grey">下一页</span> <span class="grey">尾页</span> &nbsp;共1页&nbsp;&nbsp; &nbsp;跳到至<input name="go1" id="go1" onkeyup="this.value=this.value.replace(/[^\d]/g,''); if(this.value>2||this.value<=0)this.value='';" type="text" class="last_page" value=""/> 页<a href="javascript:pageSearch('go1')" class="go" >确定</a> 
+            </div> 
+            <!-- end 1页分页 -->
+         </div>
+         
+    </div>
+</div>
+<!-- end 已买到的商品 -->
+<!-- 猜我喜欢 -->
+<div class="index_guess">
+    <div class="slidetop">
+        <h3>猜我喜欢</h3>
+        <img src="images/slidenav_top.jpg" />
+    </div>
+    <div class="index_guess_main">
+        <div class="index_guess_box">
+            <div class="index_guess_img"><a href=""><img src="images/1f_pic01.jpg" /></a></div>
+            <a class="index_guess_tit" href="#">猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢</a>
+            <p><b>&yen;55.00</b><span>&yen;899.00</span></p>
+            <a class="index_guess_ship" href="#">正大饲料旗舰店</a>
+        </div>
+        <div class="index_guess_box">
+            <div class="index_guess_img"><a href=""><img src="images/1f_pic01.jpg" /></a></div>
+            <a class="index_guess_tit" href="#">猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢</a>
+            <p><b>&yen;55.00</b><span>&yen;899.00</span></p>
+            <a class="index_guess_ship" href="#">正大饲料旗舰店</a>
+        </div>
+        <div class="index_guess_box">
+            <div class="index_guess_img"><a href=""><img src="images/1f_pic01.jpg" /></a></div>
+            <a class="index_guess_tit" href="#">猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢</a>
+            <p><b>&yen;55.00</b><span>&yen;899.00</span></p>
+            <a class="index_guess_ship" href="#">正大饲料旗舰店</a>
+        </div>
+        <div class="index_guess_box">
+            <div class="index_guess_img"><a href=""><img src="images/1f_pic01.jpg" /></a></div>
+            <a class="index_guess_tit" href="#">猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢</a>
+            <p><b>&yen;55.00</b><span>&yen;899.00</span></p>
+            <a class="index_guess_ship" href="#">正大饲料旗舰店</a>
+        </div>
+        <div class="index_guess_box">
+            <div class="index_guess_img"><a href=""><img src="images/1f_pic01.jpg" /></a></div>
+            <a class="index_guess_tit" href="#">猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢</a>
+            <p><b>&yen;55.00</b><span>&yen;899.00</span></p>
+            <a class="index_guess_ship" href="#">正大饲料旗舰店</a>
+        </div>
+        <div class="index_guess_box">
+            <div class="index_guess_img"><a href=""><img src="images/1f_pic01.jpg" /></a></div>
+            <a class="index_guess_tit" href="#">猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢猜我喜欢</a>
+            <p><b>&yen;55.00</b><span>&yen;899.00</span></p>
+            <a class="index_guess_ship" href="#">正大饲料旗舰店</a>
+        </div>
+    </div>
+<div class="index_guess_more"><a href="#">想看更多商品？去首页看看！</a></div>
+</div>
+<!-- end 猜我喜欢 -->
+</div>
+<!--end 主体-->
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer_box"><a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">意见反馈</a>|<a href="#">帮助中心</a>|<a href="#">招贤纳士</a></div>
+    <div class="link_fot">
+        <a href="#">河南畜牧规划设计院</a><a href="#">河南畜牧兽医行政执法网</a><a href="#">河南省畜牧业信息网</a><a href="#">鹤壁畜牧业信息港</a><a href="#">农业部村级信息服务站</a><a href="#">农信通集团</a><a href="#">猪e网</a><a href="#">中国禽病网</a><a href="#">爱猪网</a>
+    </div>
+    <p class="recored">Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有 沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!-- end 底部 -->
+</body>
+</html>

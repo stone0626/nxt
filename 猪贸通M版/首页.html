@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".zmt_locate_box span").click(function(){
+    $(".belong_area").css({"display":"block"});
+  });
+  $(".belong_area_top a").click(function(){
+    $(".belong_area").css({"display":"none"});
+  });
+});
+</script>
+
+<title>猪贸通M版首页</title>
+</head>
+
+<body class="mhome">
+
+<!-- 所属区域 -->
+<div class="belong_area" id="belong_area">
+    <div class="belong_area_top">
+        <a href="#"><i class="fa fa-angle-left fa-2x"></i></a>
+        <span>请选择省区及其他</span>
+    </div>
+    <ul>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">河北</a></li>
+        <li><a href="#">河南</a></li>
+        <li><a href="#">辽宁</a></li>
+        <li><a href="#">吉林</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">河南</a></li>
+        <li><a href="#">辽宁</a></li>
+        <li><a href="#">吉林</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+</div>
+<!-- end 所属区域 -->
+
+
+<!-- zmt_top -->
+<div class="zmt_top">
+    <div class="zmt_top_box">
+        <a class="zmt_logo" href="#"><i><img src="images/zmt_logo.png"></i></a>
+        <div class="zmt_search">
+            <div class="zmt_search_box">
+                <input type="text" value="" placeholder="猪价 市场 猪源" />
+                <button><i class="fa fa-search fa-lg"></i></button>
+            </div>
+        </div>
+        <div class="zmt_login">
+            <a href="#">登录</a>
+        </div>
+    </div>
+</div>
+<!-- end zmt_top -->
+
+<!--zmt_banner-->
+    <div id="zmt_banner" class="zmt_banner">
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="#"><img src="images/banner02.jpg" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/banner01.jpg" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul></ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        TouchSlide({ slideCell:"#zmt_banner",delay:3000,titCell:".hd ul",mainCell:".bd ul", effect:"leftLoop", autoPlay:true,autoPage:true, });
+    </script>
+<!--end zmt_banner-->
+
+<!--zmt_locate-->
+<div class="zmt_locate">
+    <a class="zmt_locate_box" href="#"><i class="fa fa-map-marker"></i><span>定位中...</span><em>今日猪价信息</em></a>
+    <ul>
+        <li><a href="#"><i>19.80</i><span>外三元</span></a></li>
+        <li><a href="#"><i>19.56</i><span>内三元</span></a></li>
+        <li><a href="#"><i>18.27</i><span>土杂猪</span></a></li>
+        <li><a href="#"><i>1780</i><span>43%蛋白豆粕</span></a></li>
+        <li><a href="#"><i>2640</i><span>14%水分玉米</span></a></li>
+        <li><a href="#"><i>暂无</i><span>猪粮比</span></a></li>
+    </ul>
+</div>
+<!--end zmt_locate-->
+
+<!-- zmt_nav -->
+<div class="zmt_nav">
+    <a href="#"><img src="images/nav01.jpg" /><span>养殖场</span></a>
+    <a href="#"><img src="images/nav02.jpg" /><span>经纪人</span></a>
+    <a href="#"><img src="images/nav03.jpg" /><span>物流</span></a>
+    <a href="#"><img src="images/nav04.jpg" /><span>屠宰场</span></a>
+    <a href="#"><img src="images/nav05.jpg" /><span>申报</span></a>
+    <a href="#"><img src="images/nav06.jpg" /><span>溯源</span></a>
+    <a href="#"><img src="images/nav07.jpg" /><span>资讯</span></a>
+    <a href="#"><img src="images/nav08.jpg" /><span>服务中心</span></a>
+</div>
+<!-- end zmt_nav -->
+
+<!-- zmt_link -->
+<div class="zmt_link">
+    <a href="#" class="zmt_link_lt"><img src="images/zmt_link01.jpg" alt=""></a>
+    <a href="#" class="zmt_link_rt01"><img src="images/zmt_link02.jpg" alt=""></a>
+    <a href="#" class="zmt_link_rt02"><img src="images/zmt_link03.jpg" alt=""></a>
+</div>
+<div class="zmt_link">
+    <a href="#" class="zmt_link_lt01"><img src="images/zmt_link04.jpg" alt=""></a>
+    <a href="#" class="zmt_link_rt03"><img src="images/zmt_link05.jpg" alt=""></a>
+</div>
+<!-- end zmt_link -->
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+    <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->   
+	
+</body>
+</html>

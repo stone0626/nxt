@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/sendMessage.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".register_role").click(function(){
+    $(".pig_add_cover").css({display: "block"})
+    $("#register_role").css({display: "block"})
+  });
+  $("#register_role_ul li").click(function(){
+    $("#register_role_ul").css({display: "none"});
+    $(".pig_add_cur").css({display: "block"});
+    $("#register_role_top li").css({display: "block"});
+    $("#register_role_top li").text($(this).text());
+  });
+  $("#register_role_top li").click(function(){
+    $(this).css({display: "none"});
+    $("#register_role_ul").css({display: "block"})
+  });
+   $(".pig_add_clo").click(function(){
+    $(".pig_add_cover").css({display: "none"})
+    $(".pig_add").css({display: "none"})
+  });
+  $(".pig_add_cur button").click(function(){
+    $(".pig_add_cover").css({display: "none"})
+    $(".pig_add").css({display: "none"})
+  });
+
+});
+</script>
+
+<title>猪贸通M版注册</title>
+</head>
+<body class="mhome">
+
+<!-- 选择角色 
+<div class="register_role_box" id="register_role_box">
+	<div class="register_role_box_top">
+		<a href="#"><i class="fa fa-angle-left fa-2x"></i></a>
+		<span>请选择角色</span>
+	</div>
+	<ul>
+		<li><a href="#">猪场</a></li>
+		<li><a href="#">屠宰场</a></li>
+		<li><a href="#">经纪人</a></li>
+		<li><a href="#">物流公司</a></li>
+		<li><a href="#">自然人</a></li>
+	</ul>
+</div>
+end 选择角色 -->
+
+<!-- 选择角色 -->
+<div class="pig_add_cover"></div>
+<div class="pig_add" id="register_role">
+	<header><h3>选择角色</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+	<div class="pig_add_cur" id="register_role_top">
+		<ul><li></li></ul>
+		<button>确定</button>
+	</div>
+	<div class="pig_add_main">
+		<ul class="pig_add_ul" id="register_role_ul">
+			<li><a href="#">猪场</a></li>
+			<li><a href="#">屠宰场</a></li>
+			<li><a href="#">经纪人</a></li>
+			<li><a href="#">物流公司</a></li>
+			<li><a href="#">自然人</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end 选择角色 -->
+
+
+<!--com_top-->
+<div class="com_top">
+	<a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<h3>注册</h3>
+</div>
+<!--end com_top-->
+<!--register-->
+<div class="register">
+	<div class="gain">
+		<div class="register_box">
+			<div class="register_box_icon">
+				<i class="fa fa-mobile fa-2x" style="margin-left:0.1em;"></i>
+			</div>
+			<input type="text" value="" placeholder="请输入手机号" />
+		</div>
+		
+		<input id="btnSendCode" class="gain_btn" type="button" value="发送验证码" onclick="sendMessage()" />
+	</div>
+	<div class="register_box">
+		<div class="register_box_icon">
+			<i class="fa fa-envelope-o fa-lg" style="margin-top:0.2em;"></i>
+		</div>
+		<input type="text" value="" placeholder="请输入验证码" />
+	</div>
+	<div class="register_box">
+		<div class="register_box_icon">
+			<i class="fa fa-user fa-2x" style="margin-left:-0.07em;"></i>
+		</div>
+		<input type="text" value="" placeholder="请输入用户名" />
+	</div>
+	<div class="register_box">
+		<div class="register_box_icon">
+			<i class="fa fa-lock fa-2x"></i>
+		</div>
+		<input type="password" value="" placeholder="请设置6-20位登录密码" />
+	</div>
+	<div class="register_box">
+		<div class="register_box_icon">
+			<i class="fa fa-lock fa-2x"></i>
+		</div>
+		<input type="password" value="" placeholder="请再次输入登录密码" />
+	</div>
+	<div class="register_box">
+		<div class="register_box_icon">
+			<i class="fa fa-user-secret" style="font-size:1.7em;"></i>
+		</div>
+		<p class="register_role">请选择角色</p>
+		<i class="fa fa-angle-right fa-lg new_add_area_i fr" style="margin-top:0.3em;"></i>
+	</div>
+	<div class="compact">
+		注册即视为同意<a href="#">《猪贸通用户注册协议》</a>
+	</div>
+	<button class="login_btn">注册</button>
+
+</div>
+<!--end register-->
+
+</body>
+</html>

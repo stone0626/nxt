@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-07-25 16:26:59
+ * @version $Id$
+ */
+
+/* 旗舰店-搜索页 */
+.s_top{background: #fff;min-height:44px;border-bottom: 1px solid #ededed;width:100%;padding: 2% 1%;background: linear-gradient(to bottom,#fff,#eee);overflow: hidden;position: relative;}
+.s_top a{display: block;float: left;margin-left:2%;}
+.s_top a i{color:#888;}
+.s_top form{width:75%;height:35px;border:2px solid #ccc;float: left;overflow: hidden;margin-left: 5%;border-radius: 5px;background: #fff;}
+.s_top form input[type=text]{width:85%;height:100%;border:none;float: left;padding-left: 2%;}
+.s_top form button{height:100%;width:7%;float: right;border:none;background: none;outline: none;color:#999;padding-right: 10%;}
+.s_top_home{display: block;position: absolute;top:25%;right:5%;}
+.s_top_home i{color:#aaa;font-size: 1.5rem;}
+.s_top h3{text-align:center;line-height: 30px;font-size: 1.2rem;font-family: "Microsoft Yahei";}
+
+.search_list{width:100%;overflow: hidden;background: #fff;}
+.search_list_a{display: block;width:100%;height:5rem;overflow: hidden;padding: 0 3%;border-bottom:1px solid #d9d9d9;position: relative;}
+.search_list_lt{float: left;display: block;border:2px solid #d2d2d2;max-width: 20%;margin-top: 1.5rem;}
+.search_list_rt{float: left;width:76%;overflow: hidden;margin: 1rem 0 0 0.6rem;}
+.search_list_rt h3{font-family: "华文黑体 细体";font-weight: 600;display: block;width:100%;-ms-text-overflow: ellipsis;text-overflow: ellipsis;white-space: nowrap;color:#555;}
+.search_list_rt span{line-height: 2.3rem;font-size: 0.9rem;}
+.search_list_a i{position: absolute;right:0.8rem;top:1.5rem;color:#ccc;display: block;}
+
+.scroller li {min-height:70px;padding:5px;}
+
+/*m_footer*/
+.m_footer{width:100%;height:80px;margin-top: 40px;}
+.m_footer_main{background: #fff;width:100%;height:40px;}
+.m_footer a{width:24%;display:inline-block;text-align:center;line-height:40px;font-size:13px;font-family:"Microsoft Yahei";color:#666;}
+
+
+/* 旗舰店-全部分类 */
+.nav_list{width:100%;}
+.nav_list_top{ height:40px; line-height:40px;font-size:1rem; background:#fff;width:100%;font-family: "Microsoft Yahei";}
+.nav_list_top{overflow:hidden;width:100%;  }
+.nav_list_top a{ float:left; color:#666;width:25%;text-align: center;  }
+.nav_list_top .on{ display:block;color:#f00;}
+
+.nav_list_box{width:100%;overflow:hidden;padding-left:3px;}
+.nav_list_box li{display:block;float:left;margin:5px 3px 0px;background:#fff;border:1px solid #ededed;width:48%;height:205px;padding:5px;}
+.nav_list_box_img{display:table;width:100%;height:140px;}
+.nav_list_box_img a{display:table-cell;vertical-align:middle;text-align:center;}
+.nav_list_box_img a img{max-width:100%;max-height:140px;}
+.nav_list_box li span{font-size:12px;line-height:14px;height:28px;overflow:hidden;display:block;margin-top:5px;}
+.nav_list_box_pr{width:98%;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;height:20px;line-height: 22px}
+.nav_list_box_pr b{font-size:14px;color:#f00;font-family:"Verdana";}
+
+
+/* 旗舰店-详情页 */
+.s_detail_top{width:100%;height:6rem;overflow: hidden;background: #ddd;padding: 3%;position: relative;}
+.s_detail_top_logo{width:110px;display: block;float: left;border:1px solid #c6c6c6;}
+.s_detail_top_txt{width:60%;display: block;float: left;overflow: hidden;-ms-text-overflow: ellipsis;text-overflow: ellipsis;white-space: nowrap;padding-left: 0.5rem;font-family: "Microsoft Yahei";font-size: 1.2rem;line-height: 3rem;}
+.s_detail_collect{position: absolute;right:2rem;bottom:1rem;font-family: "Microsoft Yahei";font-size: 0.9rem;background: #F23030;width:5rem;height:1.7rem;border-radius: 0.2rem;color: #fff;line-height: 1.7rem;text-align: center;border:1px solid #f23030;display: block;cursor: pointer;}
+
+.s_detail_nav{width:100%;overflow: hidden;height:5rem;padding-top:1rem;background: #fff;margin-bottom: 0.5rem;}
+.s_detail_nav a{width:33.3%;float: left;display: block;border-right:1px solid #ddd;}
+.s_detail_nav a b{display: block;width:2rem;height:2rem;background: url(../images/s_detail_nav_ico.png) no-repeat center top;background-size:2rem;margin:0 auto;}
+.s_detail_nav a .b02{background-position: 0 -2rem;}
+.s_detail_nav a .b03{background-position: 0 -4rem;}
+.s_detail_nav a span{font-size: 0.9rem;font-family: "Microsoft Yahei";color:#888;display: block;text-align: center;padding-top: 0.7rem;}
+.s_detail_company{width: 100%;background: #fff;overflow: hidden;padding-bottom: 1rem;border-bottom: 1px solid #eee;border-top: 1px solid #eee;}
+.s_detail_company_img{max-width: 720px;}
+.s_detail_company_txt{width:95%;display: block;margin: 2% auto;line-height: 1.2rem;font-size: 0.9rem;font-family: "Microsoft Yahei";text-indent: 1.8rem;word-wrap: break-word;margin-top:0.5rem;}
+.s_detail_company_certifi{width:100%;overflow: hidden;border-top: 1px solid #eee;border-bottom: 1px solid #eee;margin-top:0.5rem;background: #fff;display: block;padding: 3% 0 3% 3%;}
+.s_detail_company_certifi li{width:47%;overflow: hidden;float: left;margin:0 3% 3% 0;border: 1px solid #eee;padding: 2%;}
+.s_detail_company_certifi li a{width:100%;height:9rem;display: table;}
+.s_detail_company_certifi li a i{display: table-cell;text-align: center;vertical-align: middle;}
+.s_detail_company_certifi li a img{max-width: 100%;max-height: 9rem;}
+.s_detail_company_certifi li span{width:100%;display:inline-block;font-family: "Microsoft Yahei";font-size: 0.9rem;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding: 0.7rem 0 0.5rem;}
+
+/* 资质放大焦点图 */
+.s_zoom{overflow:hidden; margin:10px auto;width:100%;height: 100%;}
+.s_zoom .hd{display: none;}
+.s_zoom .bd{width:100%;padding: 5%;}
+.s_zoom .bd li{width:100%;overflow: hidden;}
+.s_zoom .bd li em{width:100%;display: table;height:35rem;}
+.s_zoom .bd li em i{display: table-cell;text-align: center;vertical-align: middle;}
+.s_zoom .bd li em i img{max-width:100%;max-height: 35rem;}
+.s_zoom .bd li span{display:block;width:100%;text-indent:10px;color:#666;text-align:center;font-family: "Microsoft Yahei";font-size: 1.2rem;padding-bottom: 1rem;}
+.s_zoom .pageState{font-size:1.5rem;margin:1rem auto;display:block;color:#888;padding-left: 5%}
+
+
+
+
+

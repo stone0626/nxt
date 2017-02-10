@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no,minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+	function setTab(name,cursel,n){
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+	};
+</script>
+<title>我的收藏</title>
+</head>
+
+<body class="mhome">
+<!--p_top-->
+<div class="p_top">
+	<a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<h3>我的收藏</h3>
+</div>
+<!--end p_top-->
+<!-- m_attent -->
+<div class="my_attent">
+	<ul class="my_attent_list">
+		<li id="attent1" class="hover" onclick="setTab('attent',1,2);" ><span>商品</span></li>
+		<li id="attent2" onclick="setTab('attent',2,2);" ><span>店铺</span></li>
+	</ul>
+	<div class="m_comm" id="con_attent_1">
+		<div class="m_comm_box">
+			<a href="#">
+				<div class="m_comm_img"><span><img src="images/guess_pi01.jpg" /></span></div>
+				<p>苏泊尔平底锅supor火红点溢彩无油烟不粘平底煎锅PJ28K4 酒红色</p>
+				<b>&yen;55.00</b>
+			</a>
+			<a href="#" class="m_comm_cancel">取消收藏</a>
+		</div>
+		<div class="m_comm_box">
+			<a href="#">
+				<div class="m_comm_img"><span><img src="images/guess_pi01.jpg" /></span></div>
+				<p>苏泊尔平底锅supor火红点溢彩无油烟不粘平底煎锅PJ28K4 酒红色</p>
+				<b>&yen;55.00</b>
+			</a>
+			<a href="#" class="m_comm_cancel">取消收藏</a>
+		</div>
+		<div class="m_comm_box">
+			<a href="#">
+				<div class="m_comm_img"><span><img src="images/guess_pi01.jpg" /></span></div>
+				<p>苏泊尔平底锅supor火红点溢彩无油烟不粘平底煎锅PJ28K4 酒红色</p>
+				<b>&yen;55.00</b>
+			</a>
+			<a href="#" class="m_comm_cancel">取消收藏</a>
+		</div>
+		<div class="m_comm_box">
+			<a href="#">
+				<div class="m_comm_img"><span><img src="images/guess_pi01.jpg" /></span></div>
+				<p>苏泊尔平底锅supor火红点溢彩无油烟不粘平底煎锅PJ28K4 酒红色</p>
+				<b>&yen;55.00</b>
+			</a>
+			<a href="#" class="m_comm_cancel">取消收藏</a>
+		</div>
+	</div>
+	<div class="m_shop" id="con_attent_2" style="display: none;">
+		<div class="m_shop_box">
+			<a href="#">
+				<div class="m_shop_img"><span><img src="images/flagship_brand01.jpg" /></span></div>
+				<p>正大饲料旗舰店</p>
+			</a>
+			<a href="#" class="m_shop_cancel">取消收藏</a>
+		</div>
+		<div class="m_shop_box">
+			<a href="#">
+				<div class="m_shop_img"><span><img src="images/flagship_brand01.jpg" /></span></div>
+				<p>正大饲料旗舰店</p>
+			</a>
+			<a href="#" class="m_shop_cancel">取消收藏</a>
+		</div>
+		<div class="m_shop_box">
+			<a href="#">
+				<div class="m_shop_img"><span><img src="images/flagship_brand01.jpg" /></span></div>
+				<p>正大饲料旗舰店</p>
+			</a>
+			<a href="#" class="m_shop_cancel">取消收藏</a>
+		</div>
+		<div class="m_shop_box">
+			<a href="#">
+				<div class="m_shop_img"><span><img src="images/flagship_brand01.jpg" /></span></div>
+				<p>正大饲料旗舰店</p>
+			</a>
+			<a href="#" class="m_shop_cancel">取消收藏</a>
+		</div>
+	</div>
+</div>
+<!-- end m_attent -->
+</body>
+</html>

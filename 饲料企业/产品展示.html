@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>产品展示</title>
+<link rel="shortcut icon" href="images/favicon.ico" /> 
+<link href="css/base.css" type="text/css" rel="stylesheet" />
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".top_main nav a").click(function(){
+		$(this).addClass("current").siblings().removeClass("current");
+	});
+	$(".nav_pro").click(function(){
+		$(".nav_list").show();
+		$(this).blur(function(){
+			$(".nav_list").hide();
+		});
+	});
+});
+</script>
+</head>
+<body>
+<!-- top -->
+<section class="top">
+	<article class="top_main">
+		<img class="logo" src="images/logo.png" alt="">
+		<nav>
+			<a href="#" class="current">首页</a><a href="#">关于我们</a><a class="nav_pro" href="#">产品展示</a><a href="#">新闻动态</a><a href="#">加入华康</a>
+		</nav>
+	</article>
+	<article class="nav_list">
+		<nav>
+			<a href="#">猪饲料</a><a href="#">肉鸡饲料</a><a href="#">水产饲料</a><a href="#">肉鸭饲料</a>
+		</nav>
+	</article>
+</section>
+<!-- top -->
+
+<!-- lead_img -->
+<img class="lead_img" src="images/product_img.jpg" alt="">
+<!-- lead_img -->
+
+<div class="main">
+<!-- main_lt -->
+<div class="main_lt">
+	<div class="main_lt_top">
+		<h3>01</h3><i>/</i><span>产品展示</span>
+	</div>
+	<ul>
+		<li class="hover"><i>-</i><a href="#">猪饲料</a></li>
+		<li><i>-</i><a href="#">肉鸡饲料</a></li>
+		<li><i>-</i><a href="#">水产饲料</a></li>
+		<li><i>-</i><a href="#">肉鸭饲料</a></li>
+	</ul>
+</div>
+<!-- end main_lt -->
+<!-- main_rt -->
+<div class="main_rt">
+	<div class="main_rt_top">
+		<h3>猪饲料</h3>
+	</div>
+	<div class="pro_show">
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+		<a class="pro_show_box" href="#">
+			<em class="pro_show_img"><i><img src="images/pro_show01.png" alt=""></i></em>
+			<p class="pro_show_txt">4%强化大猪复合预混料</p>
+			<p class="pro_show_pri"><b>6000元/吨</b><u>8000元/吨</u></p>
+		</a>
+	</div>
+	<div class="pagelist">
+		<a href="#" class="onepage">首页</a>
+		<a href="#" class="onepage">上一页</a>
+		<a href="#" class="page_first">1</a>
+		<a href="#" >2</a> <a href="#">3</a>
+		<span class="ellipsis">...</span> 
+		<a href="#">21</a> 
+		<a href="#" class="onepage">末页</a> 
+     </div>
+</div>
+<!-- end main_rt -->
+</div>
+
+<!-- footer -->
+<footer>
+	<section class="footer_main">
+		<article>
+			<a href="#">首页</a>|<a href="#">关于我们</a>|<a href="#">产品展示</a>|<a href="#">新闻动态</a>|<a href="#">加入康华</a>
+		</article>		
+	</section>
+	<p>华康饲料材料有限公司     版权所有  (C) 2009 Qingdao Duratight Group allright reserved<br> 
+       总机：0533-6696966  0533-5200289</p>
+</footer>
+<!-- end footer -->
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>项目详情</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	var navH = $(".nav_top").offset().top;
+	console.log(navH);
+	$(window).scroll(function(){
+		var scroH = $(this).scrollTop();
+		if(scroH>=navH){
+		$(".nav_top").css({"position":"fixed","top":0,"z-index":1000,});
+		}else{
+			$(".nav_top").css({"position":"static"});
+		}
+  });
+  $(".nav_top a").click(function(){
+    $(this).addClass("active");
+    $(this).parent().siblings().find('a').removeClass('active');
+  });
+});
+</script>
+
+
+</head>
+<body>
+<!-- top -->
+<div class="top">
+	<div class="top_mi">
+		<a href="#">更多</a><b>/</b><a href="#"><i class="fa fa-mobile"></i>手机版</a><b>/</b><a href="#">客户服务</a><b>/</b><a href="注册.html">注册</a><b>/</b><a href="登录.html">请登录</a>
+	</div>
+</div>
+<!-- end top -->
+<!-- nav -->
+<div class="nav">
+	<a href="#" class="logo"><img src="images/logo.png"></a>
+	<ul>
+		<li><a href="首页.html">首页</a></li>
+		<li><a class="hover" href="项目专区.html">项目专区</a></li>
+		<li><a href="交流专区.html">交流专区</a></li>
+		<li><a href="我的账户-个人中心.html">我的账户</a></li>
+		<li><a href="帮助中心.html">帮助中心</a></li>
+	</ul>
+</div>
+<!-- end nav -->
+<div class="wrapper">
+<!-- detail -->
+<div class="detail">
+	<p class="detail_nav"><a href="#">项目专区</a>&gt;<a href="#">牛奶宝1号046-3</a></p>
+	<div class="detail_infor">
+		<p class="detail_infor_tit">牛奶宝1号046-3</p>
+		<ul>
+			<li class="detail_infor_i01">
+				<i>10.0%</i><span>年化利率</span>
+			</li>
+			<li class="detail_infor_i02">
+				<i>6个月</i><span>项目期限</span>
+			</li>
+			<li class="detail_infor_i03">
+				<i>7万</i><span>融资总额</span>
+			</li>
+		</ul>
+		<table class="detail_infor_tab">
+			<tbody>
+				<tr>
+					<td width="19%" align="right">开标时间：</td><td>2016-12-25 09:25:00</td><td width="19%" align="right">还款方式：</td><td>一次性本息付清</td>
+				</tr>
+				<tr>
+					<td align="right">起投金额：</td><td>100元</td><td align="right">递增金额：</td><td>100元</td>
+				</tr>
+				<tr>
+					<td align="right">最高投额：</td><td>6000000元</td><td align="right">预期还款时间：</td><td>2016-12-25</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="detail_amount">
+		<h3>投资金额</h3>
+    <div class="detail_amount_pro">
+      <em><i class="de_complete"></i></em>
+      <b>已完成20%</b>
+    </div>
+		<p>可投金额：<i>58,032.52</i>元</p>
+		<p>剩余时间：6天18小时55分</p>
+		<p>可用余额：<a href="#">登录后显示</a></p>
+		<input type="text" name="" placeholder="100元起投">
+		<button class="detail_btn_com">投资</button>
+		<p>预计收入<i>0</i>元</p>
+	</div>
+</div>
+<!-- end detail -->
+<!-- detail_item -->
+<div class="detail_item">
+   <nav class="nav_top">
+   	<ul>
+   		<li><a href="#detail01" class="active" title="">项目基本信息</a></li>
+   		<li><a href="#detail02" title="">担保情况说明</a></li>
+   		<li><a href="#detail03" title="">风险信息及措施</a></li>
+   		<li><a href="#detail04" title="">项目文件</a></li>
+   		<li><a href="#detail05" title="">还款计划</a></li>
+   		<li><a href="#detail06" title="">投资记录</a></li>
+   	</ul>
+   </nav>
+   <div class="detail_item_box">
+      <span id="detail01"></span>
+      <h3>项目基本信息</h3>
+      <p>（1）养殖概况：借款人在山东省费县，从事养殖行业6年，现代标准化肉鸭养殖棚舍6栋，养殖规模7万只肉鸭； （2）资金用途：补充现金流。需要流动资金30万元，用于购买饲料，养殖周期30天，个人需要借贷的流动资金9万； （3）还款资金来源：肉鸭销售收入在80万以上。 （4）允许提前还款，借款利息按照实际借款天数（自然日）计算。提前还款仅支持按日计息，一次性到期偿还借款本金及利息的还款方式。 Ａ．凡在1个月（含）以内，不允许提前还款； Ｂ．凡在1个月以上至3个月（含）以内，最多只允许提前15个自然日还款； Ｃ．凡在3个月以上至6个月（含）以内，最多只允许提前1个自然月还款； Ｄ．凡在6个月以上至12个月（含）以内，最多只允许提前2个自然月还款</p>
+   </div>
+   <div class="detail_item_box">
+      <span id="detail02"></span>
+      <h3>担保情况说明</h3>
+      <p>普惠农牧融资担保有限公司，注册资本3亿元， 2009年12月在山东省省会济南成立，旗下完成注册的养殖担保分子公司最早的已成功运营六年多，积累了成功的实践经验，探索出了相对成熟的商业模式和风控体系。 六年多来，已累计为农户担保贷款约200亿元。网址：www.puhuichina.com。该客户借款由普惠农牧融资担保有限公司担保。</p>
+   </div>
+   <div class="detail_item_box">
+      <span id="detail03"></span>
+      <h3>风险信息及措施</h3>
+      <p>（（1） 贷前，担保公司现场对客户考察。 （2） 贷中，资金只能单向转入饲料厂银行账户，客户无法挪用资金。 （3） 贷后，担保公司有专业的法务团队保证还款。 （4） 客户签订抵押合同，将现代化肉鸡养殖棚舍7栋，总价值350万资产抵押给担保公司。</p>
+   </div>
+   <div class="detail_item_box">
+      <span id="detail04"></span>
+      <h3>项目文件</h3>
+				<div class="detail_item_img">
+						<ul>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+              <li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+							<li>
+							   <a class="example-image-link" href="images/image-3.jpg" data-lightbox="example-set" data-title="">
+							      <img class="example-image" src="images/thumb-3.jpg" alt=""/>
+							   </a>
+							</li>
+						</ul>
+						<a class="prev"></a>
+						<a class="next"></a>
+				</div>
+				<script type="text/javascript">jQuery(".detail_item_img").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:4, scroll:1, autoPage:true, pnLoop:false });</script>
+				<script src="js/lightbox-2.6.min.js" type="text/javascript" charset="utf-8" async defer></script>
+   </div>
+   <div class="detail_item_box">
+      <span id="detail05"></span>
+      <h3>还款计划</h3>
+      <table class="detail_item_tab">
+      	<thead>
+      		<tr>
+      			<th>期次</th>
+      			<th>预期还款时间</th>
+      			<th>应收本息(元)</th>
+      			<th>应收本金(元)</th>
+      			<th>应收利息(元)</th>
+      			<th>剩余本金(元)</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>1</td>
+      			<td>2017-06-24</td>
+      			<td>520000</td>
+      			<td>500000</td>
+      			<td>20000</td>
+      			<td>0</td>
+      		</tr>
+      		<tr>
+      			<td>1</td>
+      			<td>2017-06-24</td>
+      			<td>520000</td>
+      			<td>500000</td>
+      			<td>20000</td>
+      			<td>0</td>
+      		</tr>
+      		<tr>
+      			<td>1</td>
+      			<td>2017-06-24</td>
+      			<td>520000</td>
+      			<td>500000</td>
+      			<td>20000</td>
+      			<td>0</td>
+      		</tr>
+      	</tbody>
+      </table>
+   </div>
+   <div class="detail_item_box">
+      <span id="detail06"></span>
+      <h3>投资记录</h3>
+      <table class="detail_item_tab">
+      	<thead>
+      		<tr>
+      			<th width="23%">成交时间</th>
+      			<th>投资人</th>
+      			<th>投资金额(元)</th>
+      			<th>投标类型</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>2017-06-24 09:25:00</td>
+      			<td>s******</td>
+      			<td>200</td>
+      			<td>手动投标</td>
+      		</tr>
+      		<tr>
+      			<td>2017-06-24 09:25:00</td>
+      			<td>s******</td>
+      			<td>200</td>
+      			<td>手动投标</td>
+      		</tr>
+      		<tr>
+      			<td>2017-06-24 09:25:00</td>
+      			<td>s******</td>
+      			<td>200</td>
+      			<td>手动投标</td>
+      		</tr>
+      		<tr>
+      			<td>2017-06-24 09:25:00</td>
+      			<td>s******</td>
+      			<td>200</td>
+      			<td>手动投标</td>
+      		</tr>
+      		<tr>
+      			<td>2017-06-24 09:25:00</td>
+      			<td>s******</td>
+      			<td>200</td>
+      			<td>手动投标</td>
+      		</tr>
+      	</tbody>
+      </table>
+   </div>
+</div>
+<!-- end detail_item -->
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="footer_main">
+		<div class="footer_nav">
+			<dl>
+				<dt><a href="#">首页</a></dt>
+				<dd><a href="#">热门项目</a></dd>
+				<dd><a href="#">最新项目</a></dd>
+				<dd><a href="#">金融资讯</a></dd>
+				<dd><a href="#">成功案例</a></dd>
+				<dd><a href="#">友情链接</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">项目专区</a></dt>
+				<dd><a href="#">项目状态</a></dd>
+				<dd><a href="#">期限</a></dd>
+				<dd><a href="#">融资金额</a></dd>
+				<dd><a href="#">列表</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">交流专区</a></dt>
+				<dd><a href="#">收益</a></dd>
+				<dd><a href="#">时间</a></dd>
+				<dd><a href="#">项目</a></dd>
+				<dd><a href="#">融资金额</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">我的账户</a></dt>
+				<dd><a href="#">个人中心</a></dd>
+				<dd><a href="#">交易记录</a></dd>
+				<dd><a href="#">我的项目</a></dd>
+				<dd><a href="#">安全中心</a></dd>
+				<dd><a href="#">推广活动</a></dd>
+				<dd><a href="#">积分计划</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">帮助中心</a></dt>
+				<dd><a href="#">关于我们</a></dd>
+				<dd><a href="#">招贤纳士</a></dd>
+				<dd><a href="#">常见问题</a></dd>
+				<dd><a href="#">安全问题</a></dd>
+				<dd><a href="#">名词解释</a></dd>
+				<dd><a href="#">财务问题</a></dd>
+				<dd><a href="#">客户中心</a></dd>
+			</dl>
+		</div>
+		<div class="clear"></div>
+		<div class="footer_nav_last">
+			<a href="#">首页</a>|<a href="#">客户中心</a>|<a href="#">合作及洽谈</a>|<a href="#">联系我们</a>|<a href="#">关于网站</a>
+		</div>
+		<p class="state">技术支持：北京农信通科技有限责任公司</p>
+	</div>
+</div>
+<!-- end footer -->
+</body>
+</html>

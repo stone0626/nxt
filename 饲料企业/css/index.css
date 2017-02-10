@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors zhaoshi (you@example.org)
+ * @date    2016-07-07 16:23:42
+ * @version $Id$
+ */
+
+/* banner */
+.banner{ min-width:1000px;  position:relative;  height:475px; overflow:hidden;  }
+.banner .bd{ position:relative; z-index:0;  }
+.banner .bd ul{ width:100% !important; }
+.banner .bd li{ width:100% !important;  height:450px; }
+.banner .bd li .siteWidth{ width:1000px; position:relative;  margin:0 auto;  height:299px;  }
+.banner .bd li a{ height:299px; display:block;  }
+.banner .bd .txt{ position:absolute; width:415px; top:100px; left:22px;   font:normal 18px/30px "Microsoft YaHei";    }
+.banner .bd .btn{ display:block; zoom:1; margin-top:8px;  width:72px; padding-right:10px;  height:31px; line-height:31px; text-align:center; color:#fff; font-size:12px; background:url(images/banner-btn.png) 0 0 no-repeat;}
+.banner .hd{ width:100%;position:absolute; z-index:1;bottom:0;left:0; height:25px;line-height:25px;text-align:center; background: #d7d5d5;}
+.banner .hd ul{margin-top: 9px;}
+.banner .hd ul li{cursor:pointer;display:inline-block;*display:inline;zoom:1;width:75px;height:4px;margin:2px 8px 0;background:#fff;overflow:hidden;line-height:9999px;}
+.banner .hd ul .on{background: #0288fb;}
+
+.wrapper{width:1000px;overflow: hidden;margin:10px auto;}
+.wrapper_lt{width:680px;float: left;}
+
+/* 新闻中心 */
+.news{width:320px;height:220px;float: left;overflow: hidden;margin:10px 10px 20px;}
+.news_top{width:100%;border-bottom: 1px solid #c6c6c6;height:35px;line-height: 35px;padding: 0 3px;}
+.news_top h3{float: left;font-size: 18px;font-family: "Microsoft YaHei";color:#222;font-weight: normal;border-bottom: 2px solid #cf4a39;display: block;height:36px;}
+.news_top em{float: left;color:#a09f9e;font-size: 16px;font-family: "Microsoft YaHei";padding: 0 3px;}
+.news_top i{float: left;color:#c7c5c5;font-family: Arial;font-size: 14px;padding-left: 5px;}
+.news_top a{float: right;display: block;background: url(../images/more.png) no-repeat center center;width:48px;height:9px;margin-top: 12px;}
+.news ul{width:100%;overflow: hidden;display: block;margin:10px 0 0 10px;}
+.news ul li{background: url(../images/circle_list.png) no-repeat left center;display: block;width:100%;line-height: 25px;padding-left: 15px;}
+.news ul li a{font-size: 13px;color:#333;display: block;width:100%;overflow: hidden;-ms-text-overflow: ellipsis;text-overflow: ellipsis;white-space: nowrap;}
+.news ul li a:hover{color:#f00;text-decoration: underline;}
+
+/* 产品展示 */
+.show{width:100%;overflow: hidden;}
+
+.show_main{ width:100%;text-align:left;margin-top:15px;overflow: hidden;}
+.show_main .hd{ height:40px; line-height:40px;border-bottom:1px solid #ccc;overflow: hidden;}
+.show_main .hd ul li{ float:left; padding:0 15px; cursor:pointer; font-size: 14px;font-family: "Microsoft YaHei";  }
+.show_main .hd ul i{float: left;color:#888;font-style: normal;}
+.show_main .hd ul li.on{color:#0066cc;}
+
+.show_main .bd ul{width:100%;overflow: hidden;}
+.show_main .bd ul li{width:47%;float: left;margin:15px 10px 15px ;}
+.show_pro_lt{float: left;display: table-cell;width:115px;height:130px;border:1px solid #ccc;overflow: hidden;}
+.show_pro_lt em{display: table;text-align:center;vertical-align: middle;}
+.show_pro_lt em img{max-width: 115px;max-height: 130px;}
+.show_pro_rt{float: right;display: block;width:200px;overflow: hidden;padding-left: 5px;}
+.show_pro_rt h3{line-height: 30px;}
+.show_pro_rt i{font-style: normal;display: block;width:100%;height:66px;overflow: hidden;}
+.show_pro_rt a{display:inline-block;float: right;margin:12px 5px 0 0;color:#0066cc;}
+.show_line{width:100%;border-top: 1px dashed #999;float: left;}
+
+
+.wrapper_rt{width:300px;float: right;overflow: hidden;}
+
+/* 企业展示 */
+.company{width:100%;overflow: hidden;}
+.index_company{width:300px;height:155px;margin:25px auto;}
+.company_test{width:100%;overflow: hidden;margin:10px auto;}
+.company_test h3{color:#333;font-size: 16px;font-family: "Microsoft Yahei";}
+.company_test p{width:100%;height:76px;overflow: hidden;display: block;margin:10px auto;font-size: 13px;}
+.company_add{width:100%;overflow: hidden;background: #5d5d5d;padding: 10px;color:#fff;}
+.company_add p{line-height: 25px;font-size: 13px;}
+.index_company_qr{border:1px solid #666;width:298px;height:69px;display: block;margin:15px auto;}
+
+/* 客服 */
+
+.service{width:100%;overflow: hidden;margin:5px auto;}
+.service ul{width:100%;}
+.service ul li{float: left;width:33.3%;}
+.service ul li i{display: block;width:30px;height:30px;background: url(../images/service_ico.png) no-repeat top center;margin:5px auto;}
+.service ul li .service_ico01{background-position: 0 0;}
+.service ul li .service_ico02{background-position: 0 -30px;}
+.service ul li .service_ico03{background-position: 0 -60px;}
+.service ul li p{text-align: center;}
+
+
+

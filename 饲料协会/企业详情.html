@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>企业详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".like_btn button").click(function(){
+        $(this).toggleClass("btn01")
+    });
+    $(".comment_tit_lt").click(function(){
+        $(".comment_input").toggle();
+    });
+});    
+</script>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+<style type="text/css" media="screen">
+    .company_detail{font-family: "Microsoft Yahei";padding-bottom: 5rem;}
+    .company_detail h3{font-size: 1.3rem;font-weight: normal;color:#222;text-align: center;}
+    .company_detail p{font-size: 0.9rem;color:#333;padding: 0;margin:0;}
+    .company_detail img{width:100%;display: block;max-width: 1200px;margin:0 auto;}  
+
+    .like_btn{width:35%;margin:2rem auto;overflow: hidden;}
+    .like_btn button{float: left;width:3rem;height:3rem;background: url(images/like_ico01.png) no-repeat center center;display: block;background-size:2.7rem 2.7rem;margin-left: 4%;}
+    .like_btn button.btn01{float: left;width:3rem;height:3rem;background: url(images/like_ico02.png) no-repeat center center;display: block;background-size:2.7rem 2.7rem;margin-left: 4%;}
+    .like_btn_num{float: left;font-size: 1.3rem;color:#888;margin: 1.2rem 0 0 0.9rem;display: block;font-family: "Arial";}
+
+    .comment{width:100%;background: #f3f3f3;border-top: 1px solid #e5e5e5;}
+    .comment_top{text-align: center;}
+    .comment_tit{width:90%;margin:0 auto;overflow: hidden;}
+    .comment_tit_lt{float:left;}
+    .comment_tit_lt a{color:#607fa6;text-decoration: none;}
+    .comment_tit_lt i{padding-left: 0.5rem;color:#607fa6;}
+    .comment_tit_rt{float: right;}
+    .comment_input{width:90%;margin:0 auto;display: none;}
+    .comment_input textarea{width:100%;border:1px solid #e5e5e5;height:10rem;resize: none;margin:1rem 0 0;}
+    .comment_input_btn{width:30%;float: right;}
+    .comment_txt{width:100%;overflow: hidden;display: block;margin-top:2rem;padding: 0;margin-bottom: 0;}
+    .comment_txt li{width:100%;overflow: hidden;display: block;margin-bottom: 2rem;border-bottom: 1px dashed #c9c9c9;padding-bottom: 1.5rem;}
+    .comment_txt_lt{width:15%;height:15%;display: table;float: left;margin:0 2% 0;overflow: hidden;}
+    .comment_txt_lt span{text-align: center;vertical-align: middle;display: table-cell;}
+    .comment_txt_lt span img{max-width: 90%;max-height: 90%;}
+    .comment_txt_rt{float: left;width:80%;overflow: hidden;font-family: "Microsoft Yahei";}
+    .comment_txt_rt h3{margin:0;padding: 0;color:#666;font-size: 1rem;}
+    .comment_txt_rt p{margin:0.5rem 0;font-size: 1rem;color:#222;width:100%;max-height: 7.5rem;display: block;overflow: hidden;}
+    .comment_txt_rt span{font-size: 0.9rem;}
+    .comment_last{text-align: center;margin-bottom: 0;padding-bottom: 2rem;}
+</style>
+</head>
+<body>
+    <div data-role="page" id="home">
+
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="返回" data-position="fixed">
+        <h1>企业详情</h1>
+    </div>
+
+    <div data-demo-html="true" class="ui-content" role="main">
+        <div class="company_detail">
+            <h3>北京农信通科技有限公司</h3>
+            <p>北京农信通科技有限公司北京农信通科<img src="images/02.jpg" alt="">技有限公司北京农信</p>
+            <p>通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司北京农信通科技有限公司<img src="images/02.jpg" alt=""></p>
+            <!-- <a href="#" class="ui-btn ui-shadow ui-corner-all" style="margin-top:5rem;">进入旗舰店</a> -->
+
+            <div class="like_btn">
+                <button></button>
+                <span class="like_btn_num">999+</span>
+            </div>
+        </div>  
+    </div>
+    <div class="comment">
+        <h3 class="comment_top">精选留言</h3>
+        <div class="comment_tit">
+            <div class="comment_tit_lt">
+                <a href="#">写评论</a><i class="fa fa-pencil"></i>
+            </div>
+            <b class="comment_tit_rt">已<span>45421</span>评论</b>
+        </div>
+        <div class="comment_input">
+            <textarea></textarea>
+            <div class="comment_input_btn">
+                <button>提交评论</button>
+            </div>    
+        </div>
+        <ul class="comment_txt">
+            <li>
+                <div class="comment_txt_lt">
+                    <span>
+                        <img src="images/02.jpg">
+                    </span>
+                </div>
+                <div class="comment_txt_rt">
+                    <h3>张三</h3>
+                    <p>张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三</p>
+                    <span>1小时前</span>
+                </div>
+            </li>
+            <li>
+                <div class="comment_txt_lt">
+                    <span>
+                        <img src="images/02.jpg">
+                    </span>
+                </div>
+                <div class="comment_txt_rt">
+                    <h3>张三</h3>
+                    <p>张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三</p>
+                    <span>1小时前</span>
+                </div>
+            </li>
+            <li>
+                <div class="comment_txt_lt">
+                    <span>
+                        <img src="images/02.jpg">
+                    </span>
+                </div>
+                <div class="comment_txt_rt">
+                    <h3>张三</h3>
+                    <p>张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三</p>
+                    <span>1小时前</span>
+                </div>
+            </li>
+            <li>
+                <div class="comment_txt_lt">
+                    <span>
+                        <img src="images/02.jpg">
+                    </span>
+                </div>
+                <div class="comment_txt_rt">
+                    <h3>张三</h3>
+                    <p>张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三张三</p>
+                    <span>1小时前</span>
+                </div>
+            </li>
+        </ul>
+        <p class="comment_last">已加载全部评论</p>
+        
+    </div>
+
+    
+
+    <footer data-role="footer" data-position="fixed">
+        <h2>Footer</h2>
+    </footer>
+
+</div>
+
+</body>
+</html>

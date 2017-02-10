@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>更改手机号</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript">
+var sends = {
+  checked:1,
+  send:function(){
+    var time = 30;
+    function timeCountDown(){
+      if(time==0){
+        clearInterval(timer);
+        $('.ranks a').addClass('send1').removeClass('send0').html("发送验证码");
+        sends.checked = 1;
+        return true;
+      }
+      $('.ranks a').html(time+"S后再次发送");
+      time--;
+      return false;
+      sends.checked = 0;
+    }
+    $('.ranks a').addClass('send0').removeClass('send1');
+    timeCountDown();
+    var timer = setInterval(timeCountDown,1000);
+  }
+}
+</script>
+</head>
+<body>
+<!-- top -->
+<div class="top">
+	<div class="top_mi">
+		<a href="#">更多</a><b>/</b><a href="#"><i class="fa fa-mobile"></i>手机版</a><b>/</b><a href="#">客户服务</a><b>/</b><a href="#">注册</a><b>/</b><a href="#">请登录</a>
+	</div>
+</div>
+<!-- end top -->
+<!-- nav -->
+<div class="nav">
+	<a href="#" class="logo"><img src="images/logo.png"></a>
+	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">项目专区</a></li>
+		<li><a href="#">交流专区</a></li>
+		<li><a class="hover" href="#">我的账户</a></li>
+		<li><a href="#">帮助中心</a></li>
+	</ul>
+</div>
+<!-- end nav -->
+
+<!-- register -->
+<div class="register">
+  <div class="register_top">
+    <h3>更改手机号</h3>
+  </div>
+  <div class="register_main">
+    <div class="forgot_progress">
+      <div class="forgot_progress_bg"></div>
+      <ul>
+        <li><em>1</em><br/><span><i>验证身份</i></span><b></b></li>
+        <li><em>2</em><br/><span><i>设置新手机号</i></span><b></b></li>
+      </ul>
+    </div>
+    <div class="register_box">
+      <label form="phone">手机号</label><input type="text" name="" id="phone">
+    </div>
+    <p class="register_prompt">手机号不能为空</p>
+    <div class="register_box ranks">
+      <label form="rank">验证码</label><input type="text" name="" id="rank">
+      <img class="ranks_img" src="images/yzm.png" alt="">
+    </div>
+    <p class="register_prompt">请输入验证码</p>
+    <div class="register_box ranks">
+      <label form="rank">手机验证码</label><input type="text" name="" id="rank">
+      <a href="javascript:void(0);" class="send1" onclick="sends.send();">发送验证码</a>
+    </div>
+    <p class="register_prompt">请输入您收到的手机验证码</p>
+    <button class="register_btn">下一步</button>
+  </div>
+
+</div>
+<!-- end register -->
+
+
+<!-- footer -->
+<div class="footer">
+	<div class="footer_main">
+		<div class="footer_nav">
+			<dl>
+				<dt><a href="#">首页</a></dt>
+				<dd><a href="#">热门项目</a></dd>
+				<dd><a href="#">最新项目</a></dd>
+				<dd><a href="#">金融资讯</a></dd>
+				<dd><a href="#">成功案例</a></dd>
+				<dd><a href="#">友情链接</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">项目专区</a></dt>
+				<dd><a href="#">项目状态</a></dd>
+				<dd><a href="#">期限</a></dd>
+				<dd><a href="#">融资金额</a></dd>
+				<dd><a href="#">列表</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">交流专区</a></dt>
+				<dd><a href="#">收益</a></dd>
+				<dd><a href="#">时间</a></dd>
+				<dd><a href="#">项目</a></dd>
+				<dd><a href="#">融资金额</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">我的账户</a></dt>
+				<dd><a href="#">个人中心</a></dd>
+				<dd><a href="#">交易记录</a></dd>
+				<dd><a href="#">我的项目</a></dd>
+				<dd><a href="#">安全中心</a></dd>
+				<dd><a href="#">推广活动</a></dd>
+				<dd><a href="#">积分计划</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">帮助中心</a></dt>
+				<dd><a href="#">关于我们</a></dd>
+				<dd><a href="#">招贤纳士</a></dd>
+				<dd><a href="#">常见问题</a></dd>
+				<dd><a href="#">安全问题</a></dd>
+				<dd><a href="#">名词解释</a></dd>
+				<dd><a href="#">财务问题</a></dd>
+				<dd><a href="#">客户中心</a></dd>
+			</dl>
+		</div>
+		<div class="clear"></div>
+		<div class="footer_nav_last">
+			<a href="#">首页</a>|<a href="#">客户中心</a>|<a href="#">合作及洽谈</a>|<a href="#">联系我们</a>|<a href="#">关于网站</a>
+		</div>
+		<p class="state">技术支持：北京农信通科技有限责任公司</p>
+	</div>
+</div>
+<!-- end footer -->
+
+</body>
+</html>

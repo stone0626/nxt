@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>畜牧地图</title>
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $(".map_list table td:odd").css("text-align","center");
+  $(".map_main").height($(document.body).height());
+  $(".accurate").click(function(){
+    $(".popup").css({display : "block"});
+    $(".mask").css({display : "block"});
+  });
+  $(".mask_box_top input").click(function(){
+    $(".popup").css({display : "none"});
+    $(".mask").css({display : "none"});
+  });
+  $(".mask_box_main button").click(function(){
+    $(".popup").css({display : "none"});
+    $(".mask").css({display : "none"});
+  });
+});
+</script>
+
+</head>
+
+<body>
+<!-- mask -->
+<div class="popup"></div>
+<div class="mask">
+  <div class="mask_box">
+    <div class="mask_box_top">
+      <h3>精确查找</h3><input type="button" name="" value="×">
+    </div>
+    <div class="mask_box_main">
+      <b>坐标：</b><span>X :</span><input type="text" name=""><span>Y :</span><input type="text" name=""><button>搜索</button>
+    </div>
+  </div>
+</div>
+<!-- end mask -->
+
+<!--map_top-->
+<div class="map_top">
+    <div class="map_top_lt">
+      <input type="text" name="">
+      <button>搜索</button>
+    </div>
+    <div class="map_top_rt">
+      <span>筛选：</span>
+      <select>
+        <option>请选择</option>
+        <option>收购</option>
+        <option>收购</option>
+        <option>收购</option>
+        <option>收购</option>
+        <option>收购</option>
+        <option>收购</option>
+        <option>收购</option>
+        <option>收购</option>
+      </select>
+    </div>
+</div>
+<!--end map_top-->
+<!-- map_list -->
+<div class="map_list">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="80%">浚县</td><td width="20%"><a href="#" class="accurate">导航</a></td>
+    </tr>
+  </table>
+</div>
+<!-- end map_list -->
+
+<!--map_main-->
+<div class="map_main">
+  
+</div>
+
+<!--end map_main-->
+
+<!-- map_footer -->
+<div class="map_footer">
+    <p>Copyright © 2015-2016 Boqii.com All Rights Reserved 神州牧易 版权所有<br/>沪ICP备13034501号-2 B2-20140120</p>
+</div>
+<!-- end map_footer -->
+</body>
+</html>

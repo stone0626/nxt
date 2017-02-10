@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no,minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+	function setTab(name,cursel,n){
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+	};
+</script>
+<title>我的订单</title>
+</head>
+
+<body class="mhome">
+<!--p_top-->
+<div class="p_top">
+	<a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+	<h3>我的订单</h3>
+</div>
+<!--end p_top-->
+<!-- my_order -->
+<div class="my_order">
+	<div class="my_order_top">
+		<ul>
+			<li id="order1" class="hover" onclick="setTab('order',1,5);">全部</li><li id="order2" onclick="setTab('order',2,5);">待付款</li><li id="order3"  onclick="setTab('order',3,5);">待发货</li><li id="order4" onclick="setTab('order',4,5);">待收货</li><li id="order5"  onclick="setTab('order',5,5);">待评价</li>
+		</ul>
+	</div>
+	<div class="my_order_main" id="con_order_1">
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店</a>
+				<span>等待买家付款</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<em>规格:<i>1件500g</i></em>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">付款</a>
+			</div>
+		</div>
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店</a>
+				<span>卖家已发货</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">确认收货</a>
+			</div>
+		</div>
+	</div>
+	<div class="my_order_main" id="con_order_2" style="display: none;">
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店2</a>
+				<span>等待买家付款</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">付款</a>
+			</div>
+		</div>
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店</a>
+				<span>卖家已发货</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">确认收货</a>
+			</div>
+		</div>
+	</div>
+	<div class="my_order_main" id="con_order_3" style="display: none;">
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店3</a>
+				<span>等待买家付款</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">付款</a>
+			</div>
+		</div>
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店</a>
+				<span>卖家已发货</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">确认收货</a>
+			</div>
+		</div>
+	</div>
+	<div class="my_order_main" id="con_order_4" style="display: none;">
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店4</a>
+				<span>等待买家付款</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">付款</a>
+			</div>
+		</div>
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店</a>
+				<span>卖家已发货</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">确认收货</a>
+			</div>
+		</div>
+	</div>
+	<div class="my_order_main" id="con_order_5" style="display: none;">
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店5</a>
+				<span>等待买家付款</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">付款</a>
+			</div>
+		</div>
+		<div class="my_order_group">
+			<div class="my_order_title">
+				<a href="#"><i class="fa fa-home fa-lg"></i>正大饲料旗舰店</a>
+				<span>卖家已发货</span>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_box">
+				<div class="my_order_box_img"><a><img src="images/guess_pi01.jpg" /></a></div>
+				<div class="my_order_box_rt">
+					<p>牧鹤巡洋009哺乳母猪配合饲料牧鹤巡洋009哺乳母猪配合饲料合饲料合饲料</p>
+					<b>&yen;35.00</b><span>&times;3</span>
+				</div>
+			</div>
+			<div class="my_order_total">
+				<b>共<span>6</span>件商品</b><b>合计：<span>&yen;55.00</span></b><b>(含运费<span>&yen;0.00</span>)</b>
+			</div>
+			<div class="my_order_btn">
+				<a href="#">删除订单</a><a href="#">取消订单</a><a class="red" href="#">确认收货</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end my_order -->
+
+</body>
+</html>

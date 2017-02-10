@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/shop_main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/pullToRefresh.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/pullToRefresh.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+$(function(){
+
+refresher.init({
+    id:"wrapper",//<------------------------------------------------------------------------------------┐
+    pullDownAction:Refresh,                                                            
+    pullUpAction:Load                                                                           
+    });                                                                                     
+var generatedCount = 0;                                                                         
+function Refresh() {                                                                
+    setTimeout(function () {    // <-- Simulate network congestion, remove setTimeout from production!
+        var htm, i;
+        for (i=0; i<6; i++) {
+            htm  ="<li><div class='nav_list_box_img'>"
+                  + "<a href='#'><img src='images/p_basic_pic04.jpg' /></a>"
+                  + "</div><span>呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药</span>"
+                  + "<div class='nav_list_box_pr'><b>&yen;25000.00</b></div></li>";      
+            $("#wrapper_main").append(htm);
+        }
+        wrapper.refresh();
+    }, 100);
+
+}
+                                                                                                                                                        
+function Load() {
+    setTimeout(function () {
+        var htm, i;
+        for (i=0; i<6; i++) {
+            htm  ="<li><div class='nav_list_box_img'>"
+                  + "<a href='#'><img src='images/p_basic_pic04.jpg' /></a>"
+                  + "</div><span>呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药</span>"
+                  + "<div class='nav_list_box_pr'><b>&yen;25000.00</b></div></li>";      
+            $("#wrapper_main").append(htm);
+        }
+        wrapper.refresh();
+        
+    }, 100);  
+};
+
+});
+</script> 
+
+<title>旗舰店-热门推荐</title>
+</head>
+
+<body class="mhome">
+<!--s_top-->
+<div class="s_top">
+    <a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+    <h3>新品上市</h3>
+</div>
+<!--end s_top-->
+
+<!-- nav_list -->
+<div class="nav_list">
+    <div id="wrapper">
+        <ul class="nav_list_box" id="wrapper_main">
+            <li>
+                <div class="nav_list_box_img">
+                   <a href="#"><img src="images/p_basic_pic04.jpg" /></a>
+                </div>
+                <span>呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药</span>
+                <div class="nav_list_box_pr">
+                    <b>&yen;25000.00</b>
+                </div>
+            </li>
+            <li>
+                <div class="nav_list_box_img">
+                   <a href="#"><img src="images/p_basic_pic03.jpg" /></a>
+                </div>
+                <span>呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药</span>
+                <div class="nav_list_box_pr">
+                    <b>&yen;25000.00</b>
+                </div>
+            </li>
+            <li>
+                <div class="nav_list_box_img">
+                   <a href="#"><img src="images/guess_pi01.jpg" /></a>
+                </div>
+                <span>呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药</span>
+                <div class="nav_list_box_pr">
+                    <b>&yen;25000.00</b>
+                </div>
+            </li>
+            <li>
+                 <div class="nav_list_box_img">
+                   <a href="#"><img src="images/p_basic_pic02.jpg" /></a>
+                </div>
+                <span>呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药呼吸系统药</span>
+                <div class="nav_list_box_pr">
+                    <b>&yen;25000.00</b>
+                </div>
+            </li>
+        </ul>   
+    </div>
+</div>
+<!-- nav_list -->
+
+<!--m_footer-->
+<div class="m_footer">
+    <div class="m_footer_main">
+       <a href="#">登录</a>|<a href="#">注册</a>|<a href="#">反馈</a>|<a href="#">回到顶部</a>
+    </div>
+    <p class="m_case">神州牧易 版权所有 沪ICP备13034501号</p>
+</div>
+<!--end m_footer-->
+
+</body>
+</html>

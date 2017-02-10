@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/pig_market.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".login_free").click(function(){
+        $(".login_free i").toggleClass('i02');
+    });
+    $(".login_btn").click(function(){
+        $(".login_remind").toggle();
+    });
+});
+</script>
+<script type="text/javascript">
+    $(function(){
+        $(".default_del").click(function(){
+            $(".my_card_point").css({display: "block"});
+            $(".pig_add_cover").css({display: "block"});
+        });
+        $(".my_card_point_box button").click(function(){
+            $(".my_card_point").css({display: "none"});
+            $(".pig_add_cover").css({display: "none"});
+        });
+    });
+</script>
+
+<title>猪贸通M版-邮寄地址-新增</title>
+</head>
+<body class="mhome">
+
+<div class="pig_add_cover"></div>
+<!-- 选择区域 -->
+<div class="pig_add">
+  <header><h3>选择区域</h3><a href="#" class="pig_add_clo"><i class="fa fa-angle-left"></i></a></header>
+  <div class="pig_add_cur">
+    <ul><li class="cur01">北京</li><li class="cur02">北京</li><li class="cur03">北京</li></ul>
+    <button>确定</button>
+  </div>
+  <div class="pig_add_main">
+    <ul class="pig_add_ul" id="pig_add01">
+      <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津111</a></li>
+        <li><a href="#">吉林1</a></li>
+        <li><a href="#">黑龙江</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">end</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add02" style="display: none;">
+      <li><a href="#">北京2</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+    <ul class="pig_add_ul" id="pig_add03" style="display: none;">
+      <li><a href="#">北京3</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+        <li><a href="#">重庆</a></li>
+        <li><a href="#">河北</a></li>
+        <li><a href="#">河南</a></li>
+        <li><a href="#">北京</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">天津</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end 选择区域 -->
+
+<!-- 提示 -->
+<div class="my_card_point">
+    <h3>确定删除该地址？</h3>
+    <div class="my_card_point_box">
+        <button class="my_card_btn01">取消</button><button>确定</button>
+    </div>
+</div>
+<!-- end 提示 -->
+
+
+<!--com_top-->
+<div class="com_top">
+    <a href="#" target="blank"><i class="fa fa-angle-left fa-2x"></i></a>
+    <h3>新增收货地址</h3>
+</div>
+<!--end com_top-->
+
+<!-- verified_pig -->
+<div class="verified_pig" style="margin-top: 2.75em;">
+    <div class="verified_pig_box">
+        <strong>收货人：</strong><p><input type="text" value="" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>联系电话：</strong><p><input type="text" value="" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>所在地区：</strong><p class="pig_p01"><span></span><i class="fa fa-angle-right fa-lg"></i></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>详细地址：</strong><p class="verified_pig_add"><input type="text" value="" /></p><span class="redstar">*</span>
+    </div>
+    <div class="verified_pig_box">
+        <strong>邮编：</strong><p><input type="text" value="" /></p><span class="redstar">*</span>
+    </div>
+    <div class="login_free default_add">
+        <i></i>设为默认地址
+    </div>
+    <p class="default_del">删除收货地址</p>
+    <button class="verified_pig_btn">新增收货地址</button>
+</div>
+<!-- end verified_pig -->
+
+
+<!--zmt_footer-->
+<div class="zmt_footer">
+  <a href="#">15844751256_p</a><i>|</i><a href="#">退出</a><i>|</i><a href="#">反馈</a><i>|</i><a href="#">回到顶部</a>
+</div>
+<p class="zmt_case">神州牧易 版权所有 沪ICP备13034501号</p>
+<!--end zmt_footer-->
+</body>
+</html>
